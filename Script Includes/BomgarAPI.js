@@ -43,16 +43,7 @@ BomgarAPI.prototype = {
       pa.push( [ "external_key", task_no ] );
       return this.bgConn.sendCommand(pa);
    },
-   /*
-   startSession: function(task_no) {
-      var pa = [];  // Param array
-      pa.push( [ "action", "generate_session_key" ] );
-      pa.push( [ "type", "support" ] );
-      pa.push( [ "queue_id", "general" ] );
-      pa.push( [ "external_key", task_no ] );
-      return this.bgConn.startSession(pa);
-   },
-    */
+
    getApiInfo: function() {
       var pa = [];  // Param array
       pa.push( [ "action", "get_api_info" ] );
@@ -111,7 +102,7 @@ BomgarAPI.prototype = {
          pa.push( [ "generate_report", "SupportCustExitSurvey" ] );
       }
       pa.push( [ "start_time", et ] );
-      pa.push( [ "duration", "10" ] );	// Search within 10 sec window
+      pa.push( [ "duration", "10" ] ); // Search within 10 sec window
       pa.push( [ "report_type", "rep" ] );
       pa.push( [ "id", "all" ] );
       
@@ -271,25 +262,6 @@ BomgarAPI.prototype = {
       
       gr.update();
       
-      // Save Customer Survey
-      if ( session.cust_survey_list && session.cust_survey_list.cust_exit_survey ) {
-         this.saveSessionSurvey( session.cust_survey_list.cust_exit_survey, 'cust' );
-      }
-      
-      // Save Rep Surveys
-      if ( session.rep_survey_list ) {
-         var rep_surveys = session.rep_survey_list.rep_exit_survey;
-         if ( rep_surveys ) {
-            if ( this._is_array(rep_surveys) ) {
-               for ( i=0; i<rep_surveys.length; i++ ) {
-                  this.saveSessionSurvey( rep_surveys[i], 'rep' );
-               }
-            } else {
-               this.saveSessionSurvey( rep_surveys, 'rep' );
-            }
-         }
-      }
-      
       // Save Session Events
       var events = session.session_details.event;
       for ( i=0; i<events.length; i++ ) {
@@ -399,76 +371,6 @@ BomgarAPI.prototype = {
       
    },
    
-   saveSessionSurvey: function( survey, type ) {
-      
-      // survey : /session_list/session/cust_survey_list/cust_exit_survey
-      //       or /session_list/session/rep_survey_list/rep_exit_survey
-      // type : 'cust' or 'rep'
-      
-      var i, newrec = false;
-      var session_id = this.grSession.sys_id.toString();
-      var gsno = survey['@gsnumber'];
-      if ( !gsno ) { return null; }
-         
-      var gr = new GlideRecord('u_tu_bg_exit_survey');
-      gr.addQuery('u_session',session_id);
-      gr.addQuery('u_gsnumber',gsno);
-      gr.query();
-      
-      if ( !gr.next() ) {
-         // Record not found, so initialise object
-         gr.initialise();
-         gr.u_session = session_id;
-         gr.u_gsnumber = gsno;
-         newrec = true;
-      }
-      
-      // Populate Submitted By depending on type of survey
-      gr.u_survey_type = type;
-      if ( type == 'cust' ) {
-         gr.u_submitted_by = this.sessionActors[gsno];
-      } else {
-         gr.u_submitted_by_rep = this.sessionActors[gsno];
-      }
-      
-      // Ensure that the values are presented as an array
-      var va = [];
-      if ( this._is_array(survey.value) ) {
-         va = survey.value;
-      } else if ( survey.value ) {
-         va.push( survey.value );
-      }
-      
-      // Initialise details, if we have any values
-      if ( va.length > 0 ) {
-         gr.u_details = '';
-      }
-      
-      // Process the array of values
-      var nam, val, txt, j;
-      for ( i=0; i < survey.value.length; i++ ) {
-         nam = va[i]['@name'];
-         val = va[i]['@value'];
-         val = val.replace(/\\n/g,'\n');  // Re-introduce proper newline characters
-         if ( nam == 'rating' ) {
-            gr.u_rating = val;
-         } else if ( nam == 'comments' ) {
-            gr.u_comments = val;
-         } else {
-            gr.u_details += '\n' + nam + ':\t' + val;
-         }
-      }
-      
-      // Save the survey record
-      var survey_id;
-      if ( newrec ) {
-         survey_id = gr.insert();
-      } else {
-         survey_id = gr.update();
-      }
-      
-   },
-   
    saveExitSurvey: function( survey ) {
       
       // survey : /exit_survey_list/exit_survey
@@ -500,7 +402,6 @@ BomgarAPI.prototype = {
       }
       
       // Populate Survey record
-      var survey_type = survey.submitted_by['@type'];
       gr.u_survey_type = survey_type;
       gr.u_survey_time = this.getGlideDateTime(survey);
       if ( survey_type == 'rep' ) {
@@ -509,7 +410,7 @@ BomgarAPI.prototype = {
          gr.u_submitted_by = this.findSessionActor(survey.primary_customer);
       }
       
-      // Populate Questions and Answers
+      // Ensure that we have an array
       var qa = [], ql = survey.question_list.question;
       if ( this._is_array(ql) ) {
          qa = ql;
@@ -518,12 +419,20 @@ BomgarAPI.prototype = {
       }
       
       // Process questions and answers
-      var qna = '', q, q_no, q_name, ans, i;
+      var qna = '', q, q_no, q_name, ans;
       for ( i=0; i<qa.length; i++ ) {
          q = qa[i]; q_no = q['@id'];
          qna += "Q" + q_no + ".\t(" + q.type + ")\t" + q.label +"\n";
          ans = q.answer_list.answer;
-         ans = ans.replace(/\\n/g,'');  // Strip redundant escaped newline characters
+
+         // Ensure we have a valid string
+         if (ans) {
+            ans = ans.replace(/\\n/g,'');  // Strip redundant escaped newline characters
+         } else {
+            ans = '';
+         }
+         
+         // Handle special types of question
          if ( q.name == 'rating' ) {
             gr.u_rating = ans;
             qna += "\t" + q.report_header + "\t" + ans + "\n";
@@ -533,6 +442,7 @@ BomgarAPI.prototype = {
          } else {
             qna += "\t" + q.report_header + "\t" + ans + "\n";
          }
+         
       }
       
       gr.u_details = qna;
