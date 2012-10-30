@@ -4,9 +4,9 @@ BomgarAPI.prototype = {
    initialize: function( appliance ) {
       this.log = new GSLog('tu.bomgar.loglevel','Bomgar API');
       
-      // Use 'teamultra.bomgar.com' as the default appliance
+      // Get default appliance, or use 'teamultra.bomgar.com'
       if ( !appliance ) {
-         appliance = 'teamultra.bomgar.com';
+         appliance = gs.getProperty( 'tu.bomgar.hostname', 'teamultra.bomgar.com' );
       }
       
       // Find the appliance with the matching Hostname, IP or Appliance GUID
@@ -24,8 +24,8 @@ BomgarAPI.prototype = {
       
       this.grAppliance = app;
       this.bgConn = new BomgarConnection(app);
-	  this.sessionActors = [];
-	  this.systemActors = {};
+      this.sessionActors = [];
+      this.systemActors = {};
       
    },
    
@@ -43,7 +43,7 @@ BomgarAPI.prototype = {
       pa.push( [ "external_key", task_no ] );
       return this.bgConn.sendCommand(pa);
    },
-/*   
+   /*
    startSession: function(task_no) {
       var pa = [];  // Param array
       pa.push( [ "action", "generate_session_key" ] );
@@ -52,7 +52,7 @@ BomgarAPI.prototype = {
       pa.push( [ "external_key", task_no ] );
       return this.bgConn.startSession(pa);
    },
-*/   
+    */
    getApiInfo: function() {
       var pa = [];  // Param array
       pa.push( [ "action", "get_api_info" ] );
@@ -68,9 +68,9 @@ BomgarAPI.prototype = {
    getSupportTeams: function( showmembers ) {
       var pa = [];  // Param array
       pa.push( [ "action", "get_support_teams" ] );
-	  if (showmembers) {
-		 pa.push( [ "showmembers", "1" ] );
-	  }
+      if (showmembers) {
+         pa.push( [ "showmembers", "1" ] );
+      }
       return this.bgConn.sendCommand(pa);
    },
    
@@ -98,25 +98,25 @@ BomgarAPI.prototype = {
    },
    
    getExitSurvey: function( lsid, survey_type ) {
-
-	  // Get session end_time
-	  this.findSession(lsid);
-	  var ms = this.grSession.u_start_time.getGlideObject().getNumericValue(); // milli-seconds
-	  var et = Math.round( ms / 1000 ) - 5; // Convert to seconds and adjust down by 5 secs
-
+      
+      // Get session end_time
+      this.findSession(lsid);
+      var ms = this.grSession.u_start_time.getGlideObject().getNumericValue(); // milli-seconds
+      var et = Math.round( ms / 1000 ) - 5; // Convert to seconds and adjust down by 5 secs
+      
       var pa = [];  // Param array
-	  if ( survey_type == 'rep' ) {
-		 pa.push( [ "generate_report", "SupportRepExitSurvey" ] );
-	  } else {
-		 pa.push( [ "generate_report", "SupportCustExitSurvey" ] );
-	  }
+      if ( survey_type == 'rep' ) {
+         pa.push( [ "generate_report", "SupportRepExitSurvey" ] );
+      } else {
+         pa.push( [ "generate_report", "SupportCustExitSurvey" ] );
+      }
       pa.push( [ "start_time", et ] );
       pa.push( [ "duration", "10" ] );	// Search within 10 sec window
       pa.push( [ "report_type", "rep" ] );
       pa.push( [ "id", "all" ] );
-
+      
       var esl = this.bgConn.getReport(pa);
-      var root = this.bgConn.responseRoot;
+      var root = this.bgConn.getResponseRootName();
       
       if ( root == 'exit_survey_list' ) {
          if ( esl.exit_survey ) {
@@ -150,7 +150,7 @@ BomgarAPI.prototype = {
       pa.push( [ "lsid", lsid ] );
       var sl = this.bgConn.getReport(pa);
       
-      var root = this.bgConn.responseRoot;
+      var root = this.bgConn.getResponseRootName();
       
       if ( root == 'session_list' ) {
          if ( sl.session ) {
@@ -175,13 +175,13 @@ BomgarAPI.prototype = {
       }
       
    },
-
+   
    getSessionName: function() {
-	  if (this.grSession) {
-		 return this.grSession.u_display_name.toString();
-	  } else {
-		 return null;
-	  }
+      if (this.grSession) {
+         return this.grSession.u_display_name.toString();
+      } else {
+         return null;
+      }
    },
    
    //----------------------------------------------------------------------------
@@ -200,8 +200,8 @@ BomgarAPI.prototype = {
       
       var i, msg = "saveSession";
       var lsid = session["@lsid"];
-	  if (!lsid) { return null; }
-      var gr = this.findSession(lsid);
+      if (!lsid) { return null; }
+         var gr = this.findSession(lsid);
       
       gr.u_lseq = session.lseq;
       gr.u_session_type = session.session_type;
@@ -223,11 +223,11 @@ BomgarAPI.prototype = {
       
       // Save Customer
       if ( session.customer_list ) {
-		 var cust = session.customer_list.customer;
-		 if ( cust ) {
-			this.saveSessionCust( cust );
-		 }
-	  }
+         var cust = session.customer_list.customer;
+         if ( cust ) {
+            this.saveSessionCust( cust );
+         }
+      }
       
       // Save Session Reps
       if ( session.rep_list ) {
@@ -299,11 +299,11 @@ BomgarAPI.prototype = {
    },
    
    saveSessionCust: function( cust ) {
-
+      
       // cust:  /session_list/session/customer_list/customer
       
       var i, newrec = false;
-	  var session_id = this.grSession.sys_id.toString();
+      var session_id = this.grSession.sys_id.toString();
       var gsno = cust['@gsnumber'];
       if ( !gsno ) { return null; }
          
@@ -350,11 +350,11 @@ BomgarAPI.prototype = {
    },
    
    saveSessionRep: function( rep ) {
-
+      
       // rep:  /session_list/session/rep_list/representative
       
       var i, newrec = false;
-	  var session_id = this.grSession.sys_id.toString();
+      var session_id = this.grSession.sys_id.toString();
       var gsno = rep['@gsnumber'];
       if ( !gsno ) { return null; }
          
@@ -388,7 +388,7 @@ BomgarAPI.prototype = {
       gr.u_private_ip = rep.private_ip;
       gr.u_public_ip = rep.public_ip;
       
-	  var session_rep_id;
+      var session_rep_id;
       if ( newrec ) {
          session_rep_id = gr.insert();
       } else {
@@ -406,7 +406,7 @@ BomgarAPI.prototype = {
       // type : 'cust' or 'rep'
       
       var i, newrec = false;
-	  var session_id = this.grSession.sys_id.toString();
+      var session_id = this.grSession.sys_id.toString();
       var gsno = survey['@gsnumber'];
       if ( !gsno ) { return null; }
          
@@ -424,7 +424,7 @@ BomgarAPI.prototype = {
       }
       
       // Populate Submitted By depending on type of survey
-	  gr.u_survey_type = type;
+      gr.u_survey_type = type;
       if ( type == 'cust' ) {
          gr.u_submitted_by = this.sessionActors[gsno];
       } else {
@@ -472,20 +472,20 @@ BomgarAPI.prototype = {
    saveExitSurvey: function( survey ) {
       
       // survey : /exit_survey_list/exit_survey
-
+      
       var gsno, i, newrec = false;
-	  var lsid = survey['@lsid'];
-	  var survey_type = survey.submitted_by['@type'];
-	  if ( survey_type == 'rep' ) {
-		 gsno = survey.primary_rep['@gsnumber'];
-	  } else {
-		 gsno = survey.primary_customer['@gsnumber'];
-	  }
+      var lsid = survey['@lsid'];
+      var survey_type = survey.submitted_by['@type'];
+      if ( survey_type == 'rep' ) {
+         gsno = survey.primary_rep['@gsnumber'];
+      } else {
+         gsno = survey.primary_customer['@gsnumber'];
+      }
       if ( !lsid || !gsno ) { return null; }
-
-	  var session_id = this.findSession(lsid).sys_id.toString();
-	  if (!session_id) { return null; }
-	  
+         
+      var session_id = this.findSession(lsid).sys_id.toString();
+      if (!session_id) { return null; }
+         
       var gr = new GlideRecord('u_tu_bg_exit_survey');
       gr.addQuery('u_session',session_id);
       gr.addQuery('u_gsnumber',gsno);
@@ -500,42 +500,42 @@ BomgarAPI.prototype = {
       }
       
       // Populate Survey record
-	  var survey_type = survey.submitted_by['@type'];
+      var survey_type = survey.submitted_by['@type'];
       gr.u_survey_type = survey_type;
       gr.u_survey_time = this.getGlideDateTime(survey);
-	  if ( survey_type == 'rep' ) {
-		 gr.u_submitted_by = this.findSessionActor(survey.primary_rep);
-	  } else {
-		 gr.u_submitted_by = this.findSessionActor(survey.primary_customer);
-	  }
-	  
-	  // Populate Questions and Answers
-	  var qa = [], ql = survey.question_list.question;
-	  if ( this._is_array(ql) ) {
-		 qa = ql;
-	  } else {
-		 qa.push(ql);
-	  }
-	  
-	  // Process questions and answers
-	  var qna = '', q, q_no, q_name, ans, i;
-	  for ( i=0; i<qa.length; i++ ) {
-		 q = qa[i]; q_no = q['@id'];
-		 qna += "Q" + q_no + ".\t(" + q.type + ")\t" + q.label +"\n";
-		 ans = q.answer_list.answer;
+      if ( survey_type == 'rep' ) {
+         gr.u_submitted_by = this.findSessionActor(survey.primary_rep);
+      } else {
+         gr.u_submitted_by = this.findSessionActor(survey.primary_customer);
+      }
+      
+      // Populate Questions and Answers
+      var qa = [], ql = survey.question_list.question;
+      if ( this._is_array(ql) ) {
+         qa = ql;
+      } else {
+         qa.push(ql);
+      }
+      
+      // Process questions and answers
+      var qna = '', q, q_no, q_name, ans, i;
+      for ( i=0; i<qa.length; i++ ) {
+         q = qa[i]; q_no = q['@id'];
+         qna += "Q" + q_no + ".\t(" + q.type + ")\t" + q.label +"\n";
+         ans = q.answer_list.answer;
          ans = ans.replace(/\\n/g,'');  // Strip redundant escaped newline characters
-		 if ( q.name == 'rating' ) {
-			gr.u_rating = ans;
-			qna += "\t" + q.report_header + "\t" + ans + "\n";
-		 } else if  ( q.name == 'comments' ) {
-			gr.u_comments = ans;
-			qna += "\t" + q.report_header + "\t (see Comments field ) \n";
-		 } else {
-			qna += "\t" + q.report_header + "\t" + ans + "\n";
-		 }
-	  }
-	  
-	  gr.u_details = qna;
+         if ( q.name == 'rating' ) {
+            gr.u_rating = ans;
+            qna += "\t" + q.report_header + "\t" + ans + "\n";
+         } else if  ( q.name == 'comments' ) {
+            gr.u_comments = ans;
+            qna += "\t" + q.report_header + "\t (see Comments field ) \n";
+         } else {
+            qna += "\t" + q.report_header + "\t" + ans + "\n";
+         }
+      }
+      
+      gr.u_details = qna;
       
       var survey_id;
       if ( newrec ) {
@@ -549,7 +549,7 @@ BomgarAPI.prototype = {
    saveSessionEvent: function( se, seq ) {
       
       var i, gsno, newrec = false;
-	  var session_id = this.grSession.sys_id.toString();
+      var session_id = this.grSession.sys_id.toString();
       var gr = new GlideRecord('u_tu_bg_session_event');
       gr.addQuery('u_session',session_id);
       gr.addQuery('u_seq_no',seq);
@@ -566,8 +566,8 @@ BomgarAPI.prototype = {
       gr.u_event_type = se["@event_type"];
       gr.u_event_time = this.getGlideDateTime( se["@timestamp"] );
       
-	  gr.u_destination = this.findSessionActor(se.destination);
-	  gr.u_performed_by = this.findSessionActor(se.performed_by);
+      gr.u_destination = this.findSessionActor(se.destination);
+      gr.u_performed_by = this.findSessionActor(se.performed_by);
       
       // Both body and data elements are saved to the u_data field
       var body = se.body;
@@ -594,25 +594,25 @@ BomgarAPI.prototype = {
       }
       
    },
-
+   
    saveSupportTeams: function( teams ) {
       //  /support_teams
-	  
-	  // todo: Need to check that support_team is an array
-	  
-	  var i;
-	  for ( i=0; i<teams.support_team.length; i++ ) {
-		 this.saveSupportTeam( teams.support_team[i] );
-	  }
+      
+      // todo: Need to check that support_team is an array
+      
+      var i;
+      for ( i=0; i<teams.support_team.length; i++ ) {
+         this.saveSupportTeam( teams.support_team[i] );
+      }
    },
    
    saveSupportTeam: function( team ) {
-
+      
       //  /support_teams/support_team
-
+      
       var i, msg = "saveSupportTeam";
       var appliance_id = this.grAppliance.sys_id.toString();
-	  var team_id = team['@id'];
+      var team_id = team['@id'];
       
       var gr = new GlideRecord('u_tu_bg_team');
       gr.addQuery('u_appliance',appliance_id);
@@ -626,18 +626,18 @@ BomgarAPI.prototype = {
          gr.u_team_id = team_id;
          newrec = true;
       }
-
+      
       gr.u_name = team.name;
-	  
+      
       if ( newrec ) {
          gr.insert();
       } else {
          gr.update();
       }
-
+      
       // Add members
-	  
-	  // Add issues
+      
+      // Add issues
       
    },
    
@@ -683,74 +683,74 @@ BomgarAPI.prototype = {
    },
    
    findSessionActor: function( obj ) {
-
-	  // This routine finds (and caches sys_ids of) Actors 
-	  // for the current Session. It does not create records
-	  // if the Actor is not found.
-
-	  // Return immediately if object is not valid
-	  if (!obj) { return null; }
-	  
-	  var msg = "findSessionActor";
-	  
-	  // Extract expected information from object
-      var actor_name = obj['#text']; 
+      
+      // This routine finds (and caches sys_ids of) Actors
+      // for the current Session. It does not create records
+      // if the Actor is not found.
+      
+      // Return immediately if object is not valid
+      if (!obj) { return null; }
+         
+      var msg = "findSessionActor";
+      
+      // Extract expected information from object
+      var actor_name = obj['#text'];
       var actor_type = obj['@type'];
       var actor_gsno = obj['@gsnumber'];
-	  var actor_id, gr;
-	  
-	  msg += "\nName:["+actor_name+"], type:["+actor_type+"], GSno:["+actor_gsno+"]";
-	  
-	  // Return cached value, if present
-	  if ( actor_gsno && this.sessionActors[actor_gsno] ) {
-		 msg += "\nMatching Session Actor found in cache";
-		 this.log.logDebug(msg);
-		 return this.sessionActors[actor_gsno];
-	  }
-	  if ( actor_name && this.systemActors[actor_name] ) {
-		 msg += "\nMatching System Actor found in cache";
-		 this.log.logDebug(msg);
-		 return this.systemActors[actor_name];
-	  }
-	  
-	  if ( actor_gsno && actor_gsno != "0" ) {
-		 msg += "\nLookup Session Actor";
-		 this.log.logDebug(msg);
-		 // Find the Actor record
-		 var session_id = this.grSession.sys_id.toString();
-		 gr = new GlideRecord('u_tu_bg_session_actor');
-		 gr.addQuery('u_session',session_id);
-		 gr.addQuery('u_gsnumber',actor_gsno);
-		 gr.query();
-		 if (gr.next()) {
-			this.sessionActors[actor_gsno] = gr.sys_id.toString();
-			return this.sessionActors[actor_gsno];
-		 } else {
-			return null;
-		 }
-
-	  } else if ( actor_name ) {
-		 msg += "\nLookup System Actor";
-		 // This must be a Session actor, with gsno of zero
-		 // Lookup this type of Actor by name
-		 gr = new GlideRecord('u_tu_bg_session_actor');
-		 gr.addNullQuery('u_session'); // System Actors have no session
-		 gr.addQuery('u_display_name',actor_name);
-		 gr.query();
-		 msg += "\nFound matching " + gr.getRowCount() + " System Actors";
-		 if (gr.next()) {
-			this.systemActors[actor_name] = gr.sys_id.toString();
-			msg += "\nMatching SysID: ["+gr.sys_id.toString()+"] ["+this.systemActors[actor_name]+"]";
-			this.log.logDebug(msg);
-			return this.systemActors[actor_name];
-		 } else {
-			this.log.logDebug(msg);
-			return null;
-		 }
-	  } else {
-		 return null;
-	  }
-	  
+      var actor_id, gr;
+      
+      msg += "\nName:["+actor_name+"], type:["+actor_type+"], GSno:["+actor_gsno+"]";
+      
+      // Return cached value, if present
+      if ( actor_gsno && this.sessionActors[actor_gsno] ) {
+         msg += "\nMatching Session Actor found in cache";
+         this.log.logDebug(msg);
+         return this.sessionActors[actor_gsno];
+      }
+      if ( actor_name && this.systemActors[actor_name] ) {
+         msg += "\nMatching System Actor found in cache";
+         this.log.logDebug(msg);
+         return this.systemActors[actor_name];
+      }
+      
+      if ( actor_gsno && actor_gsno != "0" ) {
+         msg += "\nLookup Session Actor";
+         this.log.logDebug(msg);
+         // Find the Actor record
+         var session_id = this.grSession.sys_id.toString();
+         gr = new GlideRecord('u_tu_bg_session_actor');
+         gr.addQuery('u_session',session_id);
+         gr.addQuery('u_gsnumber',actor_gsno);
+         gr.query();
+         if (gr.next()) {
+            this.sessionActors[actor_gsno] = gr.sys_id.toString();
+            return this.sessionActors[actor_gsno];
+         } else {
+            return null;
+         }
+         
+      } else if ( actor_name ) {
+         msg += "\nLookup System Actor";
+         // This must be a Session actor, with gsno of zero
+         // Lookup this type of Actor by name
+         gr = new GlideRecord('u_tu_bg_session_actor');
+         gr.addNullQuery('u_session'); // System Actors have no session
+         gr.addQuery('u_display_name',actor_name);
+         gr.query();
+         msg += "\nFound matching " + gr.getRowCount() + " System Actors";
+         if (gr.next()) {
+            this.systemActors[actor_name] = gr.sys_id.toString();
+            msg += "\nMatching SysID: ["+gr.sys_id.toString()+"] ["+this.systemActors[actor_name]+"]";
+            this.log.logDebug(msg);
+            return this.systemActors[actor_name];
+         } else {
+            this.log.logDebug(msg);
+            return null;
+         }
+      } else {
+         return null;
+      }
+      
    },
    
    findRepSysId: function( rep ) {
