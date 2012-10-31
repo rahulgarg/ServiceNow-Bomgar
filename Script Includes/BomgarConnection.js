@@ -10,7 +10,7 @@ BomgarConnection.prototype = {
    
    initialize: function(gr_appliance) {
       
-      this.log = new GSLog('tu.bomgar.loglevel','Bomgar');
+      this.log = new GSLog('tu.bomgar.loglevel.conn','Bomgar');
 
       if ( !gr_appliance || !gr_appliance.u_hostname ) {
          throw {

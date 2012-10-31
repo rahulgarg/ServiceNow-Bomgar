@@ -3,7 +3,8 @@ var BomgarEvent = Class.create();
 BomgarEvent.prototype = {
    
    initialize: function() {
-      this.log = new GSLog('tu.bomgar.loglevel', 'Bomgar Event');
+      this.log = new GSLog('tu.bomgar.loglevel.event', 'Bomgar Event');
+	  this.validate_task = gs.getProperty( 'tu.bomgar.event.validate.task', 'false' );
       this.errMessage = '';
       this.warnMessage = '';
    },
@@ -51,11 +52,11 @@ BomgarEvent.prototype = {
       // Validate presence of essential params
       var ev_err = false, ev_warn = false;
       if (!this.event)        { msg += "\nParam missing: event"; ev_err = true; }
-      if (!this.version)      { msg += "\nParam missing: version"; ev_err = true; }
-      if (!this.timestamp)    { msg += "\nParam missing: timestamp"; ev_err = true; }
-      if (!this.appliance_id) { msg += "\nParam missing: appliance_id"; ev_err = true; }
-      if (!this.lsid)         { msg += "\nParam missing: lsid"; ev_err = true; }
-      if (!this.ext_key)      { msg += "\nWarning - Param missing: external_key"; ev_warn = true; }
+	  if (!this.version)      { msg += "\nParam missing: version"; ev_err = true; }
+	  if (!this.timestamp)    { msg += "\nParam missing: timestamp"; ev_err = true; }
+	  if (!this.appliance_id) { msg += "\nParam missing: appliance_id"; ev_err = true; }
+	  if (!this.lsid)         { msg += "\nParam missing: lsid"; ev_err = true; }
+	  if (!this.ext_key)      { msg += "\nWarning - Param missing: external_key"; ev_warn = true; }
          
       // Validate appliance
       var bg;
@@ -78,15 +79,26 @@ BomgarEvent.prototype = {
          this.warnMessage = msg;
       }
       
+      // Check that external_key is a valid task
+	  if ( this.validate_task ) {
+		 this.task_id = bg.findTaskId( this.ext_key );
+		 if ( !this.task_id ) {
+			msg += "\nThe supplied external key [" + this.ext_key + "] is not a valid task";
+			this.log.logInfo(msg);
+			return null;
+		 }
+	  }
+
       msg += "\nParameters and Appliance ID are valid";
       this.log.logInfo(msg);
-      return msg;
+	  
+	  return msg;
       
    },
    
    process_event: function() {
       
-      var bg;
+      var bg, survey;
       if (this.bomgarAPI) {
          bg = this.bomgarAPI;
       } else {
@@ -126,25 +138,16 @@ BomgarEvent.prototype = {
          msg += "\nSaved Session : [" + bg.getSessionName() + "]";
          this.log.logInfo(msg);
          break;
-         /*
+
          case 'support_conference_member_added' :
-         msg += "Session member ended";
-         // Do nothing?
-         break;
-         
          case 'support_conference_member_departed' :
-         msg += "Session member departed";
-         // Do nothing?
-         break;
-         
          case 'support_conference_owner_changed' :
-         msg += "Session owner changed";
          // Do nothing?
          break;
-          */
+
          case 'support_conference_rep_exit_survey_completed' :
          // Retrieve survey from Bomgar
-         var survey = bg.getExitSurvey( this.lsid, 'rep' );
+         survey = bg.getExitSurvey( this.lsid, 'rep' );
          if ( survey ) {
             bg.saveExitSurvey( survey );
          }
@@ -152,7 +155,7 @@ BomgarEvent.prototype = {
          
          case 'support_conference_customer_exit_survey_completed' :
          // Retrieve survey from Bomgar
-         var survey = bg.getExitSurvey( this.lsid, 'cust' );
+         survey = bg.getExitSurvey( this.lsid, 'cust' );
          if ( survey ) {
             bg.saveExitSurvey( survey );
          }

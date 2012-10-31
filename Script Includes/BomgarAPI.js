@@ -2,7 +2,7 @@ var BomgarAPI = Class.create();
 BomgarAPI.prototype = {
    
    initialize: function( appliance ) {
-      this.log = new GSLog('tu.bomgar.loglevel','Bomgar API');
+      this.log = new GSLog('tu.bomgar.loglevel.api','Bomgar API');
       
       // Get default appliance, or use 'teamultra.bomgar.com'
       if ( !appliance ) {
@@ -192,7 +192,7 @@ BomgarAPI.prototype = {
       var i, msg = "saveSession";
       var lsid = session["@lsid"];
       if (!lsid) { return null; }
-         var gr = this.findSession(lsid);
+      var gr = this.findSession(lsid);
       
       gr.u_lseq = session.lseq;
       gr.u_session_type = session.session_type;
