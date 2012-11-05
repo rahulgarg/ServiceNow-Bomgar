@@ -23,6 +23,7 @@ BomgarAPI.prototype = {
       }
       
       this.grAppliance = app;
+      this.appliance_id = app.sys_id.toString();
       this.bgConn = new BomgarConnection(app);
       this.sessionActors = [];
       this.systemActors = {};
@@ -256,7 +257,7 @@ BomgarAPI.prototype = {
       // A temporary lookup table to map gsnumber to sys_id
       this.sessionActors = [];
       
-      // Save Customer
+      // Save Customer (there is only ever one Customer)
       if ( session.customer_list ) {
          var cust = session.customer_list.customer;
          if ( cust ) {
@@ -265,16 +266,10 @@ BomgarAPI.prototype = {
       }
       
       // Save Session Reps
-      if ( session.rep_list ) {
-         var reps = session.rep_list.representative;
-         if ( reps ) {
-            if ( this._is_array(reps) ) {
-               for ( i=0; i<events.length; i++ ) {
-                  this.saveSessionRep( reps[i] );
-               }
-            } else {
-               this.saveSessionRep( reps );
-            }
+      if ( session.rep_list && session.rep_list.representative ) {
+         var reps = this.ensureArray( session.rep_list.representative );
+         for ( i=0; i<reps.length; i++ ) {
+            this.saveSessionRep( reps[i] );
          }
       }
       
@@ -307,9 +302,11 @@ BomgarAPI.prototype = {
       gr.update();
       
       // Save Session Events
-      var events = session.session_details.event;
-      for ( i=0; i<events.length; i++ ) {
-         this.saveSessionEvent( events[i], i );
+      if ( session.session_details && session.session_details.event ) {
+         var events = this.ensureArray( session.session_details.event );
+         for ( i=0; i<events.length; i++ ) {
+            this.saveSessionEvent( events[i], i );
+         }
       }
       
    },
@@ -318,7 +315,7 @@ BomgarAPI.prototype = {
       
       // cust:  /session_list/session/customer_list/customer
       
-      var i, newrec = false;
+      var i;
       var session_id = this.grSession.sys_id.toString();
       var gsno = cust['@gsnumber'];
       if ( !gsno ) { return null; }
@@ -333,7 +330,6 @@ BomgarAPI.prototype = {
          gr.initialise();
          gr.u_session = session_id;
          gr.u_gsnumber = gsno;
-         newrec = true;
       }
       
       gr.u_primary_actor = cust.primary_cust;
@@ -354,13 +350,8 @@ BomgarAPI.prototype = {
       gr.u_private_ip = cust.private_ip;
       gr.u_public_ip = cust.public_ip;
       
-      var cust_id;
-      if ( newrec ) {
-         cust_id = gr.insert();
-      } else {
-         cust_id = gr.update();
-      }
-      
+      // ( Call to update will act as insert, if rec does not exist )
+      var cust_id = gr.update();
       this.sessionActors[gsno] = cust_id;
       
    },
@@ -369,8 +360,7 @@ BomgarAPI.prototype = {
       
       // rep:  /session_list/session/rep_list/representative
       
-      var i, newrec = false;
-      var session_id = this.grSession.sys_id.toString();
+      var i, session_id = this.grSession.sys_id.toString();
       var gsno = rep['@gsnumber'];
       if ( !gsno ) { return null; }
          
@@ -388,7 +378,6 @@ BomgarAPI.prototype = {
          gr.u_rep = rep_id;
          gr.u_session = session_id;
          gr.u_gsnumber = gsno;
-         newrec = true;
       }
       
       gr.u_primary_actor = rep.primary_rep;
@@ -404,13 +393,8 @@ BomgarAPI.prototype = {
       gr.u_private_ip = rep.private_ip;
       gr.u_public_ip = rep.public_ip;
       
-      var session_rep_id;
-      if ( newrec ) {
-         session_rep_id = gr.insert();
-      } else {
-         session_rep_id = gr.update();
-      }
-      
+      // ( Call to update will act as insert, if rec does not exist )
+      var session_rep_id  = gr.update();
       this.sessionActors[gsno] = session_rep_id;
       
    },
@@ -419,7 +403,7 @@ BomgarAPI.prototype = {
       
       // survey : /exit_survey_list/exit_survey
       
-      var gsno, i, newrec = false;
+      var gsno, i;
       var lsid = survey['@lsid'];
       var survey_type = survey.submitted_by['@type'];
       if ( survey_type == 'rep' ) {
@@ -442,30 +426,24 @@ BomgarAPI.prototype = {
          gr.initialise();
          gr.u_session = session_id;
          gr.u_gsnumber = gsno;
-         newrec = true;
       }
       
       // Populate Survey record
       gr.u_survey_type = survey_type;
       gr.u_survey_time = this.getGlideDateTime(survey);
       if ( survey_type == 'rep' ) {
-         gr.u_submitted_by = this.findSessionActor(survey.primary_rep);
+         gr.u_submitted_by = this.findSessionActorId(survey.primary_rep);
       } else {
-         gr.u_submitted_by = this.findSessionActor(survey.primary_customer);
+         gr.u_submitted_by = this.findSessionActorId(survey.primary_customer);
       }
       
       // Ensure that we have an array
-      var qa = [], ql = survey.question_list.question;
-      if ( this._is_array(ql) ) {
-         qa = ql;
-      } else {
-         qa.push(ql);
-      }
+      var questions = this.ensureArray( survey.question_list.question );
       
       // Process questions and answers
       var qna = '', q, q_no, q_name, ans;
-      for ( i=0; i<qa.length; i++ ) {
-         q = qa[i]; q_no = q['@id'];
+      for ( i=0; i<questions.length; i++ ) {
+         q = questions[i]; q_no = q['@id'];
          qna += "Q" + q_no + ".\t(" + q.type + ")\t" + q.label +"\n";
          ans = q.answer_list.answer;
 
@@ -490,19 +468,15 @@ BomgarAPI.prototype = {
       }
       
       gr.u_details = qna;
-      
-      var survey_id;
-      if ( newrec ) {
-         survey_id = gr.insert();
-      } else {
-         survey_id = gr.update();
-      }
+
+      // ( Call to update will act as insert, if rec does not exist )
+      gr.update();
       
    },
    
    saveSessionEvent: function( se, seq ) {
       
-      var i, gsno, newrec = false;
+      var i, gsno;
       var session_id = this.grSession.sys_id.toString();
       var gr = new GlideRecord('u_tu_bg_session_event');
       gr.addQuery('u_session',session_id);
@@ -514,50 +488,45 @@ BomgarAPI.prototype = {
          gr.initialise();
          gr.u_session = session_id;
          gr.u_seq_no = seq;
-         newrec = true;
       }
       
       gr.u_event_type = se["@event_type"];
       gr.u_event_time = this.getGlideDateTime( se["@timestamp"] );
       
-      gr.u_destination = this.findSessionActor(se.destination);
-      gr.u_performed_by = this.findSessionActor(se.performed_by);
+      gr.u_destination = this.findSessionActorId(se.destination);
+      gr.u_performed_by = this.findSessionActorId(se.performed_by);
       
       // Both body and data elements are saved to the u_data field
       var body = se.body;
       if ( body ) {
          gr.u_data = body;
       }
-      var data = se.data.value;
-      if ( data ) {
-         if ( this._is_array(data) ) {
-            var val = '';
-            for (i=0;i<data.length;i++) {
-               val += '\n' + data[i]['@name'] + ' : ' + data[i]['@value'];
-            }
-            gr.u_data = val;
-         } else {
-            gr.u_data = data['@name'] + ' : ' + data['@value'];
+      if ( se.data && se.data.value ) {
+         var data_values = this.ensureArray( se.data.value );
+         var data_text = '';
+         for (i=0;i<data_values.length;i++) {
+            data_text += '\n' + data_values[i]['@name'] + ' : ' + data_values[i]['@value'];
          }
+         gr.u_data = data_text;
       }
       
-      if ( newrec ) {
-         gr.insert();
-      } else {
-         gr.update();
-      }
+      // ( Call to update will act as insert, if rec does not exist )
+      gr.update();
       
    },
    
    saveSupportTeams: function( teams ) {
+
       //  /support_teams
-      
-      // todo: Need to check that support_team is an array
-      
+     
       var i;
-      for ( i=0; i<teams.support_team.length; i++ ) {
-         this.saveSupportTeam( teams.support_team[i] );
+      if ( teams.support_team ) {
+         var support_teams = this.ensureArray(teams.support_team);
+         for ( i=0; i<support_teams.length; i++ ) {
+            this.saveSupportTeam( support_teams[i] );
+         }
       }
+
    },
    
    saveSupportTeam: function( team ) {
@@ -565,23 +534,23 @@ BomgarAPI.prototype = {
       //  /support_teams/support_team
       
       var i, msg = "saveSupportTeam";
-      var appliance_id = this.grAppliance.sys_id.toString();
       var team_id = team['@id'];
       
       var gr = new GlideRecord('u_tu_bg_team');
-      gr.addQuery('u_appliance',appliance_id);
+      gr.addQuery('u_appliance',this.appliance_id);
       gr.addQuery('u_team_id',team_id);
       gr.query();
       
       if ( !gr.next() ) {
          // Record not found, so initialise object
          gr.initialise();
-         gr.u_appliance = appliance_id;
+         gr.u_appliance = this.appliance_id;
          gr.u_team_id = team_id;
-         newrec = true;
       }
       
       gr.u_name = team.name;
+
+      // ( Call to update will act as insert, if rec does not exist )
       gr.update();
       
       // Add members
@@ -591,7 +560,7 @@ BomgarAPI.prototype = {
    },
    
    //----------------------------------------------------------------------------
-   // The following utility functions assist the main functions above.
+   // The following functions deal with finding and creating Bomgar records
    //----------------------------------------------------------------------------
    //
    createSession: function( lsid, task_no ) {
@@ -632,10 +601,8 @@ BomgarAPI.prototype = {
    findSession: function( lsid ) {
       // Returns a GlideRecord object for the Session
       
-      var appliance_id = this.grAppliance.sys_id.toString();
-
       var gr = new GlideRecord('u_tu_bg_session');
-      gr.addQuery('u_appliance',appliance_id);
+      gr.addQuery('u_appliance',this.appliance_id);
       gr.addQuery('u_lsid',lsid);
       gr.query();
       
@@ -660,7 +627,7 @@ BomgarAPI.prototype = {
       // Return immediately if object is not valid
       if (!obj) { return null; }
          
-      var msg = "findSessionActor";
+      var msg = "findSessionActorId";
       
       // Extract expected information from object
       var actor_name = obj['#text'];
@@ -730,12 +697,13 @@ BomgarAPI.prototype = {
    
    findBomgarRepId: function( rep ) {
       // Returns the sys_id of the Bomgar Rep record
-      
+
       var i, newrec = false;
-      var appliance_id = this.grAppliance.sys_id.toString();
       var rep_id = rep['@id'];
+      if (!rep_id) { return null; }
+
       var gr = new GlideRecord('u_tu_bg_rep');
-      gr.addQuery('u_appliance', appliance_id);
+      gr.addQuery('u_appliance', this.appliance_id);
       gr.addQuery('u_rep_id',rep_id);
       gr.query();
       
@@ -746,10 +714,13 @@ BomgarAPI.prototype = {
       
       // Record not found, so let's create one
       gr.initialise();
-      gr.u_appliance = appliance_id;
+      gr.u_appliance = this.appliance_id;
       gr.u_rep_id = rep_id;
-      gr.u_display_name = rep.display_name;
+      gr.u_name = rep.display_name;
       gr.u_username = rep.username;
+      
+      this.log.logNotice("Created new Bomgar Rep: " + 
+                          rep.display_name + " (" + rep.username + ")" );
       
       return gr.insert();
       
@@ -780,6 +751,28 @@ BomgarAPI.prototype = {
    // The following utility functions assist the main functions above.
    //----------------------------------------------------------------------------
    //
+   ensureArray: function( item ) {
+      // Sequences of XML elements of the same type are converted into JavaScript
+      // Arrays with each element being an instance of the element object. However,
+      // if an element appears only once it will be presented as a single object. 
+
+      // This conversion routine ensures that any elements that may appear one or 
+      // more times are converted into an array, even if the array consists of
+      // only a single element.
+
+      // Ensure that we have an array
+      if ( this._is_array(item) ) {
+         return item;
+      } else {
+         var item_array = [];
+         if (item) {
+            item_array.push(item);
+         }
+         return item_array;
+      }
+      
+   },
+   
    _is_array: function(v) {
       return Object.prototype.toString.apply(v) === '[object Array]';
    },
