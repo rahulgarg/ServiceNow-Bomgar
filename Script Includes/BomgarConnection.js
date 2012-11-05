@@ -52,7 +52,7 @@ BomgarConnection.prototype = {
       return this._postRequest();
    },
    
-   getReport: function( params ) {
+   runReport: function( params ) {
       this.request_url = this.report_url;
       this.apiParams = params;
       return this._postRequest();
@@ -178,7 +178,7 @@ BomgarConnection.prototype = {
       this.postResult += "\nError Message: ["+this.errorMessage+"]";
       this.postResult += "\nResponse Doc Length:  ["+this.responseDoc.length+"]";
       
-      msg += "\nPost Response" + this.postResult;
+      msg += "Post Response" + this.postResult;
       if ( this.log.debugOn() ) {
          msg += "\nResponse Doc:  ["+this.responseDoc+"]";
       }
@@ -186,14 +186,14 @@ BomgarConnection.prototype = {
       if ( this.httpStatus != 200 ) {
          this.errorMessage = "Received unexpected HTTP Status (" + 
                               this.httpStatus + ") from Bomgar appliance";
-         msg = "ERROR: " + this.errorMessage + "\n" + msg + msg_sep;
+         msg = "ERROR: " + this.errorMessage + msg_sep + msg;
          this.log.logError(msg);
          return null;
       }
       
       this.log.logInfo(msg);
       
-      // Get the name of the XMl root element
+      // Get the name of the XML root element
       // (this is lost during the standard XMLHelper toObject call)
       this.responseRoot = this._getRootName();
       

@@ -30,9 +30,70 @@ BomgarAPI.prototype = {
    },
    
    //----------------------------------------------------------------------------
-   // The following ( mostly getXXX ) functions retrieve information from the Bomgar
-   // appliance. Data is returned as a JavaScript object which reflects the structure
-   // of the XML document returned by the Bomgar API.
+   // The following functions return information about the state of this object.
+   //----------------------------------------------------------------------------
+   //
+   getSessionName: function() {
+      if (this.grSession) {
+         return this.grSession.u_display_name.toString();
+      } else {
+         return null;
+      }
+   },
+   
+   reloadSessions: function() {
+      
+      var i, msg = "getSessions";
+      var sl = this.getSessionList();
+      var ssl = sl.session_summary;
+      var lsid, ss;
+      msg += "\nSession count: " + ssl.length;
+      
+      // Get all of the sessions
+      for ( i=0; i < ssl.length; i++ ) {
+         lsid = ssl[i]["@lsid"];
+         msg += "\nSession " + i + ": [" + lsid + "]";
+         ss = this.retrieveSession( lsid );
+         if (ss) {
+            this.saveSession(ss);
+         } else {
+            msg += " - Failed to retrieve session data";
+         }
+      }
+      
+      this.log.logInfo(msg);
+      
+   },
+   
+   getGlideDateTime: function(item) {
+      
+      var ts = "";
+      
+      // Handle elements with a timestamp/ts attribute
+      if ( typeof item == 'object' && item["@timestamp"] ) {
+         ts = item["@timestamp"];
+      } else if ( typeof item == 'object' && item["@ts"] ) {
+         ts = item["@ts"];
+      } else {
+         // Otherwise treat as a string
+         ts = item;
+      }
+      
+      var secs = parseInt(ts);
+      var gdt = new GlideDateTime();
+      if ( secs > 0 ) {
+         gdt.setNumericValue( secs * 1000 );
+         return gdt;
+      } else {
+         return null;
+      }
+      
+   },
+   
+   //----------------------------------------------------------------------------
+   // The following ( mostly retrieveXXX ) functions retrieve information from the
+   // Bomgar appliance. Data is returned as a JavaScript object which reflects the
+   // structure of the XML document returned by the Bomgar API.
    //----------------------------------------------------------------------------
    //
    generateSessionKey: function(task_no) {
@@ -44,19 +105,19 @@ BomgarAPI.prototype = {
       return this.bgConn.sendCommand(pa);
    },
 
-   getApiInfo: function() {
+   retrieveApiInfo: function() {
       var pa = [];  // Param array
       pa.push( [ "action", "get_api_info" ] );
       return this.bgConn.sendCommand(pa);
    },
    
-   getLoggedInReps: function() {
+   retrieveLoggedInReps: function() {
       var pa = [];  // Param array
       pa.push( [ "action", "get_logged_in_reps" ] );
       return this.bgConn.sendCommand(pa);
    },
    
-   getSupportTeams: function( showmembers ) {
+   retrieveSupportTeams: function( showmembers ) {
       var pa = [];  // Param array
       pa.push( [ "action", "get_support_teams" ] );
       if (showmembers) {
@@ -65,30 +126,20 @@ BomgarAPI.prototype = {
       return this.bgConn.sendCommand(pa);
    },
    
-   getSessionList: function() {
+   retrieveSessionList: function() {
       var pa = [];  // Param array
       pa.push( [ "generate_report", "SupportSessionListing" ] );
-      return this.bgConn.getReport(pa);
+      return this.bgConn.runReport(pa);
    },
    
-   getSessionSummary: function() {
+   retrieveSessionSummary: function() {
       var pa = [];  // Param array
       pa.push( [ "generate_report", "SupportSessionSummary" ] );
       pa.push( [ "report_type", "rep" ] );
-      return this.bgConn.getReport(pa);
+      return this.bgConn.runReport(pa);
    },
    
-   getTestSurveys: function() {
-      var pa = [];  // Param array
-      pa.push( [ "generate_report", "SupportCustExitSurvey" ] );
-      pa.push( [ "start_date", "2012-09-01" ] );
-      pa.push( [ "duration", "0" ] );
-      pa.push( [ "report_type", "rep" ] );
-      pa.push( [ "id", "all" ] );
-      return this.bgConn.getReport(pa);
-   },
-   
-   getExitSurvey: function( lsid, survey_type ) {
+   retrieveExitSurvey: function( lsid, survey_type ) {
       
       // Get session end_time
       this.findSession(lsid);
@@ -106,7 +157,7 @@ BomgarAPI.prototype = {
       pa.push( [ "report_type", "rep" ] );
       pa.push( [ "id", "all" ] );
       
-      var esl = this.bgConn.getReport(pa);
+      var esl = this.bgConn.runReport(pa);
       var root = this.bgConn.getResponseRootName();
       
       if ( root == 'exit_survey_list' ) {
@@ -115,31 +166,31 @@ BomgarAPI.prototype = {
             return esl.exit_survey;
          } else if ( esl.error ) {
             // Record the returned error
-            this.errMessage = esl.error.toString();
+            this.errorMessage = esl.error.toString();
             return null;
          } else {
             // No error, but no sessions either
-            this.errMessage = "No exit surveys found";
+            this.errorMessage = "No exit surveys found";
             return null;
          }
          
       } else {
          // We should never get here
-         this.errMessage = "Unknown XML root element [" + root + "]";
-         msg += "\n" + this.errMessage;
+         this.errorMessage = "Unknown XML root element [" + root + "]";
+         msg += "\n" + this.errorMessage;
          this.log.logError(msg);
          return null;
       }
       
    },
    
-   getSession: function( lsid ) {
+   retrieveSession: function( lsid ) {
       
-      var msg = "getSession( " + lsid + " )";
+      var msg = "retrieveSession( " + lsid + " )";
       var pa = [];  // Param array
       pa.push( [ "generate_report", "SupportSession" ] );
       pa.push( [ "lsid", lsid ] );
-      var sl = this.bgConn.getReport(pa);
+      var sl = this.bgConn.runReport(pa);
       
       var root = this.bgConn.getResponseRootName();
       
@@ -149,30 +200,22 @@ BomgarAPI.prototype = {
             return sl.session;
          } else if ( sl.error ) {
             // Record the returned error
-            this.errMessage = sl.error.toString();
+            this.errorMessage = sl.error.toString();
             return null;
          } else {
             // No error, but no sessions either
-            this.errMessage = "No sessions found";
+            this.errorMessage = "No sessions found";
             return null;
          }
          
       } else {
          // We should never get here
-         this.errMessage = "Unknown XML root element [" + root + "]";
-         msg += "\n" + this.errMessage;
+         this.errorMessage = "Unknown XML root element [" + root + "]";
+         msg += "\n" + this.errorMessage;
          this.log.logError(msg);
          return null;
       }
       
-   },
-   
-   getSessionName: function() {
-      if (this.grSession) {
-         return this.grSession.u_display_name.toString();
-      } else {
-         return null;
-      }
    },
    
    //----------------------------------------------------------------------------
@@ -330,7 +373,7 @@ BomgarAPI.prototype = {
       var gsno = rep['@gsnumber'];
       if ( !gsno ) { return null; }
          
-      var rep_id = this.findRepSysId(rep);
+      var rep_id = this.findBomgarRepId(rep);
       
       var gr = new GlideRecord('u_tu_bg_session_rep');
       gr.addQuery('u_rep',rep_id);
@@ -538,12 +581,7 @@ BomgarAPI.prototype = {
       }
       
       gr.u_name = team.name;
-      
-      if ( newrec ) {
-         gr.insert();
-      } else {
-         gr.update();
-      }
+      gr.update();
       
       // Add members
       
@@ -555,13 +593,46 @@ BomgarAPI.prototype = {
    // The following utility functions assist the main functions above.
    //----------------------------------------------------------------------------
    //
+   createSession: function( lsid, task_no ) {
+      // Returns a GlideRecord object for the created Bomgar Session
+
+      var msg = "createSession";
+
+      // Return existing session, if it exists
+      var gr = this.findSession(lsid);
+      if ( gr ) { 
+         msg += "\nFound existing session: " + gr.getDisplayValue();
+         this.log.logInfo(msg);
+         return gr; 
+      } else {
+         // Reset error message if not found
+         this.errorMessage = null;
+      }
+      
+      gr = new GlideRecord('u_tu_bg_session');
+      gr.u_appliance = this.grAppliance.sys_id.toString();
+      gr.u_lsid = lsid;
+      gr.u_task = this.findTaskId( task_no );
+      gr.u_display_name = "New Session";
+      var session_id = gr.insert();
+      
+      if ( session_id ) {
+         this.grSession = gr;
+         msg += "\nCreated Session: " + gr.getDisplayValue();
+         this.log.logInfo(msg);
+         return gr;
+      } else {
+         this.errorMessage = "Failed to create session with lsid [" + lsid + "]";
+         return null;
+      }
+      
+   },
+   
    findSession: function( lsid ) {
+      // Returns a GlideRecord object for the Session
       
-      var i, msg = "findSession";
       var appliance_id = this.grAppliance.sys_id.toString();
-      msg += "\nAppliance ID: ["+appliance_id+"]";
-      msg += "\nLSID: [" + lsid + "]";
-      
+
       var gr = new GlideRecord('u_tu_bg_session');
       gr.addQuery('u_appliance',appliance_id);
       gr.addQuery('u_lsid',lsid);
@@ -569,32 +640,19 @@ BomgarAPI.prototype = {
       
       if ( gr.next() ) {
          // Session found, get ref and return
-         msg += "\nFound Session: " + gr.getDisplayValue();
-         this.log.logInfo(msg);
          this.grSession = gr;
          return gr;
+      } else {
+         this.errorMessage = "Failed to find session with lsid [" + lsid + "]";
+         return null;
       }
-      
-      // No session was found, so create new record
-      gr = new GlideRecord('u_tu_bg_session');
-      gr.u_appliance = this.grAppliance.sys_id.toString();
-      gr.u_lsid = lsid;
-      gr.u_display_name = "New session";
-      var session_id = gr.insert();
-      
-      // Re-query table to return record object suitable for update
-      gr = new GlideRecord('u_tu_bg_session');
-      gr.get(session_id);
-      msg += "\nCreated Session: " + gr.getDisplayValue();
-      this.log.logInfo(msg);
-      this.grSession = gr;
-      return gr;
       
    },
    
-   findSessionActor: function( obj ) {
+   findSessionActorId: function( obj ) {
+      // Returns the sys_id of the Bomgar Actor record
       
-      // This routine finds (and caches sys_ids of) Actors
+      // This routine finds (and caches) sys_ids of Actors
       // for the current Session. It does not create records
       // if the Actor is not found.
       
@@ -636,6 +694,8 @@ BomgarAPI.prototype = {
             this.sessionActors[actor_gsno] = gr.sys_id.toString();
             return this.sessionActors[actor_gsno];
          } else {
+            this.errorMessage = "Session Actor [" + actor_gsno + ","  + actor_name + 
+                                ","  + actor_type + "] was not found";
             return null;
          }
          
@@ -655,15 +715,20 @@ BomgarAPI.prototype = {
             return this.systemActors[actor_name];
          } else {
             this.log.logDebug(msg);
+            this.errorMessage = "System Actor [" + actor_gsno + ","  + actor_name + 
+                                ","  + actor_type + "] was not found";
             return null;
          }
       } else {
+         this.errorMessage = "Actor [" + actor_gsno + ","  + actor_name + 
+                             ","  + actor_type + "] was not found";
          return null;
       }
       
    },
    
-   findRepSysId: function( rep ) {
+   findBomgarRepId: function( rep ) {
+      // Returns the sys_id of the Bomgar Rep record
       
       var i, newrec = false;
       var appliance_id = this.grAppliance.sys_id.toString();
@@ -690,68 +755,28 @@ BomgarAPI.prototype = {
    },
    
    findTaskId: function( task_no ) {
-      
+      // Returns the sys_id of the task record
+
       var task_id;
       var gr = new GlideRecord('task');
       gr.addQuery('number', task_no);
       gr.query();
-      
+
       if ( gr.next() ) {
          // Task found, return sys_id
          return gr.sys_id.toString();
       } else {
+         this.errorMessage = "Failed to find task number [" + task_no + "]";
          return null;
       }
-      
    },
    
-   getGlideDateTime: function(item) {
-      
-      var ts = "";
-      
-      // Handle elements with a timestamp/ts attribute
-      if ( typeof item == 'object' && item["@timestamp"] ) {
-         ts = item["@timestamp"];
-      } else if ( typeof item == 'object' && item["@ts"] ) {
-         ts = item["@ts"];
-      } else {
-         // Otherwise treat as a string
-         ts = item;
-      }
-      
-      var secs = parseInt(ts);
-      var gdt = new GlideDateTime();
-      if ( secs > 0 ) {
-         gdt.setNumericValue( secs * 1000 );
-         return gdt;
-      } else {
-         return null;
-      }
-      
-   },
-   
+   //----------------------------------------------------------------------------
+   // The following utility functions assist the main functions above.
+   //----------------------------------------------------------------------------
+   //
    _is_array: function(v) {
       return Object.prototype.toString.apply(v) === '[object Array]';
-   },
-   
-   reloadSessions: function() {
-      
-      var i, msg = "getSessions";
-      var sl = this.getSessionList();
-      var ssl = sl.session_summary;
-      var lsid, ss;
-      msg += "\nSession count: " + ssl.length;
-      
-      // Get all of the sessions
-      for ( i=0; i < ssl.length; i++ ) {
-         lsid = ssl[i]["@lsid"];
-         msg += "\nSession " + i + ": [" + lsid + "]";
-         ss = this.getSession( lsid );
-         this.saveSession(ss);
-      }
-      
-      this.log.logInfo(msg);
-      
    },
    
    type: 'BomgarAPI'
