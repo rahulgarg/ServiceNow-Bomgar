@@ -59,7 +59,7 @@ BomgarEvent.prototype = {
       if ( this.tasks_only ) {
          // Check that external_key is a valid task
          if ( this.ext_key ) {
-            this.task_id = this.bomgarAPI.findTaskId( this.ext_key );
+            this.task_id = this.findTaskId( this.ext_key );
             if ( !this.task_id ) {
                msg += "\nThe supplied external_key [" + this.ext_key + "] is not a valid task";
                this.log.logError(msg);
@@ -184,6 +184,27 @@ BomgarEvent.prototype = {
       this.log.logInfo(msg);
       return msg;
       
+   },
+   
+   findTaskId: function( task_no ) {
+      // Returns the sys_id of the task record
+
+      var task_id, msg = "findTaskId";
+      msg += "\nTask number: [" + task_no + "]";
+      var gr = new GlideRecord('task');
+      gr.addQuery('number', task_no);
+      gr.query();
+      msg += "\nFound " + gr.getRowCount() + " tasks";
+
+      if ( gr.next() ) {
+         // Task found, return sys_id
+         this.log.logDebug("\nTask found.");
+         return gr.sys_id.toString();
+      } else {
+         this.errorMessage = "Failed to find task number [" + task_no + "]";
+         this.log.logDebug("\nTask NOT found.");
+         return null;
+      }
    },
    
    type: 'BomgarEvent'

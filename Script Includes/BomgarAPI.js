@@ -236,6 +236,7 @@ BomgarAPI.prototype = {
       var lsid = session["@lsid"];
       if (!lsid) { return null; }
       var gr = this.findSession(lsid);
+      if (!gr) { return null; }
       
       gr.u_lseq = session.lseq;
       gr.u_session_type = session.session_type;
@@ -757,16 +758,20 @@ BomgarAPI.prototype = {
    findTaskId: function( task_no ) {
       // Returns the sys_id of the task record
 
-      var task_id;
+      var task_id, msg = "findTaskId";
+      msg += "\nTask number: [" + task_no + "]";
       var gr = new GlideRecord('task');
       gr.addQuery('number', task_no);
       gr.query();
+      msg += "\nFound " + gr.getRowCount() + " tasks";
 
       if ( gr.next() ) {
          // Task found, return sys_id
+         this.log.logDebug("\nTask found.");
          return gr.sys_id.toString();
       } else {
          this.errorMessage = "Failed to find task number [" + task_no + "]";
+         this.log.logDebug("\nTask NOT found.");
          return null;
       }
    },
