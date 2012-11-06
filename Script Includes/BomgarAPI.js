@@ -42,6 +42,10 @@ BomgarAPI.prototype = {
       }
    },
    
+   getErrorMessage: function() {
+      return this.errorMessage;
+   },
+   
    reloadSessions: function() {
       
       var i, msg = "getSessions";
@@ -103,19 +107,25 @@ BomgarAPI.prototype = {
       pa.push( [ "type", "support" ] );
       pa.push( [ "queue_id", "general" ] );
       pa.push( [ "external_key", task_no ] );
-      return this.bgConn.sendCommand(pa);
+
+      var resp = this.bgConn.sendCommand(pa);
+      return this.checkResponse( resp, 'session_key' );
    },
 
    retrieveApiInfo: function() {
       var pa = [];  // Param array
       pa.push( [ "action", "get_api_info" ] );
-      return this.bgConn.sendCommand(pa);
+
+      var resp = this.bgConn.sendCommand(pa);
+      return this.checkResponse( resp, 'api_information' );
    },
    
    retrieveLoggedInReps: function() {
       var pa = [];  // Param array
       pa.push( [ "action", "get_logged_in_reps" ] );
-      return this.bgConn.sendCommand(pa);
+
+      var resp = this.bgConn.sendCommand(pa);
+      return this.checkResponse( resp, 'logged_in_reps', 'rep' );
    },
    
    retrieveSupportTeams: function( showmembers ) {
@@ -124,20 +134,26 @@ BomgarAPI.prototype = {
       if (showmembers) {
          pa.push( [ "showmembers", "1" ] );
       }
-      return this.bgConn.sendCommand(pa);
+
+      var resp = this.bgConn.sendCommand(pa);
+      return this.checkResponse( resp, 'support_teams', 'support_team' );
    },
    
    retrieveSessionList: function() {
       var pa = [];  // Param array
       pa.push( [ "generate_report", "SupportSessionListing" ] );
-      return this.bgConn.runReport(pa);
+
+      var resp = this.bgConn.runReport(pa);
+      return this.checkResponse( resp, 'session_summary_list', 'session_summary' );
    },
    
    retrieveSessionSummary: function() {
       var pa = [];  // Param array
       pa.push( [ "generate_report", "SupportSessionSummary" ] );
       pa.push( [ "report_type", "rep" ] );
-      return this.bgConn.runReport(pa);
+
+      var resp = this.bgConn.runReport(pa);
+      return this.checkResponse( resp, 'summary_list', 'summary' );
    },
    
    retrieveExitSurvey: function( lsid, survey_type ) {
@@ -158,31 +174,8 @@ BomgarAPI.prototype = {
       pa.push( [ "report_type", "rep" ] );
       pa.push( [ "id", "all" ] );
       
-      var esl = this.bgConn.runReport(pa);
-      var root = this.bgConn.getResponseRootName();
-      
-      if ( root == 'exit_survey_list' ) {
-         if ( esl.exit_survey ) {
-            // All's well, return the survey object(s)
-            return esl.exit_survey;
-         } else if ( esl.error ) {
-            // Record the returned error
-            this.errorMessage = esl.error.toString();
-            return null;
-         } else {
-            // No error, but no sessions either
-            this.errorMessage = "No exit surveys found";
-            return null;
-         }
-         
-      } else {
-         // We should never get here
-         this.errorMessage = "Unknown XML root element [" + root + "]";
-         msg += "\n" + this.errorMessage;
-         this.log.logError(msg);
-         return null;
-      }
-      
+      var resp = this.bgConn.runReport(pa);
+      return this.checkResponse( resp, 'exit_survey_list', 'exit_survey' );
    },
    
    retrieveSession: function( lsid ) {
@@ -191,29 +184,56 @@ BomgarAPI.prototype = {
       var pa = [];  // Param array
       pa.push( [ "generate_report", "SupportSession" ] );
       pa.push( [ "lsid", lsid ] );
-      var sl = this.bgConn.runReport(pa);
+
+      var resp = this.bgConn.runReport(pa);
+      return this.checkResponse( resp, 'session_list', 'session' );
+   },
+   
+   checkResponse: function( resp, valid_root, valid_child ) {
+
+      var msg = "";
       
+      // Get XML root element
       var root = this.bgConn.getResponseRootName();
       
-      if ( root == 'session_list' ) {
-         if ( sl.session ) {
-            // All's well, return the session object
-            return sl.session;
-         } else if ( sl.error ) {
-            // Record the returned error
-            this.errorMessage = sl.error.toString();
+      // Check XML root for success first
+      if ( root == valid_root ) {
+         if ( !valid_child ) {
+            // No child element expected, return entire response
+            return resp;
+         } else if ( !resp ) {
+            // The root element is empty
+            msg = "Received empty response from Bomgar Appliance";
+            msg += "\nXML root element [" + root + "] is empty";
+            this.errorMessage = msg;
+            return null;
+         } else if ( resp[valid_child] ) {
+            // Expected child element was found, return the child element
+            return resp[valid_child];
+         } else if ( resp.error ) {
+            // The child element is an error element
+            msg = "Received error response from Bomgar Appliance";
+            msg += "\nError: [" + resp + "]";
+            this.errorMessage = msg;
             return null;
          } else {
-            // No error, but no sessions either
-            this.errorMessage = "No sessions found";
+            msg = "Unexpected response from Bomgar Appliance";
+            msg += "\nXML root: [" + root + "]";
+            msg += "\nResponse: [" + resp + "]";
+            this.errorMessage = msg;
             return null;
          }
-         
+      } else if ( root == 'error' ) {
+         msg = "Received error response from Bomgar Appliance";
+         msg += "\nError: [" + resp + "]";
+         this.errorMessage = msg;
+         return null;
       } else {
-         // We should never get here
-         this.errorMessage = "Unknown XML root element [" + root + "]";
-         msg += "\n" + this.errorMessage;
-         this.log.logError(msg);
+         msg = "Unexpected response from Bomgar Appliance";
+         msg += "\nXML root: [" + root + "]";
+         msg += "\nResponse: [" + resp + "]";
+         msg += "\n" + this.bgConn.errorMessage;
+         this.errorMessage = msg;
          return null;
       }
       
@@ -612,6 +632,7 @@ BomgarAPI.prototype = {
          return gr;
       } else {
          this.errorMessage = "Failed to find session with lsid [" + lsid + "]";
+         this.grSession = null;
          return null;
       }
       
@@ -675,16 +696,17 @@ BomgarAPI.prototype = {
          gr.addNullQuery('u_session'); // System Actors have no session
          gr.addQuery('u_display_name',actor_name);
          gr.query();
-         msg += "\nFound matching " + gr.getRowCount() + " System Actors";
+         msg += "\nFound " + gr.getRowCount() + " matching System Actors";
          if (gr.next()) {
             this.systemActors[actor_name] = gr.sys_id.toString();
             msg += "\nMatching SysID: ["+gr.sys_id.toString()+"] ["+this.systemActors[actor_name]+"]";
             this.log.logDebug(msg);
             return this.systemActors[actor_name];
          } else {
-            this.log.logDebug(msg);
             this.errorMessage = "System Actor [" + actor_gsno + ","  + actor_name + 
                                 ","  + actor_type + "] was not found";
+            msg += "\n" + this.errorMessage;
+            this.log.logDebug(msg);
             return null;
          }
       } else {
