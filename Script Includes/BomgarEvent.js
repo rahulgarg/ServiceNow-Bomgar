@@ -101,7 +101,10 @@ BomgarEvent.prototype = {
    
    process_event: function() {
       
-      var bg, survey;
+      var bg, session, survey;
+      
+      // Exit immediately if no BomgarAPI object is present
+      // That object is created by a successful call to validate_params
       if (this.bomgarAPI) {
          bg = this.bomgarAPI;
       } else {
@@ -121,14 +124,16 @@ BomgarEvent.prototype = {
          var run_at = new GlideDateTime();
          run_at.addSeconds(30);
          
-         // Get the Session record
-         this.bomgarSession = bg.createSession( this.lsid, this.ext_key );
-         if ( this.bomgarSession ) {
-            msg += "\nBomgar Session created and update event scheduled.";
-            gs.eventQueueScheduled('bomgar.session.start', this.bomgarSession, 
+         // Create the Session record
+         session = bg.createSession( this.lsid, this.ext_key );
+         if ( session ) {
+            msg += "\nBomgar Session found and update event scheduled.";
+            gs.eventQueueScheduled('bomgar.session.start', session, 
                               this.appliance_id, this.lsid, run_at);
+            this.log.logNotice(msg);
          } else {
-            msg += "Failed to create Bomgar Session record";
+            msg += "\nFailed to create Bomgar Session record";
+            msg += "\n" + bg.getErrorMessage();
             this.errorMessage = msg;
             this.log.logError(msg);
             return null;
@@ -138,30 +143,54 @@ BomgarEvent.prototype = {
        case 'support_conference_end' :
          
          // Collect Session and Event data from Bomgar
-         var session = bg.retrieveSession(this.lsid);
+         session = bg.retrieveSession(this.lsid);
          if (!session) {
-            msg += "\nFailed to obtain details of session [" + this.lsid + "]";
-            msg += "\n" + bg.errorMessage;
+            msg += "\nFailed to obtain details of session";
+            msg += "\n" + bg.getErrorMessage();
             this.errorMessage = msg;
             this.log.logError(msg);
             return null;
          }
-         bg.saveSession(session);
-         msg += "\nSaved Session : [" + bg.getSessionName() + "]";
+         if ( bg.saveSession(session) ) {
+            msg += "\nSaved Completed Session : [" + bg.getSessionName() + "]";
+            this.log.logNotice(msg);
+         } else {
+            msg += "\nFailed to save details of session [" + bg.getSessionName() + "]";
+            msg += "\n" + bg.getErrorMessage();
+            this.errorMessage = msg;
+            this.log.logError(msg);
+            return null;
+         }
+            
          break;
 
        case 'support_conference_member_added' :
        case 'support_conference_member_departed' :
        case 'support_conference_owner_changed' :
          // Do nothing?
+         msg += "\nThe event type is not processed by this integration";
          break;
 
        case 'support_conference_rep_exit_survey_completed' :
 
          // Retrieve survey from Bomgar
          survey = bg.retrieveExitSurvey( this.lsid, 'rep' );
-         if ( survey ) {
-            bg.saveExitSurvey( survey );
+         if (!survey) {
+            msg += "\nFailed to obtain details of survey";
+            msg += "\n" + bg.getErrorMessage();
+            this.errorMessage = msg;
+            this.log.logError(msg);
+            return null;
+         }
+         if ( bg.saveExitSurvey( survey ) ) {
+            msg += "\nSaved Rep Exit Survey.";
+            this.log.logInfo(msg);
+         } else {
+            msg += "\nFailed to save details of survey";
+            msg += "\n" + bg.getErrorMessage();
+            this.errorMessage = msg;
+            this.log.logError(msg);
+            return null;
          }
          break;
          
@@ -169,19 +198,32 @@ BomgarEvent.prototype = {
 
          // Retrieve survey from Bomgar
          survey = bg.retrieveExitSurvey( this.lsid, 'cust' );
-         if ( survey ) {
-            bg.saveExitSurvey( survey );
+         if (!survey) {
+            msg += "\nFailed to obtain details of survey";
+            msg += "\n" + bg.getErrorMessage();
+            this.errorMessage = msg;
+            this.log.logError(msg);
+            return null;
+         }
+         if ( bg.saveExitSurvey( survey ) ) {
+            msg += "\nSaved Customer Exit Survey.";
+            this.log.logInfo(msg);
+         } else {
+            msg += "\nFailed to save details of survey";
+            msg += "\n" + bg.getErrorMessage();
+            this.errorMessage = msg;
+            this.log.logError(msg);
+            return null;
          }
          break;
          
        default:
-         msg += "\nUnknown event type : [" + this.event + "]";
+         msg += "\nUnknown event type.";
          this.errorMessage = msg;
          this.log.logError(msg);
          return null;
       }
-      
-      this.log.logInfo(msg);
+
       return msg;
       
    },
