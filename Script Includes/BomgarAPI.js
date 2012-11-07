@@ -335,7 +335,7 @@ BomgarAPI.prototype = {
 
       this.log.logDebug('saveSession - For ' + pri_cust_name + ' by ' + pri_rep_name );
       
-      var s_id = gr.update();
+      var session_id = gr.update();
 
       this.log.logDebug('saveSession - ' + s_id );
      
@@ -347,7 +347,15 @@ BomgarAPI.prototype = {
          }
       }
       
-      return 'ok';
+      // Pre-create Session Surveys, if absent
+      if ( session.cust_survey_list && session.cust_survey_list.cust_exit_survey ) {
+         this.findSurveyId( session.cust_survey_list.cust_exit_survey, 'cust' );
+      }
+      if ( session.rep_survey_list && session.rep_survey_list.rep_exit_survey ) {
+         this.findSurveyId( session.rep_survey_list.rep_exit_survey, 'rep' );
+      }
+      
+      return session_id;
       
    },
    
@@ -401,7 +409,7 @@ BomgarAPI.prototype = {
       this.log.logDebug("saveSessionCust - " + actor_key + " - " + cust_id );
      
       this.sessionActors[actor_key] = cust_id;
-      return gr;
+      return cust_id;
       
    },
    
@@ -453,7 +461,7 @@ BomgarAPI.prototype = {
       this.log.logDebug("saveSessionRep - " + actor_key + " - " + session_rep_id );
 
       this.sessionActors[actor_key] = session_rep_id;
-      return gr;
+      return session_rep_id;
       
    },
    
@@ -530,7 +538,8 @@ BomgarAPI.prototype = {
       gr.u_details = qna;
 
       // ( Call to update will act as insert, if rec does not exist )
-      gr.update();
+      var survey_id = gr.update();
+      return survey_id;
       
    },
    
@@ -573,7 +582,8 @@ BomgarAPI.prototype = {
       }
       
       // ( Call to update will act as insert, if rec does not exist )
-      gr.update();
+      var event_id = gr.update();
+      return event_id;
       
    },
    
@@ -617,12 +627,14 @@ BomgarAPI.prototype = {
       gr.u_name = team.name;
 
       // ( Call to update will act as insert, if rec does not exist )
-      gr.update();
+      var team_sys_id = gr.update();
       
       // Add members
       
       // Add issues
-      
+
+      return team_sys_id;
+            
    },
    
    //----------------------------------------------------------------------------
@@ -839,6 +851,48 @@ BomgarAPI.prototype = {
       }
       
       return rep_sys_id;
+      
+   },
+   
+   //-------------------------------------------------------
+   findSurveyId: function( survey, survey_type ) {
+   //-------------------------------------------------------
+
+      // Returns the sys_id of the Bomgar Survey record
+
+      // This routine will create a skeleton Exit Survey
+      // record if one is not found.
+
+      var gsno = survey['@gsnumber'];
+      if ( !survey || !gsno ) { return null; }
+
+      var session_id = this.grSession.sys_id.toString();
+      var survey_id, gr;
+      
+      // Find the Actor record
+      gr = new GlideRecord('u_tu_bg_exit_survey');
+      gr.addQuery('u_session',session_id);
+      gr.addQuery('u_gsnumber',gsno);
+      gr.query();
+      
+      if ( gr.next() ) {
+         // Survey found, record sys_id
+         survey_id = gr.sys_id.toString();
+      } else {
+         // Record not found, so let's create one
+         gr.initialise();
+         gr.u_session = session_id;
+         gr.u_gsnumber = gsno;
+         gr.u_survey_type = survey_type;
+         gr.u_submitted_by = this.findActorId( survey );
+
+         survey_id = gr.insert();
+         
+         this.log.logInfo("Created new Bomgar Survey\n" + 
+                             survey_type + " (" + gsno + ")" );
+      }
+      
+      return survey_id;
       
    },
    
