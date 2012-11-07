@@ -25,8 +25,7 @@ BomgarAPI.prototype = {
       this.grAppliance = app;
       this.appliance_id = app.sys_id.toString();
       this.bgConn = new BomgarConnection(app);
-      this.sessionActors = [];
-      this.systemActors = {};
+      this.sessionActors = {};   // Object used to cache Actor sys_ids
       
    },
    
@@ -34,7 +33,9 @@ BomgarAPI.prototype = {
    // The following functions return information about the state of this object.
    //----------------------------------------------------------------------------
    //
+   //-------------------------------------------------------
    getSessionName: function() {
+   //-------------------------------------------------------
       if (this.grSession) {
          return this.grSession.u_display_name.toString();
       } else {
@@ -42,11 +43,15 @@ BomgarAPI.prototype = {
       }
    },
    
+   //-------------------------------------------------------
    getErrorMessage: function() {
+   //-------------------------------------------------------
       return this.errorMessage;
    },
    
+   //-------------------------------------------------------
    reloadSessions: function() {
+   //-------------------------------------------------------
       
       var i, msg = "getSessions";
       var sl = this.getSessionList();
@@ -70,7 +75,9 @@ BomgarAPI.prototype = {
       
    },
    
+   //-------------------------------------------------------
    getGlideDateTime: function(item) {
+   //-------------------------------------------------------
       
       var ts = "";
       
@@ -101,7 +108,9 @@ BomgarAPI.prototype = {
    // structure of the XML document returned by the Bomgar API.
    //----------------------------------------------------------------------------
    //
+   //-------------------------------------------------------
    generateSessionKey: function(task_no) {
+   //-------------------------------------------------------
       var pa = [];  // Param array
       pa.push( [ "action", "generate_session_key" ] );
       pa.push( [ "type", "support" ] );
@@ -112,7 +121,9 @@ BomgarAPI.prototype = {
       return this.checkResponse( resp, 'session_key' );
    },
 
+   //-------------------------------------------------------
    retrieveApiInfo: function() {
+   //-------------------------------------------------------
       var pa = [];  // Param array
       pa.push( [ "action", "get_api_info" ] );
 
@@ -120,7 +131,9 @@ BomgarAPI.prototype = {
       return this.checkResponse( resp, 'api_information' );
    },
    
+   //-------------------------------------------------------
    retrieveLoggedInReps: function() {
+   //-------------------------------------------------------
       var pa = [];  // Param array
       pa.push( [ "action", "get_logged_in_reps" ] );
 
@@ -128,7 +141,9 @@ BomgarAPI.prototype = {
       return this.checkResponse( resp, 'logged_in_reps', 'rep' );
    },
    
+   //-------------------------------------------------------
    retrieveSupportTeams: function( showmembers ) {
+   //-------------------------------------------------------
       var pa = [];  // Param array
       pa.push( [ "action", "get_support_teams" ] );
       if (showmembers) {
@@ -139,7 +154,9 @@ BomgarAPI.prototype = {
       return this.checkResponse( resp, 'support_teams', 'support_team' );
    },
    
+   //-------------------------------------------------------
    retrieveSessionList: function() {
+   //-------------------------------------------------------
       var pa = [];  // Param array
       pa.push( [ "generate_report", "SupportSessionListing" ] );
 
@@ -147,7 +164,9 @@ BomgarAPI.prototype = {
       return this.checkResponse( resp, 'session_summary_list', 'session_summary' );
    },
    
+   //-------------------------------------------------------
    retrieveSessionSummary: function() {
+   //-------------------------------------------------------
       var pa = [];  // Param array
       pa.push( [ "generate_report", "SupportSessionSummary" ] );
       pa.push( [ "report_type", "rep" ] );
@@ -156,7 +175,9 @@ BomgarAPI.prototype = {
       return this.checkResponse( resp, 'summary_list', 'summary' );
    },
    
+   //-------------------------------------------------------
    retrieveExitSurvey: function( lsid, survey_type ) {
+   //-------------------------------------------------------
       
       // Get session end_time
       this.findSession(lsid);
@@ -178,7 +199,9 @@ BomgarAPI.prototype = {
       return this.checkResponse( resp, 'exit_survey_list', 'exit_survey' );
    },
    
+   //-------------------------------------------------------
    retrieveSession: function( lsid ) {
+   //-------------------------------------------------------
       
       var msg = "retrieveSession( " + lsid + " )";
       var pa = [];  // Param array
@@ -189,7 +212,9 @@ BomgarAPI.prototype = {
       return this.checkResponse( resp, 'session_list', 'session' );
    },
    
+   //-------------------------------------------------------
    checkResponse: function( resp, valid_root, valid_child ) {
+   //-------------------------------------------------------
 
       var msg = "";
       
@@ -249,7 +274,9 @@ BomgarAPI.prototype = {
    // record is found.
    //----------------------------------------------------------------------------
    //
+   //-------------------------------------------------------
    saveSession: function( session ) {
+   //-------------------------------------------------------
       
       // session:  /session_list/session
       
@@ -274,8 +301,8 @@ BomgarAPI.prototype = {
       gr.u_public_site_id = session.public_site["@id"];
       gr.u_public_site_name = session.public_site["#text"];
       
-      // A temporary lookup table to map gsnumber to sys_id
-      this.sessionActors = [];
+      // A temporary lookup object to map gsnumber to sys_id
+      this.sessionActors = {};
       
       // Save Customer (there is only ever one Customer)
       if ( session.customer_list ) {
@@ -293,34 +320,25 @@ BomgarAPI.prototype = {
          }
       }
       
-      // Update primary actors and compose name
+      // Compose name from primary actors
+      var pri_cust_name = 'NoCustomer';
       var pri_cust = session.primary_customer;
-      var pri_cust_name, pri_cust_no;
       if ( pri_cust && pri_cust['#text'] ) {
          pri_cust_name = pri_cust['#text'];
-         pri_cust_no = pri_cust['@gsnumber'];
-      } else {
-         pri_cust = 'no_customer';
       }
+      var pri_rep_name = 'NoRep';
       var pri_rep = session.primary_rep;
-      var pri_rep_name, pri_rep_no;
       if ( pri_rep && pri_rep['#text'] ) {
          pri_rep_name = pri_rep['#text'];
-         pri_rep_no = pri_rep['@gsnumber'];
-      } else {
-         pri_rep = 'no_rep';
-      }
-      
-      if (pri_cust_no) {
-         gr.u_primary_customer = this.sessionActors[ pri_cust_no ];
-      }
-      if (pri_rep_no) {
-         gr.u_primary_rep = this.sessionActors[ pri_rep_no ];
       }
       gr.u_display_name = 'For ' + pri_cust_name + ' by ' + pri_rep_name;
+
+      this.log.logDebug('saveSession - For ' + pri_cust_name + ' by ' + pri_rep_name );
       
-      gr.update();
-      
+      var s_id = gr.update();
+
+      this.log.logDebug('saveSession - ' + s_id );
+     
       // Save Session Events
       if ( session.session_details && session.session_details.event ) {
          var events = this.ensureArray( session.session_details.event );
@@ -329,9 +347,13 @@ BomgarAPI.prototype = {
          }
       }
       
+      return 'ok';
+      
    },
    
+   //-------------------------------------------------------
    saveSessionCust: function( cust ) {
+   //-------------------------------------------------------
       
       // cust:  /session_list/session/customer_list/customer
       
@@ -352,6 +374,7 @@ BomgarAPI.prototype = {
          gr.u_gsnumber = gsno;
       }
       
+      gr.u_actor_type = 'customer';
       gr.u_primary_actor = cust.primary_cust;
       
       // Session details
@@ -372,11 +395,19 @@ BomgarAPI.prototype = {
       
       // ( Call to update will act as insert, if rec does not exist )
       var cust_id = gr.update();
-      this.sessionActors[gsno] = cust_id;
+
+      // Cache sys_id for future lookup
+      var actor_key = 'gs' + gsno;
+      this.log.logDebug("saveSessionCust - " + actor_key + " - " + cust_id );
+     
+      this.sessionActors[actor_key] = cust_id;
+      return gr;
       
    },
    
+   //-------------------------------------------------------
    saveSessionRep: function( rep ) {
+   //-------------------------------------------------------
       
       // rep:  /session_list/session/rep_list/representative
       
@@ -384,7 +415,7 @@ BomgarAPI.prototype = {
       var gsno = rep['@gsnumber'];
       if ( !gsno ) { return null; }
          
-      var rep_id = this.findBomgarRepId(rep);
+      var rep_id = this.findRepId(rep);
       
       var gr = new GlideRecord('u_tu_bg_session_rep');
       gr.addQuery('u_rep',rep_id);
@@ -400,6 +431,7 @@ BomgarAPI.prototype = {
          gr.u_gsnumber = gsno;
       }
       
+      gr.u_actor_type = 'representative';
       gr.u_primary_actor = rep.primary_rep;
       
       // Session details
@@ -415,11 +447,19 @@ BomgarAPI.prototype = {
       
       // ( Call to update will act as insert, if rec does not exist )
       var session_rep_id  = gr.update();
-      this.sessionActors[gsno] = session_rep_id;
+
+      // Cache sys_id for future lookup
+      var actor_key = 'gs' + gsno;
+      this.log.logDebug("saveSessionRep - " + actor_key + " - " + session_rep_id );
+
+      this.sessionActors[actor_key] = session_rep_id;
+      return gr;
       
    },
    
+   //-------------------------------------------------------
    saveExitSurvey: function( survey ) {
+   //-------------------------------------------------------
       
       // survey : /exit_survey_list/exit_survey
       
@@ -452,9 +492,9 @@ BomgarAPI.prototype = {
       gr.u_survey_type = survey_type;
       gr.u_survey_time = this.getGlideDateTime(survey);
       if ( survey_type == 'rep' ) {
-         gr.u_submitted_by = this.findSessionActorId(survey.primary_rep);
+         gr.u_submitted_by = this.findActorId(survey.primary_rep);
       } else {
-         gr.u_submitted_by = this.findSessionActorId(survey.primary_customer);
+         gr.u_submitted_by = this.findActorId(survey.primary_customer);
       }
       
       // Ensure that we have an array
@@ -494,7 +534,9 @@ BomgarAPI.prototype = {
       
    },
    
+   //-------------------------------------------------------
    saveSessionEvent: function( se, seq ) {
+   //-------------------------------------------------------
       
       var i, gsno;
       var session_id = this.grSession.sys_id.toString();
@@ -513,8 +555,8 @@ BomgarAPI.prototype = {
       gr.u_event_type = se["@event_type"];
       gr.u_event_time = this.getGlideDateTime( se["@timestamp"] );
       
-      gr.u_destination = this.findSessionActorId(se.destination);
-      gr.u_performed_by = this.findSessionActorId(se.performed_by);
+      gr.u_destination = this.findActorId( se.destination );
+      gr.u_performed_by = this.findActorId( se.performed_by );
       
       // Both body and data elements are saved to the u_data field
       var body = se.body;
@@ -535,7 +577,9 @@ BomgarAPI.prototype = {
       
    },
    
+   //-------------------------------------------------------
    saveSupportTeams: function( teams ) {
+   //-------------------------------------------------------
 
       //  /support_teams
      
@@ -549,7 +593,9 @@ BomgarAPI.prototype = {
 
    },
    
+   //-------------------------------------------------------
    saveSupportTeam: function( team ) {
+   //-------------------------------------------------------
       
       //  /support_teams/support_team
       
@@ -583,7 +629,9 @@ BomgarAPI.prototype = {
    // The following functions deal with finding and creating Bomgar records
    //----------------------------------------------------------------------------
    //
+   //-------------------------------------------------------
    createSession: function( lsid, task_no ) {
+   //-------------------------------------------------------
       // Returns a GlideRecord object for the created Bomgar Session
 
       var msg = "createSession";
@@ -618,7 +666,9 @@ BomgarAPI.prototype = {
       
    },
    
+   //-------------------------------------------------------
    findSession: function( lsid ) {
+   //-------------------------------------------------------
       // Returns a GlideRecord object for the Session
       
       var gr = new GlideRecord('u_tu_bg_session');
@@ -631,97 +681,140 @@ BomgarAPI.prototype = {
          this.grSession = gr;
          return gr;
       } else {
-         this.errorMessage = "Failed to find session with lsid [" + lsid + "]";
+         this.log.logWarning( "Session not found, lsid: [" + lsid + "]" );
          this.grSession = null;
          return null;
       }
       
    },
    
-   findSessionActorId: function( obj ) {
+   //-------------------------------------------------------
+   findActorId: function( item ) {
+   //-------------------------------------------------------
       // Returns the sys_id of the Bomgar Actor record
+
+      // item:  //event/destination or //event/performed_by
       
       // This routine finds (and caches) sys_ids of Actors
-      // for the current Session. It does not create records
-      // if the Actor is not found.
-      
-      // Return immediately if object is not valid
-      if (!obj) { return null; }
-         
-      var msg = "findSessionActorId";
+      // for the current Session. It will create System Actor
+      // records, if they do not exist, but it will not create
+      // Customers or Reps.
+
+      // We can get called for non-existant elements, so protect 
+      // ourselves from that.
+      if ( !item ) { return null; }
+
+      var msg = "findActorId";
       
       // Extract expected information from object
-      var actor_name = obj['#text'];
-      var actor_type = obj['@type'];
-      var actor_gsno = obj['@gsnumber'];
-      var actor_id, gr;
+      var actor_name = item['#text'];
+      var actor_type = item['@type'];
+      var actor_gsno = item['@gsnumber'];
+      var actor_id, actor_key;
+
+      msg += "\n " + actor_gsno + " : " + actor_type + " : " + actor_name;
       
-      msg += "\nName:["+actor_name+"], type:["+actor_type+"], GSno:["+actor_gsno+"]";
-      
-      // Return cached value, if present
-      if ( actor_gsno && this.sessionActors[actor_gsno] ) {
-         msg += "\nMatching Session Actor found in cache";
-         this.log.logDebug(msg);
-         return this.sessionActors[actor_gsno];
-      }
-      if ( actor_name && this.systemActors[actor_name] ) {
-         msg += "\nMatching System Actor found in cache";
-         this.log.logDebug(msg);
-         return this.systemActors[actor_name];
-      }
-      
-      if ( actor_gsno && actor_gsno != "0" ) {
-         msg += "\nLookup Session Actor";
-         this.log.logDebug(msg);
-         // Find the Actor record
-         var session_id = this.grSession.sys_id.toString();
-         gr = new GlideRecord('u_tu_bg_session_actor');
-         gr.addQuery('u_session',session_id);
-         gr.addQuery('u_gsnumber',actor_gsno);
-         gr.query();
-         if (gr.next()) {
-            this.sessionActors[actor_gsno] = gr.sys_id.toString();
-            return this.sessionActors[actor_gsno];
-         } else {
-            this.errorMessage = "Session Actor [" + actor_gsno + ","  + actor_name + 
-                                ","  + actor_type + "] was not found";
-            return null;
-         }
-         
-      } else if ( actor_name ) {
-         msg += "\nLookup System Actor";
-         // This must be a Session actor, with gsno of zero
-         // Lookup this type of Actor by name
-         gr = new GlideRecord('u_tu_bg_session_actor');
-         gr.addNullQuery('u_session'); // System Actors have no session
-         gr.addQuery('u_display_name',actor_name);
-         gr.query();
-         msg += "\nFound " + gr.getRowCount() + " matching System Actors";
-         if (gr.next()) {
-            this.systemActors[actor_name] = gr.sys_id.toString();
-            msg += "\nMatching SysID: ["+gr.sys_id.toString()+"] ["+this.systemActors[actor_name]+"]";
-            this.log.logDebug(msg);
-            return this.systemActors[actor_name];
-         } else {
-            this.errorMessage = "System Actor [" + actor_gsno + ","  + actor_name + 
-                                ","  + actor_type + "] was not found";
-            msg += "\n" + this.errorMessage;
-            this.log.logDebug(msg);
-            return null;
+      if ( actor_gsno != "0" ) {
+         // This is a Customer or Rep lookup
+         actor_key = 'gs' + actor_gsno;
+         msg += "\nActor Key: " + actor_key;
+         actor_id = this.sessionActors[actor_key];
+         if ( !actor_id ) {
+            msg += "\nCust or Rep: not found in cache" 
+            actor_id = this.findSessionActorId( actor_gsno );
          }
       } else {
-         this.errorMessage = "Actor [" + actor_gsno + ","  + actor_name + 
-                             ","  + actor_type + "] was not found";
-         return null;
+         // This is a System Actor lookup
+         actor_key = actor_type + "_" + actor_name;
+         msg += "\nActor Key: " + actor_key;
+         actor_id = this.sessionActors[actor_key];
+         if ( !actor_id ) {
+            msg += "\nSystem: not found in cache" 
+            actor_id = this.findSystemActorId( actor_type, actor_name );
+         }
       }
+
+      msg += "\nActor Id: " + actor_id;
+      this.log.logDebug(msg);
+      
+      return actor_id;
+   },
+      
+   //-------------------------------------------------------
+   findSessionActorId: function( actor_gsno ) {
+   //-------------------------------------------------------
+
+      // This routine finds a Bomgar Session Actor record 
+      // and caches the resulting sys_id for future lookups.
+      // It does not create a record if the Actor is not found.
+      
+      var session_id = this.grSession.sys_id.toString();
+      var actor_id, gr;
+      
+      // Find the Actor record
+      gr = new GlideRecord('u_tu_bg_session_actor');
+      gr.addQuery('u_session',session_id);
+      gr.addQuery('u_gsnumber',actor_gsno);
+      gr.query();
+      
+      if ( gr.next() ) {
+         actor_id = gr.sys_id.toString();
+      } else {
+         this.log.logWarning( "Session Actor not found, gsnumber: [" + actor_gsno + "]" );
+         actor_id = null;
+      }
+      
+      // Cache and return the id
+      this.sessionActors['gs'+actor_gsno] = actor_id;
+      return actor_id;
+
+   },
+   
+   //-------------------------------------------------------
+   findSystemActorId: function( actor_type, actor_name ) {
+   //-------------------------------------------------------
+
+      // This routine finds or creates a Bomgar System Actor record 
+      // and caches the resulting sys_id for future lookups
+      
+      // Build key from data
+      var actor_key = actor_type + '_' + actor_name;
+      var actor_id;
+         
+      var gr = new GlideRecord('u_tu_bg_system_actor');
+      gr.addQuery('u_appliance',this.appliance_id);
+      gr.addQuery('u_actor_type', actor_type);
+      gr.addQuery('u_display_name', actor_name);
+      gr.query();
+      
+      if ( gr.next() ) {
+         actor_id = gr.sys_id.toString();
+      } else {
+         // Create a new System Actor
+         gr.initialise();
+         gr.u_appliance = this.appliance_id;
+         gr.u_actor_type = actor_type;
+         gr.u_display_name = actor_name;
+         gr.u_gsnumber = '0';
+         actor_id = gr.insert();
+
+         this.log.logNotice("Created new Bomgar System Actor:\n" + 
+                            actor_name + " (" + actor_type + ")" );
+
+      }
+      
+      // Cache and return the id
+      this.sessionActors[actor_key] = actor_id;
+      return actor_id;
       
    },
    
-   findBomgarRepId: function( rep ) {
+   //-------------------------------------------------------
+   findRepId: function( rep ) {
+   //-------------------------------------------------------
       // Returns the sys_id of the Bomgar Rep record
 
-      var i, newrec = false;
-      var rep_id = rep['@id'];
+      var rep_sys_id, rep_id = rep['@id'];
       if (!rep_id) { return null; }
 
       var gr = new GlideRecord('u_tu_bg_rep');
@@ -730,25 +823,28 @@ BomgarAPI.prototype = {
       gr.query();
       
       if ( gr.next() ) {
-         // Rep found, return sys_id
-         return gr.sys_id.toString();
+         // Rep found, record sys_id
+         rep_sys_id = gr.sys_id.toString();
+      } else {
+         // Record not found, so let's create one
+         gr.initialise();
+         gr.u_appliance = this.appliance_id;
+         gr.u_rep_id = rep_id;
+         gr.u_name = rep.display_name;
+         gr.u_username = rep.username;
+         rep_sys_id = gr.insert();
+         
+         this.log.logNotice("Created new Bomgar Rep\n" + 
+                             rep.display_name + " (" + rep.username + ")" );
       }
       
-      // Record not found, so let's create one
-      gr.initialise();
-      gr.u_appliance = this.appliance_id;
-      gr.u_rep_id = rep_id;
-      gr.u_name = rep.display_name;
-      gr.u_username = rep.username;
-      
-      this.log.logNotice("Created new Bomgar Rep: " + 
-                          rep.display_name + " (" + rep.username + ")" );
-      
-      return gr.insert();
+      return rep_sys_id;
       
    },
    
+   //-------------------------------------------------------
    findTaskId: function( task_no ) {
+   //-------------------------------------------------------
       // Returns the sys_id of the task record
 
       var task_id, msg = "findTaskId";
@@ -760,11 +856,9 @@ BomgarAPI.prototype = {
 
       if ( gr.next() ) {
          // Task found, return sys_id
-         this.log.logDebug("\nTask found.");
          return gr.sys_id.toString();
       } else {
-         this.errorMessage = "Failed to find task number [" + task_no + "]";
-         this.log.logDebug("\nTask NOT found.");
+         this.log.logWarning( "Task not found, task number: [" + task_no + "]" );
          return null;
       }
    },
@@ -773,6 +867,7 @@ BomgarAPI.prototype = {
    // The following utility functions assist the main functions above.
    //----------------------------------------------------------------------------
    //
+   //-------------------------------------------------------
    ensureArray: function( item ) {
       // Sequences of XML elements of the same type are converted into JavaScript
       // Arrays with each element being an instance of the element object. However,
@@ -795,6 +890,7 @@ BomgarAPI.prototype = {
       
    },
    
+   //-------------------------------------------------------
    _is_array: function(v) {
       return Object.prototype.toString.apply(v) === '[object Array]';
    },
