@@ -115,6 +115,7 @@ BomgarAPI.prototype = {
       pa.push( [ "action", "generate_session_key" ] );
       pa.push( [ "type", "support" ] );
       pa.push( [ "queue_id", "general" ] );
+      pa.push( [ "ttl", "1800" ] );
       pa.push( [ "external_key", task_no ] );
 
       var resp = this.bgConn.sendCommand(pa);
@@ -500,7 +501,14 @@ BomgarAPI.prototype = {
       gr.u_survey_type = survey_type;
       gr.u_survey_time = this.getGlideDateTime(survey);
       if ( survey_type == 'rep' ) {
-         gr.u_submitted_by = this.findActorId(survey.primary_rep);
+         // The Session Rep may not have been created when the 
+         // RepExitSurvey event arrives, so attempt to create it
+         var reps = this.ensureArray( survey.rep_list.representative );
+         if ( reps && reps[0] ) {
+            gr.u_submitted_by = this.saveSessionRep(reps[0]);
+         } else {
+            gr.u_submitted_by = this.findActorId(survey.primary_rep);
+         }
       } else {
          gr.u_submitted_by = this.findActorId(survey.primary_customer);
       }
@@ -598,11 +606,11 @@ BomgarAPI.prototype = {
          var support_teams = this.ensureArray(teams);
          for ( i=0; i<support_teams.length; i++ ) {
             if ( this.saveSupportTeam( support_teams[i] ) ) {
-			   n++;
-			}
+            n++;
+         }
          }
       }
-	  return n;
+     return n;
 
    },
    
