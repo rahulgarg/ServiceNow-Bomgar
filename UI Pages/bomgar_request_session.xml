@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+<g:evaluate>
+var hostname = gs.getProperty( 'tu.bomgar.hostname', 'teamultra.bomgar.com' );
+ var url = 'https://' + hostname + '/api/start_session.ns';
+
+
+</g:evaluate>
+
+<br/>
+<div class="contentBox" id="sessionKeyBox">
+
+<table style="padding-left:2px" class="wide" cellspacing="0">
+<tr class="header">
+  <td class="column_head" align="left">Bomgar Session request - Session Key</td>
+</tr>
+</table>
+
+<p>You can use this form to initiate a Bomgar session when you have been given a Session key from a Support Representative.</p>
+<br/>
+
+<div>
+<form action="${url}" method="post">
+
+<table>
+<tr>
+<td title="Please enter the Bomgar Session Key" data-type="label" noWrap="true" class="label label_spacing">
+    <span id="status.session.key" class=" label_description" title="" mandatory="false" oclass=""></span>
+    <label id="access_key_pretty:label" for="access_key_pretty" class="accessible">Session key:</label>
+  </td>
+  <td class="input_controls">
+    <input type="text" name="short_key" id="short_key" value="" size="12" maxlength="24" autocomplete="off" />
+  </td>
+</tr>
+
+<tr>
+  <td/>
+  <td>
+    <button type="submit">Submit Session Key</button>
+  </td>
+</tr>
+</table>
+
+
+</form>
+
+</div>
+</div>
+
+</j:jelly>

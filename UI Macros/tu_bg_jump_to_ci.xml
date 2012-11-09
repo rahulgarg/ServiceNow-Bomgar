@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:evaluate var="jvar_guid" expression="gs.generateGUID(this);" />
+<j:set var="jvar_n" value="tu_bg_jump_${jvar_guid}:${ref}"/>
+<g:reference_decoration id="${jvar_n}" field="${ref}" 
+  onclick="tubgJump('${ref}'); "
+  title="${gs.getMessage('Bomgar Jump')}" image="bomgar_small.pngx"/>
+
+<script>
+// show related list 
+// todo: should be part of the PopupWindow class
+// todo: needs new stack name
+function tubgJump(reference) {
+
+  var s = reference.split('.');
+  var tableName = s[0];
+  var referenceField = s[1];
+  var fieldElement = 'sys_display.' + tableName + '.' + referenceField; 
+
+  var task_no = g_form.getValue('number');
+  var cmdb_ci = gel(fieldElement).value;
+
+  var amp = '&amp;amp;', url;
+
+  url = 'https://teamultra.bomgar.com/api/client_script.ns?';
+  url += 'type=rep';
+  url += amp + 'operation=generate';
+  url += amp + 'action=start_pinned_client_session';
+  url += amp + 'search_string=' + cmdb_ci;
+  url += amp + 'session.custom.external_key=' + task_no;
+
+  var w = getTopWindow(); 
+  w.popupOpenFocus(url, 'related_list',  950, 700, '', false, false); 
+
+}
+
+</script>
+</j:jelly> 
