@@ -337,7 +337,7 @@ BomgarAPI.prototype = {
       
       var session_id = gr.update();
 
-      this.log.logDebug('saveSession - ' + s_id );
+      this.log.logDebug('saveSession - ' + session_id );
      
       // Save Session Events
       if ( session.session_details && session.session_details.event ) {
@@ -593,13 +593,16 @@ BomgarAPI.prototype = {
 
       //  /support_teams
      
-      var i;
-      if ( teams.support_team ) {
-         var support_teams = this.ensureArray(teams.support_team);
+      var i, n=0;
+      if ( teams ) {
+         var support_teams = this.ensureArray(teams);
          for ( i=0; i<support_teams.length; i++ ) {
-            this.saveSupportTeam( support_teams[i] );
+            if ( this.saveSupportTeam( support_teams[i] ) ) {
+			   n++;
+			}
          }
       }
+	  return n;
 
    },
    
