@@ -378,7 +378,7 @@ BomgarAPI.prototype = {
       
       if ( !gr.next() ) {
          // Record not found, so initialise object
-         gr.initialise();
+         gr.initialize();
          gr.u_session = session_id;
          gr.u_gsnumber = gsno;
       }
@@ -434,7 +434,7 @@ BomgarAPI.prototype = {
       
       if ( !gr.next() ) {
          // Record not found, so initialise object
-         gr.initialise();
+         gr.initialize();
          gr.u_rep = rep_id;
          gr.u_session = session_id;
          gr.u_gsnumber = gsno;
@@ -492,7 +492,7 @@ BomgarAPI.prototype = {
       
       if ( !gr.next() ) {
          // Record not found, so initialise object
-         gr.initialise();
+         gr.initialize();
          gr.u_session = session_id;
          gr.u_gsnumber = gsno;
       }
@@ -564,7 +564,7 @@ BomgarAPI.prototype = {
       
       if ( !gr.next() ) {
          // Record not found, so initialise object
-         gr.initialise();
+         gr.initialize();
          gr.u_session = session_id;
          gr.u_seq_no = seq;
       }
@@ -576,10 +576,6 @@ BomgarAPI.prototype = {
       gr.u_performed_by = this.findActorId( se.performed_by );
       
       // Both body and data elements are saved to the u_data field
-      var body = se.body;
-      if ( body ) {
-         gr.u_data = body;
-      }
       if ( se.data && se.data.value ) {
          var data_values = this.ensureArray( se.data.value );
          var data_text = '';
@@ -587,6 +583,12 @@ BomgarAPI.prototype = {
             data_text += '\n' + data_values[i]['@name'] + ' : ' + data_values[i]['@value'];
          }
          gr.u_data = data_text;
+      }
+
+      // Append body to event data field
+      var body = se.body;
+      if ( body ) {
+         gr.u_data += body;
       }
       
       // ( Call to update will act as insert, if rec does not exist )
@@ -630,7 +632,7 @@ BomgarAPI.prototype = {
       
       if ( !gr.next() ) {
          // Record not found, so initialise object
-         gr.initialise();
+         gr.initialize();
          gr.u_appliance = this.appliance_id;
          gr.u_team_id = team_id;
       }
@@ -743,7 +745,7 @@ BomgarAPI.prototype = {
          msg += "\nActor Key: " + actor_key;
          actor_id = this.sessionActors[actor_key];
          if ( !actor_id ) {
-            msg += "\nCust or Rep: not found in cache" 
+            msg += "\nCust or Rep: not found in cache"; 
             actor_id = this.findSessionActorId( actor_gsno );
          }
       } else {
@@ -752,7 +754,7 @@ BomgarAPI.prototype = {
          msg += "\nActor Key: " + actor_key;
          actor_id = this.sessionActors[actor_key];
          if ( !actor_id ) {
-            msg += "\nSystem: not found in cache" 
+            msg += "\nSystem: not found in cache"; 
             actor_id = this.findSystemActorId( actor_type, actor_name );
          }
       }
@@ -814,7 +816,7 @@ BomgarAPI.prototype = {
          actor_id = gr.sys_id.toString();
       } else {
          // Create a new System Actor
-         gr.initialise();
+         gr.initialize();
          gr.u_appliance = this.appliance_id;
          gr.u_actor_type = actor_type;
          gr.u_display_name = actor_name;
@@ -850,7 +852,7 @@ BomgarAPI.prototype = {
          rep_sys_id = gr.sys_id.toString();
       } else {
          // Record not found, so let's create one
-         gr.initialise();
+         gr.initialize();
          gr.u_appliance = this.appliance_id;
          gr.u_rep_id = rep_id;
          gr.u_name = rep.display_name;
@@ -891,7 +893,7 @@ BomgarAPI.prototype = {
          survey_id = gr.sys_id.toString();
       } else {
          // Record not found, so let's create one
-         gr.initialise();
+         gr.initialize();
          gr.u_session = session_id;
          gr.u_gsnumber = gsno;
          gr.u_survey_type = survey_type;
