@@ -569,8 +569,10 @@ BomgarAPI.prototype = {
          gr.u_seq_no = seq;
       }
       
-      gr.u_event_type = se["@event_type"];
-      gr.u_event_time = this.getGlideDateTime( se["@timestamp"] );
+      var bg_event_type = se["@event_type"];
+      var bg_event_ts = se["@timestamp"];
+      gr.u_event_type = bg_event_type;
+      gr.u_event_time = this.getGlideDateTime( bg_event_ts );
       
       gr.u_destination = this.findActorId( se.destination );
       gr.u_performed_by = this.findActorId( se.performed_by );
@@ -586,13 +588,68 @@ BomgarAPI.prototype = {
       }
 
       // Append body to event data field
-      var body = se.body;
-      if ( body ) {
-         gr.u_data += body;
+      var bg_event_body = se.body;
+      if ( bg_event_body ) {
+         gr.u_data += '\n' + bg_event_body;
       }
       
       // ( Call to update will act as insert, if rec does not exist )
       var event_id = gr.update();
+
+      // Add a Work Note to the task for certain event types
+      var bg_worknote = '', bg_hostname = '';
+
+      switch ( bg_event_type ) {
+
+         case 'Session Note Added':
+            
+            bg_worknote = 'Bomgar - Session Note Added.';
+            bg_worknote += '\nPerformed by ' + gr.u_performed_by.getDisplayValue();
+            bg_worknote += ' at ' + gr.u_event_time.toString();
+            bg_worknote += '\n' + bg_event_body;
+            
+            this.addTaskWorkNote( bg_worknote, bg_event_ts );
+            break;
+            
+         case 'File Download':
+            
+            bg_worknote = 'Bomgar - File Downloaded from Customer device.';
+            bg_worknote += '\nDownloaded by: ' + gr.u_destination.getDisplayValue();
+            bg_worknote += ' at ' + gr.u_event_time.toString();
+            bg_worknote += '\nCustomer Username: ' + gr.u_performed_by.getDisplayValue();
+            bg_hostname = gr.u_performed_by.u_hostname.toString();
+            if ( bg_hostname ) {
+               bg_worknote += '\nCustomer Hostname: ' + bg_hostname;
+            }
+            bg_worknote += '\nTarget Filename: ' + se.filename;
+            bg_worknote += '\nTarget Filesize: ' + se.filesize;
+            bg_worknote += '\n';
+            
+            this.addTaskWorkNote( bg_worknote, bg_event_ts );
+            break;
+            
+         case 'File Upload':
+            
+            bg_worknote = 'Bomgar - File Uploaded to Customer device.';
+            bg_worknote += '\nUploaded by: ' + gr.u_performed_by.getDisplayValue();
+            bg_worknote += ' at ' + gr.u_event_time.toString();
+            bg_worknote += '\nCustomer Username: ' + gr.u_destination.getDisplayValue();
+            bg_hostname = gr.u_destination.u_hostname.toString();
+            if ( bg_hostname ) {
+               bg_worknote += '\nCustomer Hostname: ' + bg_hostname;
+            }
+            bg_worknote += '\nTarget Filename: ' + se.filename;
+            bg_worknote += '\nTarget Filesize: ' + se.filesize;
+            bg_worknote += '\n';
+            
+            this.addTaskWorkNote( bg_worknote, bg_event_ts );
+            break;
+            
+         default:
+            // default ... do nothing
+            
+      }
+
       return event_id;
       
    },
@@ -907,6 +964,37 @@ BomgarAPI.prototype = {
       
       return survey_id;
       
+   },
+   
+   //-------------------------------------------------------
+   addTaskWorkNote: function( txt, ts ) {
+   //-------------------------------------------------------
+
+      var msg = "addTaskWorkNote";
+      msg += "\nSession name: [" + this.grSession.u_display_name + "]";
+
+      // Update the task related to this session
+      var gr = new GlideRecord('task');
+      if ( gr.get( this.grSession.u_task.toString() ) ) {
+         msg += "\nTask number: [" + gr.number + "]";
+         // Only add Work Note if Event is later than High Water Mark
+         if ( ts > gr.u_bomgar_event_hwm ) {
+            gr.work_notes = txt;
+            gr.u_bomgar_event_hwm = ts;
+            var gr_id = gr.update();
+            if ( gr_id ) {
+               // Success, return sys_id
+               return gr.sys_id.toString();
+            } else {
+               this.log.logError( msg + "\nFailed to add WorkNote." );
+               return null;
+            }
+         }
+      } else {
+         this.log.logError( msg + "\nTask not found." );
+         return null;
+      }
+
    },
    
    //-------------------------------------------------------
