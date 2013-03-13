@@ -1,17 +1,20 @@
-get_session_data( event.parm1, event.parm2 );
+// This script will only execute if the session has no End Time set
+//  i.e. if the Bomgar Session is still in progress
 
-function get_session_data( appliance_id, lsid ) {
+refresh_session_data( event.parm1, event.parm2 );
+
+function refresh_session_data( appliance_id, lsid ) {
    
-   var bg, msg = "Bomgar Session Starts";
+   var bg, msg = "Bomgar Session Refresh";
    msg += "\nAppliance ID : [" + appliance_id + "]";
    msg += "\nLSID : [" + lsid + "]";
-   
+
    // Initialise the API
    try {
       bg = new BomgarAPI( appliance_id );
    } catch(e) {
       msg += "\nFailed to initialise Bomgar API\n" + e.name + "\n" + e.message;
-      gs.logError(msg,'Bomgar Event');
+      gs.logError(msg,'Bomgar Refresh');
       return null;
    }
    
@@ -20,7 +23,7 @@ function get_session_data( appliance_id, lsid ) {
    if (!session) {
       msg += "\nFailed to obtain details of session";
       msg += "\n" + bg.getErrorMessage();
-      gs.logError(msg,'Bomgar Event');
+      gs.logError(msg,'Bomgar Refresh');
       return null;
    }
    
@@ -28,12 +31,12 @@ function get_session_data( appliance_id, lsid ) {
    if ( !bg.saveSession(session) ) {
       msg += "\nFailed to save details of session [" + bg.getSessionName() + "]";
       msg += "\n" + bg.getErrorMessage();
-      gs.logError(msg,'Bomgar Event');
+      gs.logError(msg,'Bomgar Refresh');
       return null;
    }
 
-   msg += "\nSession saved : [" + bg.getSessionName() + "]";
-   
+   msg += "\nSession refreshed : [" + bg.getSessionName() + "]";
+
    // Read the refresh interval and set next refresh time
    var refresh_interval = parseInt( gs.getProperty( 'tu.bomgar.session.refresh.interval', '0' ) );
    var run_at = new GlideDateTime();
@@ -47,7 +50,7 @@ function get_session_data( appliance_id, lsid ) {
    } else {
       msg += "\nSession is complete";
    }
-   
+
    // Say we've done it
    bg.log.logInfo(msg);
    
