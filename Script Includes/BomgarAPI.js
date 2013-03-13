@@ -25,6 +25,11 @@ BomgarAPI.prototype = {
       this.grAppliance = app;
       this.appliance_id = app.sys_id.toString();
       this.bgConn = new BomgarConnection(app);
+
+      // Store the session event names that should be recorded as worknotes
+      var wne = '' + gs.getProperty( 'tu.bomgar.worknote.events', '' );
+      this.worknote_events = wne.split(/\s*,\s*/);
+
       this.sessionActors = {};   // Object used to cache Actor sys_ids
       
    },
@@ -33,6 +38,16 @@ BomgarAPI.prototype = {
    // The following functions return information about the state of this object.
    //----------------------------------------------------------------------------
    //
+   //-------------------------------------------------------
+   getSessionId: function() {
+   //-------------------------------------------------------
+      if (this.grSession) {
+         return this.grSession.sys_id.toString();
+      } else {
+         return null;
+      }
+   },
+   
    //-------------------------------------------------------
    getSessionName: function() {
    //-------------------------------------------------------
@@ -47,32 +62,6 @@ BomgarAPI.prototype = {
    getErrorMessage: function() {
    //-------------------------------------------------------
       return this.errorMessage;
-   },
-   
-   //-------------------------------------------------------
-   reloadSessions: function() {
-   //-------------------------------------------------------
-      
-      var i, msg = "getSessions";
-      var sl = this.getSessionList();
-      var ssl = sl.session_summary;
-      var lsid, ss;
-      msg += "\nSession count: " + ssl.length;
-      
-      // Get all of the sessions
-      for ( i=0; i < ssl.length; i++ ) {
-         lsid = ssl[i]["@lsid"];
-         msg += "\nSession " + i + ": [" + lsid + "]";
-         ss = this.retrieveSession( lsid );
-         if (ss) {
-            this.saveSession(ss);
-         } else {
-            msg += " - Failed to retrieve session data";
-         }
-      }
-      
-      this.log.logInfo(msg);
-      
    },
    
    //-------------------------------------------------------
@@ -100,6 +89,20 @@ BomgarAPI.prototype = {
          return null;
       }
       
+   },
+   
+   //-------------------------------------------------------
+   sessionInProgress: function() {
+   //-------------------------------------------------------
+      if ( this.grSession ) {
+         if ( this.grSession.u_end_time ) {
+            return false;
+         } else {
+            return true;
+         }
+      } else {
+         return false;
+      }
    },
    
    //----------------------------------------------------------------------------
@@ -554,6 +557,11 @@ BomgarAPI.prototype = {
    //-------------------------------------------------------
    saveSessionEvent: function( se, seq ) {
    //-------------------------------------------------------
+
+      // se (session_event):  /session/session_details/event
+      // seq: Sequence number of session_event
+      
+      // Returns the result of inserting or updating the Session Event record
       
       var i, gsno;
       var session_id = this.grSession.sys_id.toString();
@@ -588,68 +596,21 @@ BomgarAPI.prototype = {
       }
 
       // Append body to event data field
-      var bg_event_body = se.body;
-      if ( bg_event_body ) {
-         gr.u_data += '\n' + bg_event_body;
+      if ( se.body ) {
+         gr.u_data += '\n' + se.body;
       }
       
       // ( Call to update will act as insert, if rec does not exist )
       var event_id = gr.update();
 
-      // Add a Work Note to the task for certain event types
-      var bg_worknote = '', bg_hostname = '';
-
-      switch ( bg_event_type ) {
-
-         case 'Session Note Added':
-            
-            bg_worknote = 'Bomgar - Session Note Added.';
-            bg_worknote += '\nPerformed by ' + gr.u_performed_by.getDisplayValue();
-            bg_worknote += ' at ' + gr.u_event_time.toString();
-            bg_worknote += '\n' + bg_event_body;
-            
-            this.addTaskWorkNote( bg_worknote, bg_event_ts );
+      // Check whether this event type should be recorded as a Work Note
+      for (i=0; i<this.worknote_events.length; i++ ) {
+         if ( this.worknote_events[i] == bg_event_type ) {
+            this.addEventWorkNote( gr, se );
             break;
-            
-         case 'File Download':
-            
-            bg_worknote = 'Bomgar - File Downloaded from Customer device.';
-            bg_worknote += '\nDownloaded by: ' + gr.u_destination.getDisplayValue();
-            bg_worknote += ' at ' + gr.u_event_time.toString();
-            bg_worknote += '\nCustomer Username: ' + gr.u_performed_by.getDisplayValue();
-            bg_hostname = gr.u_performed_by.u_hostname.toString();
-            if ( bg_hostname ) {
-               bg_worknote += '\nCustomer Hostname: ' + bg_hostname;
-            }
-            bg_worknote += '\nTarget Filename: ' + se.filename;
-            bg_worknote += '\nTarget Filesize: ' + se.filesize;
-            bg_worknote += '\n';
-            
-            this.addTaskWorkNote( bg_worknote, bg_event_ts );
-            break;
-            
-         case 'File Upload':
-            
-            bg_worknote = 'Bomgar - File Uploaded to Customer device.';
-            bg_worknote += '\nUploaded by: ' + gr.u_performed_by.getDisplayValue();
-            bg_worknote += ' at ' + gr.u_event_time.toString();
-            bg_worknote += '\nCustomer Username: ' + gr.u_destination.getDisplayValue();
-            bg_hostname = gr.u_destination.u_hostname.toString();
-            if ( bg_hostname ) {
-               bg_worknote += '\nCustomer Hostname: ' + bg_hostname;
-            }
-            bg_worknote += '\nTarget Filename: ' + se.filename;
-            bg_worknote += '\nTarget Filesize: ' + se.filesize;
-            bg_worknote += '\n';
-            
-            this.addTaskWorkNote( bg_worknote, bg_event_ts );
-            break;
-            
-         default:
-            // default ... do nothing
-            
+         }
       }
-
+      
       return event_id;
       
    },
@@ -665,8 +626,8 @@ BomgarAPI.prototype = {
          var support_teams = this.ensureArray(teams);
          for ( i=0; i<support_teams.length; i++ ) {
             if ( this.saveSupportTeam( support_teams[i] ) ) {
-            n++;
-         }
+               n++;
+            }
          }
       }
      return n;
@@ -967,31 +928,93 @@ BomgarAPI.prototype = {
    },
    
    //-------------------------------------------------------
-   addTaskWorkNote: function( txt, ts ) {
+   addEventWorkNote: function( grEvent, se ) {
    //-------------------------------------------------------
 
-      var msg = "addTaskWorkNote";
+      // grEvent: GlideRecord object for the current Session Event
+      // se (session_event):  /session/session_details/event
+      
+      // Returns the result of inserting or updating the Task record
+
+      var msg = "addEventWorkNote";
       msg += "\nSession name: [" + this.grSession.u_display_name + "]";
 
-      // Update the task related to this session
-      var gr = new GlideRecord('task');
-      if ( gr.get( this.grSession.u_task.toString() ) ) {
-         msg += "\nTask number: [" + gr.number + "]";
-         // Only add Work Note if Event is later than High Water Mark
-         if ( ts > gr.u_bomgar_event_hwm ) {
-            gr.work_notes = txt;
-            gr.u_bomgar_event_hwm = ts;
-            var gr_id = gr.update();
-            if ( gr_id ) {
-               // Success, return sys_id
-               return gr.sys_id.toString();
-            } else {
-               this.log.logError( msg + "\nFailed to add WorkNote." );
-               return null;
-            }
-         }
-      } else {
+      // Find the task related to this session
+      var grTask = new GlideRecord('task');
+      if ( !grTask.get( this.grSession.u_task.toString() ) ) {
          this.log.logError( msg + "\nTask not found." );
+         return null;
+      }
+
+      msg += "\nTask number: [" + grTask.number + "]";
+
+      // Get event type and timestamp from session event object
+      var bg_event_type = se["@event_type"];
+      var bg_event_ts = se["@timestamp"];
+
+      // Return silently if Event timestamp is not later than High Water Mark
+      if ( bg_event_ts <= grTask.u_bomgar_event_hwm ) {
+         return null;
+      }
+
+      // Construct the text of the Work Note for supported event types
+      var bg_worknote = '', bg_hostname = '';
+
+      switch ( bg_event_type ) {
+
+         case 'Session Note Added':
+            
+            bg_worknote = 'Bomgar - Session Note Added.';
+            bg_worknote += '\nPerformed by ' + grEvent.u_performed_by.getDisplayValue();
+            bg_worknote += ' at ' + grEvent.u_event_time.toString();
+            bg_worknote += '\n' + se.body;
+            break;
+            
+         case 'File Download':
+            
+            bg_worknote = 'Bomgar - File Downloaded from Customer device.';
+            bg_worknote += '\nDownloaded by: ' + grEvent.u_destination.getDisplayValue();
+            bg_worknote += ' at ' + grEvent.u_event_time.toString();
+            bg_worknote += '\nCustomer Username: ' + grEvent.u_performed_by.getDisplayValue();
+            bg_hostname = grEvent.u_performed_by.u_hostname.toString();
+            if ( bg_hostname ) {
+               bg_worknote += '\nCustomer Hostname: ' + bg_hostname;
+            }
+            bg_worknote += '\nTarget Filename: ' + se.filename;
+            bg_worknote += '\nTarget Filesize: ' + se.filesize;
+            bg_worknote += '\n';
+            break;
+            
+         case 'File Upload':
+            
+            bg_worknote = 'Bomgar - File Uploaded to Customer device.';
+            bg_worknote += '\nUploaded by: ' + grEvent.u_performed_by.getDisplayValue();
+            bg_worknote += ' at ' + grEvent.u_event_time.toString();
+            bg_worknote += '\nCustomer Username: ' + grEvent.u_destination.getDisplayValue();
+            bg_hostname = grEvent.u_destination.u_hostname.toString();
+            if ( bg_hostname ) {
+               bg_worknote += '\nCustomer Hostname: ' + bg_hostname;
+            }
+            bg_worknote += '\nTarget Filename: ' + se.filename;
+            bg_worknote += '\nTarget Filesize: ' + se.filesize;
+            bg_worknote += '\n';
+            break;
+            
+         default:
+            // default ... do nothing
+            return null;
+         
+      }
+
+      grTask.work_notes = bg_worknote;
+      grTask.u_bomgar_event_hwm = bg_event_ts;
+      
+      var gr_id = grTask.update();
+      if ( gr_id ) {
+         // Success, return sys_id
+         return grTask.sys_id.toString();
+      } else {
+         this.log.logError( msg + "\nFailed to add WorkNote." );
          return null;
       }
 
