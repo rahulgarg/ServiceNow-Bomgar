@@ -563,7 +563,7 @@ BomgarAPI.prototype = {
       
       // Returns the result of inserting or updating the Session Event record
       
-      var i, gsno;
+      var i, j, k, gsno;
       var session_id = this.grSession.sys_id.toString();
       var gr = new GlideRecord('u_tu_bg_session_event');
       gr.addQuery('u_session',session_id);
@@ -585,8 +585,55 @@ BomgarAPI.prototype = {
       gr.u_destination = this.findActorId( se.destination );
       gr.u_performed_by = this.findActorId( se.performed_by );
       
-      // Both body and data elements are saved to the u_data field
+      // System information, data and body elements are saved to the u_data field
       var event_data = '';
+
+      // Read the system information, if present
+      // (If an event has system info it will not have any other elements )
+      if ( se.system_information && se.system_information.category ) {
+         event_data += '<div>\n';
+
+         var cats = this.ensureArray( se.system_information.category );
+         for ( i=0; i<cats.length; i++ ) {
+
+            event_data += '<h2>' + cats[i]["@name"] + '</h2>\n';
+            event_data += '<table>\n';
+            
+            // Handle column headers (descriptions)
+            event_data += '<thead>\n';
+            event_data += '<tr>';
+            var hdrs = this.ensureArray( cats[i].description.field );
+            for ( k=0; k<hdrs.length; k++ ) {
+               event_data += '<th>' + hdrs[k]["@name"] + '</th>';
+            }
+            event_data += '</tr>\n';
+            event_data += '</thead>\n';
+
+            // Handle data rows
+            event_data += '<tbody>\n';
+            var rows = this.ensureArray( cats[i].data.row );
+            for ( j=0; j<rows.length; j++ ) {
+               event_data += '<tr>';
+
+               // Handle data row fields
+               var flds = this.ensureArray( rows[j].field );
+               for ( k=0; k<flds.length; k++ ) {
+                  var txt = '' + flds[k]["#text"];
+                  txt = txt.replace(/^\s+|\n|\s+$/g,''); // Strip newlines and trim spaces
+                  event_data += '<td>' + txt + '</td>';
+               }
+
+               event_data += '</tr>\n';
+            }
+            event_data += '</tbody>\n';
+
+            event_data += '</table>\n';
+
+         }
+         event_data += '</div>\n';
+      }
+
+      // Read the data elements, if present
       if ( se.data && se.data.value ) {
          var data_values = this.ensureArray( se.data.value );
          for (i=0;i<data_values.length;i++) {
@@ -599,8 +646,10 @@ BomgarAPI.prototype = {
       if ( se.body ) {
          event_data += se.body;
       }
+
+      // Now write whatever we collected into the event record      
       gr.u_data = event_data;
-      
+
       // ( Call to update will act as insert, if rec does not exist )
       var event_id = gr.update();
 
