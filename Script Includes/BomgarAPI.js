@@ -586,19 +586,20 @@ BomgarAPI.prototype = {
       gr.u_performed_by = this.findActorId( se.performed_by );
       
       // Both body and data elements are saved to the u_data field
+      var event_data = '';
       if ( se.data && se.data.value ) {
          var data_values = this.ensureArray( se.data.value );
-         var data_text = '';
          for (i=0;i<data_values.length;i++) {
-            data_text += '\n' + data_values[i]['@name'] + ' : ' + data_values[i]['@value'];
+            event_data += data_values[i]['@name'] + ' : ' + data_values[i]['@value'] + '\n';
          }
-         gr.u_data = data_text;
+         event_data += '\n';
       }
 
-      // Append body to event data field
+      // Append body to event data
       if ( se.body ) {
-         gr.u_data += '\n' + se.body;
+         event_data += se.body;
       }
+      gr.u_data = event_data;
       
       // ( Call to update will act as insert, if rec does not exist )
       var event_id = gr.update();
