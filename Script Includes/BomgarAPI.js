@@ -591,46 +591,8 @@ BomgarAPI.prototype = {
       // Read the system information, if present
       // (If an event has system info it will not have any other elements )
       if ( se.system_information && se.system_information.category ) {
-         event_data += '<div>\n';
-
-         var cats = this.ensureArray( se.system_information.category );
-         for ( i=0; i<cats.length; i++ ) {
-
-            event_data += '<h2>' + cats[i]["@name"] + '</h2>\n';
-            event_data += '<table>\n';
-            
-            // Handle column headers (descriptions)
-            event_data += '<thead>\n';
-            event_data += '<tr>';
-            var hdrs = this.ensureArray( cats[i].description.field );
-            for ( k=0; k<hdrs.length; k++ ) {
-               event_data += '<th>' + hdrs[k]["@name"] + '</th>';
-            }
-            event_data += '</tr>\n';
-            event_data += '</thead>\n';
-
-            // Handle data rows
-            event_data += '<tbody>\n';
-            var rows = this.ensureArray( cats[i].data.row );
-            for ( j=0; j<rows.length; j++ ) {
-               event_data += '<tr>';
-
-               // Handle data row fields
-               var flds = this.ensureArray( rows[j].field );
-               for ( k=0; k<flds.length; k++ ) {
-                  var txt = '' + flds[k]["#text"];
-                  txt = txt.replace(/^\s+|\n|\s+$/g,''); // Strip newlines and trim spaces
-                  event_data += '<td>' + txt + '</td>';
-               }
-
-               event_data += '</tr>\n';
-            }
-            event_data += '</tbody>\n';
-
-            event_data += '</table>\n';
-
-         }
-         event_data += '</div>\n';
+         this.saveSystemInfo( se.system_information );
+         event_data = "System information is stored on the Bomgar Session record";
       }
 
       // Read the data elements, if present
@@ -663,6 +625,88 @@ BomgarAPI.prototype = {
       
       return event_id;
       
+   },
+   
+   //-------------------------------------------------------
+   saveSystemInfo: function( sys_info ) {
+   //-------------------------------------------------------
+      
+      // sys_info (system_information):  /session/session_details/event/system_information
+      // Returns the result of inserting or updating the Session record
+
+      // Read the CSS styling for the System Info
+      var event_data = gs.getProperty( 'tu.bomgar.session.sysinfo.style', '' );
+
+      // Extract the system info and convert to HTML
+      event_data += '<div class="bg_sysinfo">\n';
+
+      var cats = this.ensureArray( sys_info.category );
+      for ( i=0; i<cats.length; i++ ) {
+
+         event_data += '<h2>' + cats[i]["@name"] + '</h2>\n';
+         event_data += '<table class="grid">\n';
+
+         // For data with only one row, build the table headers vertically
+         if ( !this._is_array( cats[i].data.row ) ) {
+            
+            var col1 = this.ensureArray( cats[i].description.field );
+            var col2 = this.ensureArray( cats[i].data.row.field );
+            for ( k=0; k<col1.length; k++ ) {
+               event_data += '<tr>';
+               event_data += '<th>' + col1[k]["@name"] + '</th>';
+               var ctxt = '' + col2[k]["#text"];
+               ctxt = ctxt.replace(/^\s+|\n|\s+$/g,''); // Strip newlines and trim spaces
+               event_data += '<td>' + ctxt + '</td>';
+               event_data += '<tr>';
+            }
+
+         } else {
+
+            // Handle column headers (descriptions)
+            event_data += '<thead>\n';
+            event_data += '<tr>';
+            var hdrs = this.ensureArray( cats[i].description.field );
+            for ( k=0; k<hdrs.length; k++ ) {
+               event_data += '<th>' + hdrs[k]["@name"] + '</th>';
+            }
+            event_data += '</tr>\n';
+            event_data += '</thead>\n';
+
+            // Handle data rows
+            event_data += '<tbody>\n';
+            var rows = this.ensureArray( cats[i].data.row );
+            for ( j=0; j<rows.length; j++ ) {
+               event_data += '<tr>';
+
+               // Handle data row fields
+               var flds = this.ensureArray( rows[j].field );
+               for ( k=0; k<flds.length; k++ ) {
+                  var txt = '' + flds[k]["#text"];
+                  txt = txt.replace(/^\s+|\n|\s+$/g,''); // Strip newlines and trim spaces
+                  event_data += '<td>' + txt + '</td>';
+               }
+
+               event_data += '</tr>\n';
+            }
+            event_data += '</tbody>\n';
+
+         }
+
+         event_data += '</table>\n';
+
+      }
+      event_data += '</div>\n';
+      
+      // Update the session record
+      var session_id = '' + this.grSession.sys_id;
+      var gr = new GlideRecord('u_tu_bg_session');
+      gr.get('sys_id',session_id);
+
+      gr.u_system_info = event_data;
+      var sys_id = gr.update();
+
+      return sys_id;
+
    },
    
    //-------------------------------------------------------
