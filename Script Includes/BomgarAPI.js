@@ -304,6 +304,21 @@ BomgarAPI.prototype = {
       gr.u_file_transfers = session.file_transfer_count;
       gr.u_public_site_id = session.public_site["@id"];
       gr.u_public_site_name = session.public_site["#text"];
+
+      // Collect Chat and Recording URLs
+      gr.u_chat_url = session.session_chat_download_url;
+      gr.u_recording_url = session.session_recording_download_url;
+      
+      // Collect Command Shell Recording URLs
+      if ( session.command_shell_recordings &&
+           session.command_shell_recordings.command_shell_recording ) {
+         var cmdurls = this.ensureArray( session.command_shell_recordings.command_shell_recording );
+         var cmdtxt = '', cmdsep = '';
+         for ( i=0; i<cmdurls.length; i++ ) {
+            cmdtxt += cmdurls[i].download_url + cmdsep;
+            cmdsep = ',';
+         }
+      }
       
       // A temporary lookup object to map gsnumber to sys_id
       this.sessionActors = {};
