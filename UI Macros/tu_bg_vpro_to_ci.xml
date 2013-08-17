@@ -3,32 +3,35 @@
 
 <g:evaluate var="jvar_guid" expression="gs.generateGUID(this);" />
 <g:evaluate var="jvar_appliance" expression="gs.getProperty('tu.bomgar.hostname','');" />
-<j:set var="jvar_n" value="tu_bg_jump_${jvar_guid}:${ref}"/>
+<g:evaluate var="jvar_jumpoint" expression="gs.getProperty('tu.bomgar.vpro.jumpoint','');" />
+<j:set var="jvar_n" value="tu_bg_vpro_${jvar_guid}:${ref}"/>
 
 <g:reference_decoration id="${jvar_n}" field="${ref}" 
-  onclick="tu_bg_jump('${ref}'); "
-  title="${gs.getMessage('Bomgar Jump')}" image="bomgar_small.pngx"/>
+  onclick="tu_bg_vpro('${ref}'); "
+  title="Bomgar vPro Jump" image="bomgar_vpro_small.jpgx"/>
 
 <script>
 // Client side script to popup URL to Bomgar appliance
 
-function tu_bg_jump(reference) {
+function tu_bg_vpro(reference) {
 
   var s = reference.split('.');
   var tableName = s[0];
   var referenceField = s[1];
   var fieldElement = 'sys_display.' + tableName + '.' + referenceField; 
 
-  var task_no = g_form.getValue('number');
-  var cmdb_ci = gel(fieldElement).value;
+  var task_no = g_form.getValue('number');  // Assumes the form has a task 'number' field
+  var cmdb_ci = gel(fieldElement).value;    // Gets the displayed value from the CI field
+  var jumpoint = ''
 
   var amp = '&amp;amp;', url;
 
   url = 'https://${jvar_appliance}/api/client_script.ns?';
   url += 'type=rep';
   url += amp + 'operation=generate';
-  url += amp + 'action=start_pinned_client_session';
-  url += amp + 'search_string=' + cmdb_ci;
+  url += amp + 'action=start_vpro_session';
+  url += amp + 'target=' + cmdb_ci;
+  url += amp + 'jumpoint=${jvar_jumpoint}';
   url += amp + 'session.custom.external_key=' + task_no;
 
   var w = getTopWindow(); 
@@ -37,4 +40,5 @@ function tu_bg_jump(reference) {
 }
 
 </script>
+
 </j:jelly> 
