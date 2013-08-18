@@ -1,0 +1,1755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2013-08-18 11:58:33">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>High Priority enhancements to Bomgar Integration.
+Mar 2013 v0.5 p1
+
+Add events and handlers for session start and refresh
+Add feature to record bomgar events as task work notes
+Update properties page
+Modify App and Modules
+</description>
+<inserted/>
+<name>TeamUltra Bomgar Integration - v0.5 p1</name>
+<origin_sys_id/>
+<release_date/>
+<remote_sys_id>c10287ac5c088100e28a0c90fdabf3eb</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>51bade49945b0100e28a4e71b2faeb1d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_u_tu_bg_appliance_u_hostname</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_hostname" table="u_tu_bg_appliance"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice/><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>true</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_hostname</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>100</max_length><name>u_tu_bg_appliance</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-08 12:04:36</sys_created_on><sys_id>cdf0cf6c5c088100e28a0c90fdabf3c7</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-08 12:13:40</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>1dbade49945b0100e28a4e71b2faeb1d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>Bomgar Appliance.u_hostname</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_850d57a3e033300029a6fccbaa5d4844</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="DELETE"><category display_value="BomgarAppliance">6ecc17a3e033300029a6fccbaa5d4889</category><order>600</order><property display_value="tu.bomgar.socket.timeout">f9cbd323e033300029a6fccbaa5d4856</property><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:33:18</sys_created_on><sys_id>850d57a3e033300029a6fccbaa5d4844</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:28:39</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>25bade49945b0100e28a4e71b2faeb21</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.socket.timeout.BomgarAppliance</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>DELETE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_c90d57a3e033300029a6fccbaa5d4843</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="DELETE"><category display_value="BomgarAppliance">6ecc17a3e033300029a6fccbaa5d4889</category><order>500</order><property display_value="tu.bomgar.connect.timeout">677bdf63e033300029a6fccbaa5d481e</property><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:33:18</sys_created_on><sys_id>c90d57a3e033300029a6fccbaa5d4843</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:28:39</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>29bade49945b0100e28a4e71b2faeb1e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.connect.timeout.BomgarAppliance</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_18fa18165c40c100e28a0c90fdabf3a1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="BomgarAppliance">6ecc17a3e033300029a6fccbaa5d4889</category><order>400</order><property display_value="tu.bomgar.session.refresh.interval">ea5e88925c40c100e28a0c90fdabf3be</property><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-13 10:28:39</sys_created_on><sys_id>18fa18165c40c100e28a0c90fdabf3a1</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:28:39</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>29bade49945b0100e28a4e71b2faeb1f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.session.refresh.interval.BomgarAppliance</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_1e5933e7e033300029a6fccbaa5d48f6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image>images/properties.gif</image><link_type>DIRECT</link_type><map_page/><name/><order>900</order><query>system_properties_ui.do?sysparm_title=Bomgar%20Integration%20Properties&amp;sysparm_category=BomgarAppliance,BomgarLogging</query><report/><roles>bomgar_admin</roles><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:38:07</sys_created_on><sys_domain>global</sys_domain><sys_id>1e5933e7e033300029a6fccbaa5d48f6</sys_id><sys_mod_count>2</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:52:35</sys_updated_on><timeline_page/><title>Properties</title><u_count_color/><u_count_filter/><u_refresh_interval/><u_show_count>false</u_show_count><u_sort_order/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>29bade49945b0100e28a4e71b2faeb20</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>Properties</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_actor_u_display_name</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_display_name" table="u_tu_bg_session_actor"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>true</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_display_name</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_session_actor</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-08 12:04:43</sys_created_on><sys_id>36f0cf6c5c088100e28a0c90fdabf3f6</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-08 12:28:47</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>29bade49945b0100e28a4e71b2faeb21</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor.u_display_name</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_b2d93ba7e033300029a6fccbaa5d48ef</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><name/><order>2000</order><query>User details</query><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:39:18</sys_created_on><sys_domain>global</sys_domain><sys_id>b2d93ba7e033300029a6fccbaa5d48ef</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:53:43</sys_updated_on><timeline_page/><title/><u_count_color/><u_count_filter/><u_refresh_interval/><u_show_count>false</u_show_count><u_sort_order/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>2dbade49945b0100e28a4e71b2faeb1e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>Module.b2d93ba7e033300029a6fccbaa5d48ef</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_3df937a7e033300029a6fccbaa5d480a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><name/><order>10</order><query>System details</query><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:39:47</sys_created_on><sys_domain>global</sys_domain><sys_id>3df937a7e033300029a6fccbaa5d480a</sys_id><sys_mod_count>2</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:53:32</sys_updated_on><timeline_page/><title/><u_count_color/><u_count_filter/><u_refresh_interval/><u_show_count>false</u_show_count><u_sort_order/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>2dbade49945b0100e28a4e71b2faeb1f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>Module.3df937a7e033300029a6fccbaa5d480a</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_properties_category_m2m_091ed7395ccc8100e28a0c90fdabf342</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="BomgarAppliance">6ecc17a3e033300029a6fccbaa5d4889</category><order>300</order><property display_value="tu.bomgar.worknote.events">740e53b55ccc8100e28a0c90fdabf309</property><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-12 11:24:15</sys_created_on><sys_id>091ed7395ccc8100e28a0c90fdabf342</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:28:39</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>55bade49945b0100e28a4e71b2faeb1d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.worknote.events.BomgarAppliance</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_properties_740e53b55ccc8100e28a0c90fdabf309</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Please supply a comma separated list of Session Events that will be recorded as Task Work Notes</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>tu.bomgar.worknote.events</name><read_roles/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-12 11:23:58</sys_created_on><sys_id>740e53b55ccc8100e28a0c90fdabf309</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-12 11:23:58</sys_updated_on><type>string</type><value>Session Note Added, File Download, File Upload</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=740e53b55ccc8100e28a0c90fdabf309"/></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>59bade49945b0100e28a4e71b2faeb1d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.worknote.events</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sysevent_script_action_c6e6e4a5295d3000e28a069626280a13</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action"><sysevent_script_action action="INSERT_OR_UPDATE"><active>true</active><condition_script/><description>Reacts to the session start event from a Bomgar Appliance.&#13;
+&#13;
+This is implemented as an internal scheduled event within ServiceNow because there seems to be a delay in the Bomgar appliance between sending its session_start event and actually having a session available to be interrogated over the HTTP/XML API. If we react immediately to the session_start event with a retrieveSession call then it returns a "no such session exists" type error message.</description><event_name>bomgar.session.start</event_name><name>Bomgar Session Start</name><order>100</order><script>get_session_data( event.parm1, event.parm2 );&#13;
+&#13;
+function get_session_data( appliance_id, lsid ) {&#13;
+   &#13;
+   var bg, msg = "Bomgar Session Starts";&#13;
+   msg += "\nAppliance ID : [" + appliance_id + "]";&#13;
+   msg += "\nLSID : [" + lsid + "]";&#13;
+   &#13;
+   // Initialise the API&#13;
+   try {&#13;
+      bg = new BomgarAPI( appliance_id );&#13;
+   } catch(e) {&#13;
+      msg += "\nFailed to initialise Bomgar API\n" + e.name + "\n" + e.message;&#13;
+      gs.logError(msg,'Bomgar Event');&#13;
+      return null;&#13;
+   }&#13;
+   &#13;
+   // Get the session data&#13;
+   var session = bg.retrieveSession(lsid);&#13;
+   if (!session) {&#13;
+      msg += "\nFailed to obtain details of session";&#13;
+      msg += "\n" + bg.getErrorMessage();&#13;
+      gs.logError(msg,'Bomgar Event');&#13;
+      return null;&#13;
+   }&#13;
+   &#13;
+   // Update the Bomgar Session record&#13;
+   if ( !bg.saveSession(session) ) {&#13;
+      msg += "\nFailed to save details of session [" + bg.getSessionName() + "]";&#13;
+      msg += "\n" + bg.getErrorMessage();&#13;
+      gs.logError(msg,'Bomgar Event');&#13;
+      return null;&#13;
+   }&#13;
+&#13;
+   msg += "\nSession saved : [" + bg.getSessionName() + "]";&#13;
+   &#13;
+   // Read the refresh interval and set next refresh time&#13;
+   var refresh_interval = parseInt( gs.getProperty( 'tu.bomgar.session.refresh.interval', '0' ) );&#13;
+   msg += "\nRefresh interval : [" + refresh_interval + "] minutes";&#13;
+   var run_at = new GlideDateTime();&#13;
+   run_at.addSeconds( refresh_interval * 60 );&#13;
+&#13;
+   // Schedule the next refresh, if appropriate&#13;
+   if ( refresh_interval &gt; 0 &amp;&amp; bg.sessionInProgress ) {&#13;
+      gs.eventQueueScheduled('bomgar.session.refresh', current, &#13;
+                              appliance_id, lsid, run_at);&#13;
+      msg += "\nSession is in progress', refresh scheduled at " + run_at;&#13;
+   } else {&#13;
+      msg += "\nSession is complete";&#13;
+   }&#13;
+   &#13;
+   // Say we've done it&#13;
+   bg.log.logInfo(msg);&#13;
+   &#13;
+}&#13;
+</script><synchronous>false</synchronous><sys_class_name>sysevent_script_action</sys_class_name><sys_created_by>huw.nolan</sys_created_by><sys_created_on>2012-10-25 10:51:34</sys_created_on><sys_domain>global</sys_domain><sys_id>c6e6e4a5295d3000e28a069626280a13</sys_id><sys_mod_count>13</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:16:35</sys_updated_on><u_reason_for_change/></sysevent_script_action></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>61bade49945b0100e28a4e71b2faeb21</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>bomgar</table>
+<target_name>Bomgar Session Start</target_name>
+<type>Script Action</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_14efd3a3e033300029a6fccbaa5d4805</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>false</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><name>u_tu_bg_system_actor</name><order>200</order><query/><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:45:48</sys_created_on><sys_domain>global</sys_domain><sys_id>14efd3a3e033300029a6fccbaa5d4805</sys_id><sys_mod_count>2</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:32:39</sys_updated_on><timeline_page/><title>Bomgar System Actor</title><u_count_color/><u_count_filter/><u_refresh_interval/><u_show_count>false</u_show_count><u_sort_order/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>65bade49945b0100e28a4e71b2faeb1e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>u_tu_bg_system_actor</table>
+<target_name>Bomgar System Actor</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_properties_ea5e88925c40c100e28a0c90fdabf3be</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Please enter the refresh interval (in minutes) for active Bomgar sessions. (Enter 0 to inhibit refresh).</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>tu.bomgar.session.refresh.interval</name><read_roles/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-13 09:35:57</sys_created_on><sys_id>ea5e88925c40c100e28a0c90fdabf3be</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 09:35:57</sys_updated_on><type>integer</type><value>5</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=ea5e88925c40c100e28a0c90fdabf3be"/></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>65bade49945b0100e28a4e71b2faeb1f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.session.refresh.interval</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_app_application_b5bdd7a3e033300029a6fccbaa5d4857</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category/><device_type>browser</device_type><hint/><name>bomgar</name><order/><roles>bomgar_rep</roles><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:36:21</sys_created_on><sys_domain>global</sys_domain><sys_id>b5bdd7a3e033300029a6fccbaa5d4857</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:34:29</sys_updated_on><title>Bomgar</title><view_name/></sys_app_application></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>65bade49945b0100e28a4e71b2faeb20</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>Bomgar</target_name>
+<type>Application Menu</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_de8e1fa3e033300029a6fccbaa5d48b1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>false</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><name>u_tu_bg_session_actor</name><order>250</order><query/><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:39:56</sys_created_on><sys_domain>global</sys_domain><sys_id>de8e1fa3e033300029a6fccbaa5d48b1</sys_id><sys_mod_count>2</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:32:39</sys_updated_on><timeline_page/><title>Bomgar Session Actor</title><u_count_color/><u_count_filter/><u_refresh_interval/><u_show_count>false</u_show_count><u_sort_order/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>a1bade49945b0100e28a4e71b2faeb1e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_76f8483be033300029a6fccbaa5d482d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include"><sys_script_include action="INSERT_OR_UPDATE"><active>true</active><client_callable>false</client_callable><description/><name>BomgarAPI</name><script>var BomgarAPI = Class.create();&#13;
+BomgarAPI.prototype = {&#13;
+   &#13;
+   initialize: function( appliance ) {&#13;
+      this.log = new GSLog('tu.bomgar.loglevel.api','Bomgar API');&#13;
+      &#13;
+      // Get default appliance, or use 'teamultra.bomgar.com'&#13;
+      if ( !appliance ) {&#13;
+         appliance = gs.getProperty( 'tu.bomgar.hostname', 'teamultra.bomgar.com' );&#13;
+      }&#13;
+      &#13;
+      // Find the appliance with the matching Hostname, IP or Appliance GUID&#13;
+      var app = new GlideRecord('u_tu_bg_appliance');&#13;
+      var qc = app.addQuery('u_hostname', appliance);&#13;
+      qc.addOrCondition('u_public_ip', appliance);&#13;
+      qc.addOrCondition('u_appliance_id', appliance);&#13;
+      app.query();&#13;
+      if ( !app.next() ) {&#13;
+         throw {&#13;
+            'name': 'Invalid Bomgar Appliance',&#13;
+            'message': 'Failed to find Bomgar appliance [' + appliance + ']'&#13;
+         };&#13;
+      }&#13;
+      &#13;
+      this.grAppliance = app;&#13;
+      this.appliance_id = app.sys_id.toString();&#13;
+      this.bgConn = new BomgarConnection(app);&#13;
+&#13;
+      // Store the session event names that should be recorded as worknotes&#13;
+      var wne = '' + gs.getProperty( 'tu.bomgar.worknote.events', '' );&#13;
+      this.worknote_events = wne.split(/\s*,\s*/);&#13;
+&#13;
+      this.sessionActors = {};   // Object used to cache Actor sys_ids&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //----------------------------------------------------------------------------&#13;
+   // The following functions return information about the state of this object.&#13;
+   //----------------------------------------------------------------------------&#13;
+   //&#13;
+   //-------------------------------------------------------&#13;
+   getSessionId: function() {&#13;
+   //-------------------------------------------------------&#13;
+      if (this.grSession) {&#13;
+         return this.grSession.sys_id.toString();&#13;
+      } else {&#13;
+         return null;&#13;
+      }&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   getSessionName: function() {&#13;
+   //-------------------------------------------------------&#13;
+      if (this.grSession) {&#13;
+         return this.grSession.u_display_name.toString();&#13;
+      } else {&#13;
+         return null;&#13;
+      }&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   getErrorMessage: function() {&#13;
+   //-------------------------------------------------------&#13;
+      return this.errorMessage;&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   getGlideDateTime: function(item) {&#13;
+   //-------------------------------------------------------&#13;
+      &#13;
+      var ts = "";&#13;
+      &#13;
+      // Handle elements with a timestamp/ts attribute&#13;
+      if ( typeof item == 'object' &amp;&amp; item["@timestamp"] ) {&#13;
+         ts = item["@timestamp"];&#13;
+      } else if ( typeof item == 'object' &amp;&amp; item["@ts"] ) {&#13;
+         ts = item["@ts"];&#13;
+      } else {&#13;
+         // Otherwise treat as a string&#13;
+         ts = item;&#13;
+      }&#13;
+      &#13;
+      var secs = parseInt(ts);&#13;
+      var gdt = new GlideDateTime();&#13;
+      if ( secs &gt; 0 ) {&#13;
+         gdt.setNumericValue( secs * 1000 );&#13;
+         return gdt;&#13;
+      } else {&#13;
+         return null;&#13;
+      }&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   sessionInProgress: function() {&#13;
+   //-------------------------------------------------------&#13;
+      if ( this.grSession ) {&#13;
+         if ( this.grSession.u_end_time ) {&#13;
+            return false;&#13;
+         } else {&#13;
+            return true;&#13;
+         }&#13;
+      } else {&#13;
+         return false;&#13;
+      }&#13;
+   },&#13;
+   &#13;
+   //----------------------------------------------------------------------------&#13;
+   // The following ( mostly retrieveXXX ) functions retrieve information from the&#13;
+   // Bomgar appliance. Data is returned as a JavaScript object which reflects the&#13;
+   // structure of the XML document returned by the Bomgar API.&#13;
+   //----------------------------------------------------------------------------&#13;
+   //&#13;
+   //-------------------------------------------------------&#13;
+   generateSessionKey: function(task_no) {&#13;
+   //-------------------------------------------------------&#13;
+      var pa = [];  // Param array&#13;
+      pa.push( [ "action", "generate_session_key" ] );&#13;
+      pa.push( [ "type", "support" ] );&#13;
+      pa.push( [ "queue_id", "general" ] );&#13;
+      pa.push( [ "ttl", "1800" ] );&#13;
+      pa.push( [ "external_key", task_no ] );&#13;
+&#13;
+      var resp = this.bgConn.sendCommand(pa);&#13;
+      return this.checkResponse( resp, 'session_key' );&#13;
+   },&#13;
+&#13;
+   //-------------------------------------------------------&#13;
+   retrieveApiInfo: function() {&#13;
+   //-------------------------------------------------------&#13;
+      var pa = [];  // Param array&#13;
+      pa.push( [ "action", "get_api_info" ] );&#13;
+&#13;
+      var resp = this.bgConn.sendCommand(pa);&#13;
+      return this.checkResponse( resp, 'api_information' );&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   retrieveLoggedInReps: function() {&#13;
+   //-------------------------------------------------------&#13;
+      var pa = [];  // Param array&#13;
+      pa.push( [ "action", "get_logged_in_reps" ] );&#13;
+&#13;
+      var resp = this.bgConn.sendCommand(pa);&#13;
+      return this.checkResponse( resp, 'logged_in_reps', 'rep' );&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   retrieveSupportTeams: function( showmembers ) {&#13;
+   //-------------------------------------------------------&#13;
+      var pa = [];  // Param array&#13;
+      pa.push( [ "action", "get_support_teams" ] );&#13;
+      if (showmembers) {&#13;
+         pa.push( [ "showmembers", "1" ] );&#13;
+      }&#13;
+&#13;
+      var resp = this.bgConn.sendCommand(pa);&#13;
+      return this.checkResponse( resp, 'support_teams', 'support_team' );&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   retrieveSessionList: function() {&#13;
+   //-------------------------------------------------------&#13;
+      var pa = [];  // Param array&#13;
+      pa.push( [ "generate_report", "SupportSessionListing" ] );&#13;
+&#13;
+      var resp = this.bgConn.runReport(pa);&#13;
+      return this.checkResponse( resp, 'session_summary_list', 'session_summary' );&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   retrieveSessionSummary: function() {&#13;
+   //-------------------------------------------------------&#13;
+      var pa = [];  // Param array&#13;
+      pa.push( [ "generate_report", "SupportSessionSummary" ] );&#13;
+      pa.push( [ "report_type", "rep" ] );&#13;
+&#13;
+      var resp = this.bgConn.runReport(pa);&#13;
+      return this.checkResponse( resp, 'summary_list', 'summary' );&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   retrieveExitSurvey: function( lsid, survey_type ) {&#13;
+   //-------------------------------------------------------&#13;
+      &#13;
+      // Get session end_time&#13;
+      this.findSession(lsid);&#13;
+      var ms = this.grSession.u_start_time.getGlideObject().getNumericValue(); // milli-seconds&#13;
+      var et = Math.round( ms / 1000 ) - 5; // Convert to seconds and adjust down by 5 secs&#13;
+      &#13;
+      var pa = [];  // Param array&#13;
+      if ( survey_type == 'rep' ) {&#13;
+         pa.push( [ "generate_report", "SupportRepExitSurvey" ] );&#13;
+      } else {&#13;
+         pa.push( [ "generate_report", "SupportCustExitSurvey" ] );&#13;
+      }&#13;
+      pa.push( [ "start_time", et ] );&#13;
+      pa.push( [ "duration", "10" ] ); // Search within 10 sec window&#13;
+      pa.push( [ "report_type", "rep" ] );&#13;
+      pa.push( [ "id", "all" ] );&#13;
+      &#13;
+      var resp = this.bgConn.runReport(pa);&#13;
+      return this.checkResponse( resp, 'exit_survey_list', 'exit_survey' );&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   retrieveSession: function( lsid ) {&#13;
+   //-------------------------------------------------------&#13;
+      &#13;
+      var msg = "retrieveSession( " + lsid + " )";&#13;
+      var pa = [];  // Param array&#13;
+      pa.push( [ "generate_report", "SupportSession" ] );&#13;
+      pa.push( [ "lsid", lsid ] );&#13;
+&#13;
+      var resp = this.bgConn.runReport(pa);&#13;
+      return this.checkResponse( resp, 'session_list', 'session' );&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   checkResponse: function( resp, valid_root, valid_child ) {&#13;
+   //-------------------------------------------------------&#13;
+&#13;
+      var msg = "";&#13;
+      &#13;
+      // Get XML root element&#13;
+      var root = this.bgConn.getResponseRootName();&#13;
+      &#13;
+      // Check XML root for success first&#13;
+      if ( root == valid_root ) {&#13;
+         if ( !valid_child ) {&#13;
+            // No child element expected, return entire response&#13;
+            return resp;&#13;
+         } else if ( !resp ) {&#13;
+            // The root element is empty&#13;
+            msg = "Received empty response from Bomgar Appliance";&#13;
+            msg += "\nXML root element [" + root + "] is empty";&#13;
+            this.errorMessage = msg;&#13;
+            return null;&#13;
+         } else if ( resp[valid_child] ) {&#13;
+            // Expected child element was found, return the child element&#13;
+            return resp[valid_child];&#13;
+         } else if ( resp.error ) {&#13;
+            // The child element is an error element&#13;
+            msg = "Received error response from Bomgar Appliance";&#13;
+            msg += "\nError: [" + resp + "]";&#13;
+            this.errorMessage = msg;&#13;
+            return null;&#13;
+         } else {&#13;
+            msg = "Unexpected response from Bomgar Appliance";&#13;
+            msg += "\nXML root: [" + root + "]";&#13;
+            msg += "\nResponse: [" + resp + "]";&#13;
+            this.errorMessage = msg;&#13;
+            return null;&#13;
+         }&#13;
+      } else if ( root == 'error' ) {&#13;
+         msg = "Received error response from Bomgar Appliance";&#13;
+         msg += "\nError: [" + resp + "]";&#13;
+         this.errorMessage = msg;&#13;
+         return null;&#13;
+      } else {&#13;
+         msg = "Unexpected response from Bomgar Appliance";&#13;
+         msg += "\nXML root: [" + root + "]";&#13;
+         msg += "\nResponse: [" + resp + "]";&#13;
+         msg += "\n" + this.bgConn.errorMessage;&#13;
+         this.errorMessage = msg;&#13;
+         return null;&#13;
+      }&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //----------------------------------------------------------------------------&#13;
+   // The following saveXXX functions extract information from the JavaScript&#13;
+   // object returned by the getXXX functions and store the data as interlinked&#13;
+   // glide records.&#13;
+   //&#13;
+   // Whenever possible the save routines will attempt to locate an existing&#13;
+   // record and update that, but will create new records when no existing&#13;
+   // record is found.&#13;
+   //----------------------------------------------------------------------------&#13;
+   //&#13;
+   //-------------------------------------------------------&#13;
+   saveSession: function( session ) {&#13;
+   //-------------------------------------------------------&#13;
+      &#13;
+      // session:  /session_list/session&#13;
+      &#13;
+      var i, msg = "saveSession";&#13;
+      var lsid = session["@lsid"];&#13;
+      if (!lsid) { return null; }&#13;
+      var gr = this.findSession(lsid);&#13;
+      if (!gr) { return null; }&#13;
+      &#13;
+      gr.u_lseq = session.lseq;&#13;
+      gr.u_session_type = session.session_type;&#13;
+      &#13;
+      gr.u_start_time = this.getGlideDateTime( session.start_time );&#13;
+      gr.u_end_time = this.getGlideDateTime( session.end_time );&#13;
+      gr.u_duration = session.duration;&#13;
+      &#13;
+      if ( session.external_key ) {&#13;
+         gr.u_external_key = session.external_key;&#13;
+         gr.u_task = this.findTaskId( session.external_key );&#13;
+      }&#13;
+      gr.u_file_transfers = session.file_transfer_count;&#13;
+      gr.u_public_site_id = session.public_site["@id"];&#13;
+      gr.u_public_site_name = session.public_site["#text"];&#13;
+      &#13;
+      // A temporary lookup object to map gsnumber to sys_id&#13;
+      this.sessionActors = {};&#13;
+      &#13;
+      // Save Customer (there is only ever one Customer)&#13;
+      if ( session.customer_list ) {&#13;
+         var cust = session.customer_list.customer;&#13;
+         if ( cust ) {&#13;
+            this.saveSessionCust( cust );&#13;
+         }&#13;
+      }&#13;
+      &#13;
+      // Save Session Reps&#13;
+      if ( session.rep_list &amp;&amp; session.rep_list.representative ) {&#13;
+         var reps = this.ensureArray( session.rep_list.representative );&#13;
+         for ( i=0; i&lt;reps.length; i++ ) {&#13;
+            this.saveSessionRep( reps[i] );&#13;
+         }&#13;
+      }&#13;
+      &#13;
+      // Compose name from primary actors&#13;
+      var pri_cust_name = 'NoCustomer';&#13;
+      var pri_cust = session.primary_customer;&#13;
+      if ( pri_cust &amp;&amp; pri_cust['#text'] ) {&#13;
+         pri_cust_name = pri_cust['#text'];&#13;
+      }&#13;
+      var pri_rep_name = 'NoRep';&#13;
+      var pri_rep = session.primary_rep;&#13;
+      if ( pri_rep &amp;&amp; pri_rep['#text'] ) {&#13;
+         pri_rep_name = pri_rep['#text'];&#13;
+      }&#13;
+      gr.u_display_name = 'For ' + pri_cust_name + ' by ' + pri_rep_name;&#13;
+&#13;
+      this.log.logDebug('saveSession - For ' + pri_cust_name + ' by ' + pri_rep_name );&#13;
+      &#13;
+      var session_id = gr.update();&#13;
+&#13;
+      this.log.logDebug('saveSession - ' + session_id );&#13;
+     &#13;
+      // Save Session Events&#13;
+      if ( session.session_details &amp;&amp; session.session_details.event ) {&#13;
+         var events = this.ensureArray( session.session_details.event );&#13;
+         for ( i=0; i&lt;events.length; i++ ) {&#13;
+            this.saveSessionEvent( events[i], i );&#13;
+         }&#13;
+      }&#13;
+      &#13;
+      // Pre-create Session Surveys, if absent&#13;
+      if ( session.cust_survey_list &amp;&amp; session.cust_survey_list.cust_exit_survey ) {&#13;
+         this.findSurveyId( session.cust_survey_list.cust_exit_survey, 'cust' );&#13;
+      }&#13;
+      if ( session.rep_survey_list &amp;&amp; session.rep_survey_list.rep_exit_survey ) {&#13;
+         this.findSurveyId( session.rep_survey_list.rep_exit_survey, 'rep' );&#13;
+      }&#13;
+      &#13;
+      return session_id;&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   saveSessionCust: function( cust ) {&#13;
+   //-------------------------------------------------------&#13;
+      &#13;
+      // cust:  /session_list/session/customer_list/customer&#13;
+      &#13;
+      var i;&#13;
+      var session_id = this.grSession.sys_id.toString();&#13;
+      var gsno = cust['@gsnumber'];&#13;
+      if ( !gsno ) { return null; }&#13;
+         &#13;
+      var gr = new GlideRecord('u_tu_bg_session_customer');&#13;
+      gr.addQuery('u_session',session_id);&#13;
+      gr.addQuery('u_gsnumber',gsno);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( !gr.next() ) {&#13;
+         // Record not found, so initialise object&#13;
+         gr.initialize();&#13;
+         gr.u_session = session_id;&#13;
+         gr.u_gsnumber = gsno;&#13;
+      }&#13;
+      &#13;
+      gr.u_actor_type = 'customer';&#13;
+      gr.u_primary_actor = cust.primary_cust;&#13;
+      &#13;
+      // Session details&#13;
+      if ( cust.info.name ) {&#13;
+         gr.u_display_name = cust.info.name;&#13;
+      } else {&#13;
+         gr.u_display_name = cust.username;&#13;
+      }&#13;
+      gr.u_company = cust.info.company;&#13;
+      gr.u_issue = cust.info.issue;&#13;
+      &#13;
+      // Environment details&#13;
+      gr.u_hostname = cust.hostname;&#13;
+      gr.u_username = cust.username;&#13;
+      gr.u_os = cust.os;&#13;
+      gr.u_private_ip = cust.private_ip;&#13;
+      gr.u_public_ip = cust.public_ip;&#13;
+      &#13;
+      // ( Call to update will act as insert, if rec does not exist )&#13;
+      var cust_id = gr.update();&#13;
+&#13;
+      // Cache sys_id for future lookup&#13;
+      var actor_key = 'gs' + gsno;&#13;
+      this.log.logDebug("saveSessionCust - " + actor_key + " - " + cust_id );&#13;
+     &#13;
+      this.sessionActors[actor_key] = cust_id;&#13;
+      return cust_id;&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   saveSessionRep: function( rep ) {&#13;
+   //-------------------------------------------------------&#13;
+      &#13;
+      // rep:  /session_list/session/rep_list/representative&#13;
+      &#13;
+      var i, session_id = this.grSession.sys_id.toString();&#13;
+      var gsno = rep['@gsnumber'];&#13;
+      if ( !gsno ) { return null; }&#13;
+         &#13;
+      var rep_id = this.findRepId(rep);&#13;
+      &#13;
+      var gr = new GlideRecord('u_tu_bg_session_rep');&#13;
+      gr.addQuery('u_rep',rep_id);&#13;
+      gr.addQuery('u_session',session_id);&#13;
+      gr.addQuery('u_gsnumber',gsno);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( !gr.next() ) {&#13;
+         // Record not found, so initialise object&#13;
+         gr.initialize();&#13;
+         gr.u_rep = rep_id;&#13;
+         gr.u_session = session_id;&#13;
+         gr.u_gsnumber = gsno;&#13;
+      }&#13;
+      &#13;
+      gr.u_actor_type = 'representative';&#13;
+      gr.u_primary_actor = rep.primary_rep;&#13;
+      &#13;
+      // Session details&#13;
+      gr.u_display_name = rep.display_name;&#13;
+      gr.u_seconds_involved = rep.seconds_involved;&#13;
+      &#13;
+      // Environment details&#13;
+      gr.u_hostname = rep.hostname;&#13;
+      gr.u_username = rep.username;&#13;
+      gr.u_os = rep.os;&#13;
+      gr.u_private_ip = rep.private_ip;&#13;
+      gr.u_public_ip = rep.public_ip;&#13;
+      &#13;
+      // ( Call to update will act as insert, if rec does not exist )&#13;
+      var session_rep_id  = gr.update();&#13;
+&#13;
+      // Cache sys_id for future lookup&#13;
+      var actor_key = 'gs' + gsno;&#13;
+      this.log.logDebug("saveSessionRep - " + actor_key + " - " + session_rep_id );&#13;
+&#13;
+      this.sessionActors[actor_key] = session_rep_id;&#13;
+      return session_rep_id;&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   saveExitSurvey: function( survey ) {&#13;
+   //-------------------------------------------------------&#13;
+      &#13;
+      // survey : /exit_survey_list/exit_survey&#13;
+      &#13;
+      var gsno, i;&#13;
+      var lsid = survey['@lsid'];&#13;
+      var survey_type = survey.submitted_by['@type'];&#13;
+      if ( survey_type == 'rep' ) {&#13;
+         gsno = survey.primary_rep['@gsnumber'];&#13;
+      } else {&#13;
+         gsno = survey.primary_customer['@gsnumber'];&#13;
+      }&#13;
+      if ( !lsid || !gsno ) { return null; }&#13;
+         &#13;
+      var session_id = this.findSession(lsid).sys_id.toString();&#13;
+      if (!session_id) { return null; }&#13;
+         &#13;
+      var gr = new GlideRecord('u_tu_bg_exit_survey');&#13;
+      gr.addQuery('u_session',session_id);&#13;
+      gr.addQuery('u_gsnumber',gsno);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( !gr.next() ) {&#13;
+         // Record not found, so initialise object&#13;
+         gr.initialize();&#13;
+         gr.u_session = session_id;&#13;
+         gr.u_gsnumber = gsno;&#13;
+      }&#13;
+      &#13;
+      // Populate Survey record&#13;
+      gr.u_survey_type = survey_type;&#13;
+      gr.u_survey_time = this.getGlideDateTime(survey);&#13;
+      if ( survey_type == 'rep' ) {&#13;
+         // The Session Rep may not have been created when the &#13;
+         // RepExitSurvey event arrives, so attempt to create it&#13;
+         var reps = this.ensureArray( survey.rep_list.representative );&#13;
+         if ( reps &amp;&amp; reps[0] ) {&#13;
+            gr.u_submitted_by = this.saveSessionRep(reps[0]);&#13;
+         } else {&#13;
+            gr.u_submitted_by = this.findActorId(survey.primary_rep);&#13;
+         }&#13;
+      } else {&#13;
+         gr.u_submitted_by = this.findActorId(survey.primary_customer);&#13;
+      }&#13;
+      &#13;
+      // Ensure that we have an array&#13;
+      var questions = this.ensureArray( survey.question_list.question );&#13;
+      &#13;
+      // Process questions and answers&#13;
+      var qna = '', q, q_no, q_name, ans;&#13;
+      for ( i=0; i&lt;questions.length; i++ ) {&#13;
+         q = questions[i]; q_no = q['@id'];&#13;
+         qna += "Q" + q_no + ".\t(" + q.type + ")\t" + q.label +"\n";&#13;
+         ans = q.answer_list.answer;&#13;
+&#13;
+         // Ensure we have a valid string&#13;
+         if (ans) {&#13;
+            ans = ans.replace(/\\n/g,'');  // Strip redundant escaped newline characters&#13;
+         } else {&#13;
+            ans = '';&#13;
+         }&#13;
+         &#13;
+         // Handle special types of question&#13;
+         if ( q.name == 'rating' ) {&#13;
+            gr.u_rating = ans;&#13;
+            qna += "\t" + q.report_header + "\t" + ans + "\n";&#13;
+         } else if  ( q.name == 'comments' ) {&#13;
+            gr.u_comments = ans;&#13;
+            qna += "\t" + q.report_header + "\t (see Comments field ) \n";&#13;
+         } else {&#13;
+            qna += "\t" + q.report_header + "\t" + ans + "\n";&#13;
+         }&#13;
+         &#13;
+      }&#13;
+      &#13;
+      gr.u_details = qna;&#13;
+&#13;
+      // ( Call to update will act as insert, if rec does not exist )&#13;
+      var survey_id = gr.update();&#13;
+      return survey_id;&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   saveSessionEvent: function( se, seq ) {&#13;
+   //-------------------------------------------------------&#13;
+&#13;
+      // se (session_event):  /session/session_details/event&#13;
+      // seq: Sequence number of session_event&#13;
+      &#13;
+      // Returns the result of inserting or updating the Session Event record&#13;
+      &#13;
+      var i, gsno;&#13;
+      var session_id = this.grSession.sys_id.toString();&#13;
+      var gr = new GlideRecord('u_tu_bg_session_event');&#13;
+      gr.addQuery('u_session',session_id);&#13;
+      gr.addQuery('u_seq_no',seq);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( !gr.next() ) {&#13;
+         // Record not found, so initialise object&#13;
+         gr.initialize();&#13;
+         gr.u_session = session_id;&#13;
+         gr.u_seq_no = seq;&#13;
+      }&#13;
+      &#13;
+      var bg_event_type = se["@event_type"];&#13;
+      var bg_event_ts = se["@timestamp"];&#13;
+      gr.u_event_type = bg_event_type;&#13;
+      gr.u_event_time = this.getGlideDateTime( bg_event_ts );&#13;
+      &#13;
+      gr.u_destination = this.findActorId( se.destination );&#13;
+      gr.u_performed_by = this.findActorId( se.performed_by );&#13;
+      &#13;
+      // Both body and data elements are saved to the u_data field&#13;
+      if ( se.data &amp;&amp; se.data.value ) {&#13;
+         var data_values = this.ensureArray( se.data.value );&#13;
+         var data_text = '';&#13;
+         for (i=0;i&lt;data_values.length;i++) {&#13;
+            data_text += '\n' + data_values[i]['@name'] + ' : ' + data_values[i]['@value'];&#13;
+         }&#13;
+         gr.u_data = data_text;&#13;
+      }&#13;
+&#13;
+      // Append body to event data field&#13;
+      if ( se.body ) {&#13;
+         gr.u_data += '\n' + se.body;&#13;
+      }&#13;
+      &#13;
+      // ( Call to update will act as insert, if rec does not exist )&#13;
+      var event_id = gr.update();&#13;
+&#13;
+      // Check whether this event type should be recorded as a Work Note&#13;
+      for (i=0; i&lt;this.worknote_events.length; i++ ) {&#13;
+         if ( this.worknote_events[i] == bg_event_type ) {&#13;
+            this.addEventWorkNote( gr, se );&#13;
+            break;&#13;
+         }&#13;
+      }&#13;
+      &#13;
+      return event_id;&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   saveSupportTeams: function( teams ) {&#13;
+   //-------------------------------------------------------&#13;
+&#13;
+      //  /support_teams&#13;
+     &#13;
+      var i, n=0;&#13;
+      if ( teams ) {&#13;
+         var support_teams = this.ensureArray(teams);&#13;
+         for ( i=0; i&lt;support_teams.length; i++ ) {&#13;
+            if ( this.saveSupportTeam( support_teams[i] ) ) {&#13;
+               n++;&#13;
+            }&#13;
+         }&#13;
+      }&#13;
+     return n;&#13;
+&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   saveSupportTeam: function( team ) {&#13;
+   //-------------------------------------------------------&#13;
+      &#13;
+      //  /support_teams/support_team&#13;
+      &#13;
+      var i, msg = "saveSupportTeam";&#13;
+      var team_id = team['@id'];&#13;
+      &#13;
+      var gr = new GlideRecord('u_tu_bg_team');&#13;
+      gr.addQuery('u_appliance',this.appliance_id);&#13;
+      gr.addQuery('u_team_id',team_id);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( !gr.next() ) {&#13;
+         // Record not found, so initialise object&#13;
+         gr.initialize();&#13;
+         gr.u_appliance = this.appliance_id;&#13;
+         gr.u_team_id = team_id;&#13;
+      }&#13;
+      &#13;
+      gr.u_name = team.name;&#13;
+&#13;
+      // ( Call to update will act as insert, if rec does not exist )&#13;
+      var team_sys_id = gr.update();&#13;
+      &#13;
+      // Add members&#13;
+      &#13;
+      // Add issues&#13;
+&#13;
+      return team_sys_id;&#13;
+            &#13;
+   },&#13;
+   &#13;
+   //----------------------------------------------------------------------------&#13;
+   // The following functions deal with finding and creating Bomgar records&#13;
+   //----------------------------------------------------------------------------&#13;
+   //&#13;
+   //-------------------------------------------------------&#13;
+   createSession: function( lsid, task_no ) {&#13;
+   //-------------------------------------------------------&#13;
+      // Returns a GlideRecord object for the created Bomgar Session&#13;
+&#13;
+      var msg = "createSession";&#13;
+&#13;
+      // Return existing session, if it exists&#13;
+      var gr = this.findSession(lsid);&#13;
+      if ( gr ) { &#13;
+         msg += "\nFound existing session: " + gr.getDisplayValue();&#13;
+         this.log.logInfo(msg);&#13;
+         return gr; &#13;
+      } else {&#13;
+         // Reset error message if not found&#13;
+         this.errorMessage = null;&#13;
+      }&#13;
+      &#13;
+      gr = new GlideRecord('u_tu_bg_session');&#13;
+      gr.u_appliance = this.grAppliance.sys_id.toString();&#13;
+      gr.u_lsid = lsid;&#13;
+      gr.u_task = this.findTaskId( task_no );&#13;
+      gr.u_display_name = "New Session";&#13;
+      var session_id = gr.insert();&#13;
+      &#13;
+      if ( session_id ) {&#13;
+         this.grSession = gr;&#13;
+         msg += "\nCreated Session: " + gr.getDisplayValue();&#13;
+         this.log.logInfo(msg);&#13;
+         return gr;&#13;
+      } else {&#13;
+         this.errorMessage = "Failed to create session with lsid [" + lsid + "]";&#13;
+         return null;&#13;
+      }&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   findSession: function( lsid ) {&#13;
+   //-------------------------------------------------------&#13;
+      // Returns a GlideRecord object for the Session&#13;
+      &#13;
+      var gr = new GlideRecord('u_tu_bg_session');&#13;
+      gr.addQuery('u_appliance',this.appliance_id);&#13;
+      gr.addQuery('u_lsid',lsid);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( gr.next() ) {&#13;
+         // Session found, get ref and return&#13;
+         this.grSession = gr;&#13;
+         return gr;&#13;
+      } else {&#13;
+         this.log.logWarning( "Session not found, lsid: [" + lsid + "]" );&#13;
+         this.grSession = null;&#13;
+         return null;&#13;
+      }&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   findActorId: function( item ) {&#13;
+   //-------------------------------------------------------&#13;
+      // Returns the sys_id of the Bomgar Actor record&#13;
+&#13;
+      // item:  //event/destination or //event/performed_by&#13;
+      &#13;
+      // This routine finds (and caches) sys_ids of Actors&#13;
+      // for the current Session. It will create System Actor&#13;
+      // records, if they do not exist, but it will not create&#13;
+      // Customers or Reps.&#13;
+&#13;
+      // We can get called for non-existant elements, so protect &#13;
+      // ourselves from that.&#13;
+      if ( !item ) { return null; }&#13;
+&#13;
+      var msg = "findActorId";&#13;
+      &#13;
+      // Extract expected information from object&#13;
+      var actor_name = item['#text'];&#13;
+      var actor_type = item['@type'];&#13;
+      var actor_gsno = item['@gsnumber'];&#13;
+      var actor_id, actor_key;&#13;
+&#13;
+      msg += "\n " + actor_gsno + " : " + actor_type + " : " + actor_name;&#13;
+      &#13;
+      if ( actor_gsno != "0" ) {&#13;
+         // This is a Customer or Rep lookup&#13;
+         actor_key = 'gs' + actor_gsno;&#13;
+         msg += "\nActor Key: " + actor_key;&#13;
+         actor_id = this.sessionActors[actor_key];&#13;
+         if ( !actor_id ) {&#13;
+            msg += "\nCust or Rep: not found in cache"; &#13;
+            actor_id = this.findSessionActorId( actor_gsno );&#13;
+         }&#13;
+      } else {&#13;
+         // This is a System Actor lookup&#13;
+         actor_key = actor_type + "_" + actor_name;&#13;
+         msg += "\nActor Key: " + actor_key;&#13;
+         actor_id = this.sessionActors[actor_key];&#13;
+         if ( !actor_id ) {&#13;
+            msg += "\nSystem: not found in cache"; &#13;
+            actor_id = this.findSystemActorId( actor_type, actor_name );&#13;
+         }&#13;
+      }&#13;
+&#13;
+      msg += "\nActor Id: " + actor_id;&#13;
+      this.log.logDebug(msg);&#13;
+      &#13;
+      return actor_id;&#13;
+   },&#13;
+      &#13;
+   //-------------------------------------------------------&#13;
+   findSessionActorId: function( actor_gsno ) {&#13;
+   //-------------------------------------------------------&#13;
+&#13;
+      // This routine finds a Bomgar Session Actor record &#13;
+      // and caches the resulting sys_id for future lookups.&#13;
+      // It does not create a record if the Actor is not found.&#13;
+      &#13;
+      var session_id = this.grSession.sys_id.toString();&#13;
+      var actor_id, gr;&#13;
+      &#13;
+      // Find the Actor record&#13;
+      gr = new GlideRecord('u_tu_bg_session_actor');&#13;
+      gr.addQuery('u_session',session_id);&#13;
+      gr.addQuery('u_gsnumber',actor_gsno);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( gr.next() ) {&#13;
+         actor_id = gr.sys_id.toString();&#13;
+      } else {&#13;
+         this.log.logWarning( "Session Actor not found, gsnumber: [" + actor_gsno + "]" );&#13;
+         actor_id = null;&#13;
+      }&#13;
+      &#13;
+      // Cache and return the id&#13;
+      this.sessionActors['gs'+actor_gsno] = actor_id;&#13;
+      return actor_id;&#13;
+&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   findSystemActorId: function( actor_type, actor_name ) {&#13;
+   //-------------------------------------------------------&#13;
+&#13;
+      // This routine finds or creates a Bomgar System Actor record &#13;
+      // and caches the resulting sys_id for future lookups&#13;
+      &#13;
+      // Build key from data&#13;
+      var actor_key = actor_type + '_' + actor_name;&#13;
+      var actor_id;&#13;
+         &#13;
+      var gr = new GlideRecord('u_tu_bg_system_actor');&#13;
+      gr.addQuery('u_appliance',this.appliance_id);&#13;
+      gr.addQuery('u_actor_type', actor_type);&#13;
+      gr.addQuery('u_display_name', actor_name);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( gr.next() ) {&#13;
+         actor_id = gr.sys_id.toString();&#13;
+      } else {&#13;
+         // Create a new System Actor&#13;
+         gr.initialize();&#13;
+         gr.u_appliance = this.appliance_id;&#13;
+         gr.u_actor_type = actor_type;&#13;
+         gr.u_display_name = actor_name;&#13;
+         gr.u_gsnumber = '0';&#13;
+         actor_id = gr.insert();&#13;
+&#13;
+         this.log.logNotice("Created new Bomgar System Actor:\n" + &#13;
+                            actor_name + " (" + actor_type + ")" );&#13;
+&#13;
+      }&#13;
+      &#13;
+      // Cache and return the id&#13;
+      this.sessionActors[actor_key] = actor_id;&#13;
+      return actor_id;&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   findRepId: function( rep ) {&#13;
+   //-------------------------------------------------------&#13;
+      // Returns the sys_id of the Bomgar Rep record&#13;
+&#13;
+      var rep_sys_id, rep_id = rep['@id'];&#13;
+      if (!rep_id) { return null; }&#13;
+&#13;
+      var gr = new GlideRecord('u_tu_bg_rep');&#13;
+      gr.addQuery('u_appliance', this.appliance_id);&#13;
+      gr.addQuery('u_rep_id',rep_id);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( gr.next() ) {&#13;
+         // Rep found, record sys_id&#13;
+         rep_sys_id = gr.sys_id.toString();&#13;
+      } else {&#13;
+         // Record not found, so let's create one&#13;
+         gr.initialize();&#13;
+         gr.u_appliance = this.appliance_id;&#13;
+         gr.u_rep_id = rep_id;&#13;
+         gr.u_name = rep.display_name;&#13;
+         gr.u_username = rep.username;&#13;
+         rep_sys_id = gr.insert();&#13;
+         &#13;
+         this.log.logNotice("Created new Bomgar Rep\n" + &#13;
+                             rep.display_name + " (" + rep.username + ")" );&#13;
+      }&#13;
+      &#13;
+      return rep_sys_id;&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   findSurveyId: function( survey, survey_type ) {&#13;
+   //-------------------------------------------------------&#13;
+&#13;
+      // Returns the sys_id of the Bomgar Survey record&#13;
+&#13;
+      // This routine will create a skeleton Exit Survey&#13;
+      // record if one is not found.&#13;
+&#13;
+      var gsno = survey['@gsnumber'];&#13;
+      if ( !survey || !gsno ) { return null; }&#13;
+&#13;
+      var session_id = this.grSession.sys_id.toString();&#13;
+      var survey_id, gr;&#13;
+      &#13;
+      // Find the Actor record&#13;
+      gr = new GlideRecord('u_tu_bg_exit_survey');&#13;
+      gr.addQuery('u_session',session_id);&#13;
+      gr.addQuery('u_gsnumber',gsno);&#13;
+      gr.query();&#13;
+      &#13;
+      if ( gr.next() ) {&#13;
+         // Survey found, record sys_id&#13;
+         survey_id = gr.sys_id.toString();&#13;
+      } else {&#13;
+         // Record not found, so let's create one&#13;
+         gr.initialize();&#13;
+         gr.u_session = session_id;&#13;
+         gr.u_gsnumber = gsno;&#13;
+         gr.u_survey_type = survey_type;&#13;
+         gr.u_submitted_by = this.findActorId( survey );&#13;
+&#13;
+         survey_id = gr.insert();&#13;
+         &#13;
+         this.log.logInfo("Created new Bomgar Survey\n" + &#13;
+                             survey_type + " (" + gsno + ")" );&#13;
+      }&#13;
+      &#13;
+      return survey_id;&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   addEventWorkNote: function( grEvent, se ) {&#13;
+   //-------------------------------------------------------&#13;
+&#13;
+      // grEvent: GlideRecord object for the current Session Event&#13;
+      // se (session_event):  /session/session_details/event&#13;
+      &#13;
+      // Returns the result of inserting or updating the Task record&#13;
+&#13;
+      var msg = "addEventWorkNote";&#13;
+      msg += "\nSession name: [" + this.grSession.u_display_name + "]";&#13;
+&#13;
+      // Find the task related to this session&#13;
+      var grTask = new GlideRecord('task');&#13;
+      if ( !grTask.get( this.grSession.u_task.toString() ) ) {&#13;
+         this.log.logError( msg + "\nTask not found." );&#13;
+         return null;&#13;
+      }&#13;
+&#13;
+      msg += "\nTask number: [" + grTask.number + "]";&#13;
+&#13;
+      // Get event type and timestamp from session event object&#13;
+      var bg_event_type = se["@event_type"];&#13;
+      var bg_event_ts = se["@timestamp"];&#13;
+&#13;
+      // Return silently if Event timestamp is not later than High Water Mark&#13;
+      if ( bg_event_ts &lt;= grTask.u_bomgar_event_hwm ) {&#13;
+         return null;&#13;
+      }&#13;
+&#13;
+      // Construct the text of the Work Note for supported event types&#13;
+      var bg_worknote = '', bg_hostname = '';&#13;
+&#13;
+      switch ( bg_event_type ) {&#13;
+&#13;
+         case 'Session Note Added':&#13;
+            &#13;
+            bg_worknote = 'Bomgar - Session Note Added.';&#13;
+            bg_worknote += '\nPerformed by ' + grEvent.u_performed_by.getDisplayValue();&#13;
+            bg_worknote += ' at ' + grEvent.u_event_time.toString();&#13;
+            bg_worknote += '\n' + se.body;&#13;
+            break;&#13;
+            &#13;
+         case 'File Download':&#13;
+            &#13;
+            bg_worknote = 'Bomgar - File Downloaded from Customer device.';&#13;
+            bg_worknote += '\nDownloaded by: ' + grEvent.u_destination.getDisplayValue();&#13;
+            bg_worknote += ' at ' + grEvent.u_event_time.toString();&#13;
+            bg_worknote += '\nCustomer Username: ' + grEvent.u_performed_by.getDisplayValue();&#13;
+            bg_hostname = grEvent.u_performed_by.u_hostname.toString();&#13;
+            if ( bg_hostname ) {&#13;
+               bg_worknote += '\nCustomer Hostname: ' + bg_hostname;&#13;
+            }&#13;
+            bg_worknote += '\nTarget Filename: ' + se.filename;&#13;
+            bg_worknote += '\nTarget Filesize: ' + se.filesize;&#13;
+            bg_worknote += '\n';&#13;
+            break;&#13;
+            &#13;
+         case 'File Upload':&#13;
+            &#13;
+            bg_worknote = 'Bomgar - File Uploaded to Customer device.';&#13;
+            bg_worknote += '\nUploaded by: ' + grEvent.u_performed_by.getDisplayValue();&#13;
+            bg_worknote += ' at ' + grEvent.u_event_time.toString();&#13;
+            bg_worknote += '\nCustomer Username: ' + grEvent.u_destination.getDisplayValue();&#13;
+            bg_hostname = grEvent.u_destination.u_hostname.toString();&#13;
+            if ( bg_hostname ) {&#13;
+               bg_worknote += '\nCustomer Hostname: ' + bg_hostname;&#13;
+            }&#13;
+            bg_worknote += '\nTarget Filename: ' + se.filename;&#13;
+            bg_worknote += '\nTarget Filesize: ' + se.filesize;&#13;
+            bg_worknote += '\n';&#13;
+            break;&#13;
+            &#13;
+         default:&#13;
+            // default ... do nothing&#13;
+            return null;&#13;
+         &#13;
+      }&#13;
+&#13;
+      grTask.work_notes = bg_worknote;&#13;
+      grTask.u_bomgar_event_hwm = bg_event_ts;&#13;
+      &#13;
+      var gr_id = grTask.update();&#13;
+      if ( gr_id ) {&#13;
+         // Success, return sys_id&#13;
+         return grTask.sys_id.toString();&#13;
+      } else {&#13;
+         this.log.logError( msg + "\nFailed to add WorkNote." );&#13;
+         return null;&#13;
+      }&#13;
+&#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   findTaskId: function( task_no ) {&#13;
+   //-------------------------------------------------------&#13;
+      // Returns the sys_id of the task record&#13;
+&#13;
+      var task_id, msg = "findTaskId";&#13;
+      msg += "\nTask number: [" + task_no + "]";&#13;
+      var gr = new GlideRecord('task');&#13;
+      gr.addQuery('number', task_no);&#13;
+      gr.query();&#13;
+      msg += "\nFound " + gr.getRowCount() + " tasks";&#13;
+&#13;
+      if ( gr.next() ) {&#13;
+         // Task found, return sys_id&#13;
+         return gr.sys_id.toString();&#13;
+      } else {&#13;
+         this.log.logWarning( "Task not found, task number: [" + task_no + "]" );&#13;
+         return null;&#13;
+      }&#13;
+   },&#13;
+   &#13;
+   //----------------------------------------------------------------------------&#13;
+   // The following utility functions assist the main functions above.&#13;
+   //----------------------------------------------------------------------------&#13;
+   //&#13;
+   //-------------------------------------------------------&#13;
+   ensureArray: function( item ) {&#13;
+      // Sequences of XML elements of the same type are converted into JavaScript&#13;
+      // Arrays with each element being an instance of the element object. However,&#13;
+      // if an element appears only once it will be presented as a single object. &#13;
+&#13;
+      // This conversion routine ensures that any elements that may appear one or &#13;
+      // more times are converted into an array, even if the array consists of&#13;
+      // only a single element.&#13;
+&#13;
+      // Ensure that we have an array&#13;
+      if ( this._is_array(item) ) {&#13;
+         return item;&#13;
+      } else {&#13;
+         var item_array = [];&#13;
+         if (item) {&#13;
+            item_array.push(item);&#13;
+         }&#13;
+         return item_array;&#13;
+      }&#13;
+      &#13;
+   },&#13;
+   &#13;
+   //-------------------------------------------------------&#13;
+   _is_array: function(v) {&#13;
+      return Object.prototype.toString.apply(v) === '[object Array]';&#13;
+   },&#13;
+   &#13;
+   type: 'BomgarAPI'&#13;
+   &#13;
+};&#13;
+</script><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 14:45:54</sys_created_on><sys_id>76f8483be033300029a6fccbaa5d482d</sys_id><sys_mod_count>4</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:02:58</sys_updated_on><u_reason_for_change/></sys_script_include></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>a1bade49945b0100e28a4e71b2faeb1f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>BomgarAPI</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>dictionary_task_cf3c8b615c8c8100e28a0c90fdabf387</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><database><element label="Task" name="task" type="collection"><element label="Bomgar Event HWM" max_length="40" name="u_bomgar_event_hwm" type="integer"/></element></database>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>a1bade49945b0100e28a4e71b2faeb20</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>task</table>
+<target_name>Task</target_name>
+<type>Database field(s)</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sysevent_register_0ab21ce1295d3000e28a069626280a12</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register"><sysevent_register action="INSERT_OR_UPDATE"><description>Event to read session details from Bomgar Appliance, shortly after the session start event.</description><event_name>bomgar.session.start</event_name><fired_by>BomgarEvent Script Include</fired_by><queue/><sys_created_by>huw.nolan</sys_created_by><sys_created_on>2012-10-25 09:06:43</sys_created_on><sys_id>0ab21ce1295d3000e28a069626280a12</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-08 13:39:21</sys_updated_on><table>u_tu_bg_session</table></sysevent_register></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>adbade49945b0100e28a4e71b2faeb20</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>bomgar.session.start</target_name>
+<type>Event Registration</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_ed4fdfa3e033300029a6fccbaa5d486f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>false</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><name>u_tu_bg_session_event</name><order>1900</order><query/><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:43:09</sys_created_on><sys_domain>global</sys_domain><sys_id>ed4fdfa3e033300029a6fccbaa5d486f</sys_id><sys_mod_count>2</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:36:24</sys_updated_on><timeline_page/><title>Bomgar Session Event</title><u_count_color/><u_count_filter/><u_refresh_interval/><u_show_count>false</u_show_count><u_sort_order/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>adbade49945b0100e28a4e71b2faeb21</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>Bomgar Session Event</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_05a9f3a7e033300029a6fccbaa5d4803</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><name/><order>1000</order><query>Session details</query><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:38:41</sys_created_on><sys_domain>global</sys_domain><sys_id>05a9f3a7e033300029a6fccbaa5d4803</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:53:16</sys_updated_on><timeline_page/><title/><u_count_color/><u_count_filter/><u_refresh_interval/><u_show_count>false</u_show_count><u_sort_order/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>ddbade49945b0100e28a4e71b2faeb1d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table/>
+<target_name>Module.05a9f3a7e033300029a6fccbaa5d4803</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_task_u_bomgar_event_hwm</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_bomgar_event_hwm" table="task"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice/><choice_field/><choice_table/><comments/><create_roles/><default_value>0</default_value><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_bomgar_event_hwm</element><element_reference>false</element_reference><foreign_database/><internal_type>integer</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>task</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-11 15:30:19</sys_created_on><sys_id>33cccb615c8c8100e28a0c90fdabf396</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-11 15:38:30</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>e9bade49945b0100e28a4e71b2faeb20</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>task</table>
+<target_name>Task.u_bomgar_event_hwm</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_app_module_f04edba3e033300029a6fccbaa5d487e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><name>u_tu_bg_rep</name><order>2200</order><query/><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:38:44</sys_created_on><sys_domain>global</sys_domain><sys_id>f04edba3e033300029a6fccbaa5d487e</sys_id><sys_mod_count>2</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:32:08</sys_updated_on><timeline_page/><title>Bomgar Representative</title><u_count_color/><u_count_filter/><u_refresh_interval/><u_show_count>false</u_show_count><u_sort_order/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>e9bade49945b0100e28a4e71b2faeb21</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>u_tu_bg_rep</table>
+<target_name>Bomgar Representative</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sysevent_script_action_a2cf2c025c00c100e28a0c90fdabf364</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action"><sysevent_script_action action="INSERT_OR_UPDATE"><active>true</active><condition_script>current.u_end_time.nil()</condition_script><description>Reacts to the session start event from a Bomgar Appliance.&#13;
+&#13;
+This is implemented as an internal scheduled event within ServiceNow because there seems to be a delay in the Bomgar appliance between sending its session_start event and actually having a session available to be interrogated over the HTTP/XML API. If we react immediately to the session_start event with a retrieveSession call then it returns a "no such session exists" type error message.</description><event_name>bomgar.session.refresh</event_name><name>Bomgar Session Refresh</name><order>100</order><script>// This script will only execute if the session has no End Time set&#13;
+//  i.e. if the Bomgar Session is still in progress&#13;
+&#13;
+refresh_session_data( event.parm1, event.parm2 );&#13;
+&#13;
+function refresh_session_data( appliance_id, lsid ) {&#13;
+   &#13;
+   var bg, msg = "Bomgar Session Refresh";&#13;
+   msg += "\nAppliance ID : [" + appliance_id + "]";&#13;
+   msg += "\nLSID : [" + lsid + "]";&#13;
+&#13;
+   // Initialise the API&#13;
+   try {&#13;
+      bg = new BomgarAPI( appliance_id );&#13;
+   } catch(e) {&#13;
+      msg += "\nFailed to initialise Bomgar API\n" + e.name + "\n" + e.message;&#13;
+      gs.logError(msg,'Bomgar Refresh');&#13;
+      return null;&#13;
+   }&#13;
+   &#13;
+   // Get the session data&#13;
+   var session = bg.retrieveSession(lsid);&#13;
+   if (!session) {&#13;
+      msg += "\nFailed to obtain details of session";&#13;
+      msg += "\n" + bg.getErrorMessage();&#13;
+      gs.logError(msg,'Bomgar Refresh');&#13;
+      return null;&#13;
+   }&#13;
+   &#13;
+   // Update the Bomgar Session record&#13;
+   if ( !bg.saveSession(session) ) {&#13;
+      msg += "\nFailed to save details of session [" + bg.getSessionName() + "]";&#13;
+      msg += "\n" + bg.getErrorMessage();&#13;
+      gs.logError(msg,'Bomgar Refresh');&#13;
+      return null;&#13;
+   }&#13;
+&#13;
+   msg += "\nSession refreshed : [" + bg.getSessionName() + "]";&#13;
+&#13;
+   // Read the refresh interval and set next refresh time&#13;
+   var refresh_interval = parseInt( gs.getProperty( 'tu.bomgar.session.refresh.interval', '0' ) );&#13;
+   msg += "\nRefresh interval : [" + refresh_interval + "] minutes";&#13;
+   var run_at = new GlideDateTime();&#13;
+   run_at.addSeconds( refresh_interval * 60 );&#13;
+&#13;
+   // Schedule the next refresh, if appropriate&#13;
+   if ( refresh_interval &gt; 0 &amp;&amp; bg.sessionInProgress ) {&#13;
+      gs.eventQueueScheduled('bomgar.session.refresh', current, &#13;
+                              appliance_id, lsid, run_at);&#13;
+      msg += "\nSession is in progress', refresh scheduled at " + run_at;&#13;
+   } else {&#13;
+      msg += "\nSession is complete";&#13;
+   }&#13;
+&#13;
+   // Say we've done it&#13;
+   bg.log.logInfo(msg);&#13;
+   &#13;
+}&#13;
+</script><synchronous>false</synchronous><sys_class_name>sysevent_script_action</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-12 17:21:16</sys_created_on><sys_domain>global</sys_domain><sys_id>a2cf2c025c00c100e28a0c90fdabf364</sys_id><sys_mod_count>9</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-13 10:16:07</sys_updated_on><u_reason_for_change/></sysevent_script_action></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>edbade49945b0100e28a4e71b2faeb1e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>bomgar</table>
+<target_name>Bomgar Session Refresh</target_name>
+<type>Script Action</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sysevent_register_b69f60425c00c100e28a0c90fdabf3e8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register"><sysevent_register action="INSERT_OR_UPDATE"><description>Event to read session details from Bomgar Appliance, periodically, while session is in progress.</description><event_name>bomgar.session.refresh</event_name><fired_by>Bomgar Session Script Actions</fired_by><queue/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-12 17:20:27</sys_created_on><sys_id>b69f60425c00c100e28a0c90fdabf3e8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-12 17:20:27</sys_updated_on><table>u_tu_bg_session</table></sysevent_register></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p1">51bade49945b0100e28a4e71b2faeb1d</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:33</sys_created_on>
+<sys_id>edbade49945b0100e28a4e71b2faeb1f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:33</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>bomgar.session.refresh</target_name>
+<type>Event Registration</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>

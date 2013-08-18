@@ -1,0 +1,1873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2013-08-18 11:57:24">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>ServiceNow-Bomgar Integration by TeamUltra
+Mar 2013  v0.5</description>
+<inserted/>
+<name>TeamUltra Bomgar Integration - v0.5</name>
+<origin_sys_id/>
+<release_date/>
+<remote_sys_id>5ee0cf6c5c088100e28a0c90fdabf31d</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:22</sys_created_on>
+<sys_id>907a5e49945b0100e28a4e71b2faebb1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:22</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_rep_u_rep</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_rep" table="u_tu_bg_session_rep"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_rep</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_session_rep</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>u_tu_bg_rep</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>263d2327e033300029a6fccbaa5d4846</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>107a5e49945b0100e28a4e71b2faebb7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>Bomgar Session Rep.u_rep</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_u_end_time</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_end_time" table="u_tu_bg_session"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_end_time</element><element_reference>false</element_reference><foreign_database/><internal_type>glide_date_time</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_session</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:12:27</sys_created_on><sys_id>76f56fe3e033300029a6fccbaa5d486a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:12:27</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>107a5e49945b0100e28a4e71b2faebbc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Session.u_end_time</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_properties_category_m2m_c93d9b63e033300029a6fccbaa5d4826</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="BomgarLogging">801d5323e033300029a6fccbaa5d4877</category><order>300</order><property display_value="tu.bomgar.loglevel.event">90ac5323e033300029a6fccbaa5d48f1</property><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:34:07</sys_created_on><sys_id>c93d9b63e033300029a6fccbaa5d4826</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:34:07</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>107a5e49945b0100e28a4e71b2faebbd</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.loglevel.event.BomgarLogging</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_team_u_team_id</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_team_id" table="u_tu_bg_team"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_team_id</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_team</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:16:37</sys_created_on><sys_id>73e62327e033300029a6fccbaa5d4807</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:16:37</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>107a5e49945b0100e28a4e71b2faebc0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_team</table>
+<target_name>Bomgar Team.u_team_id</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_cdd3b767e033300029a6fccbaa5d487f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users to read Bomgar records</description><name>u_tu_bg_rep</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:12:58</sys_created_on><sys_id>cdd3b767e033300029a6fccbaa5d487f</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:12:58</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:22</sys_created_on>
+<sys_id>147a5e49945b0100e28a4e71b2faebb4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:22</sys_updated_on>
+<table>u_tu_bg_rep</table>
+<target_name>u_tu_bg_rep</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_exit_survey_u_submitted_by</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_submitted_by" table="u_tu_bg_exit_survey"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_submitted_by</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_exit_survey</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>u_tu_bg_session_actor</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:32:15</sys_created_on><sys_id>648a2b27e033300029a6fccbaa5d4842</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:32:15</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>147a5e49945b0100e28a4e71b2faebb6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>Bomgar Survey.u_submitted_by</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_list_u_tu_bg_team_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_list parent="" sys_domain="global" table="u_tu_bg_team" version="2" view=""><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_name</element><list_id display_value="u_tu_bg_team">1f0767e3e033300029a6fccbaa5d48f2</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:17:08</sys_created_on><sys_id>9f0767e3e033300029a6fccbaa5d48f2</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:17:08</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_appliance</element><list_id display_value="u_tu_bg_team">1f0767e3e033300029a6fccbaa5d48f2</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:17:08</sys_created_on><sys_id>130767e3e033300029a6fccbaa5d48f3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:17:08</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_team_id</element><list_id display_value="u_tu_bg_team">1f0767e3e033300029a6fccbaa5d48f2</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:17:08</sys_created_on><sys_id>930767e3e033300029a6fccbaa5d48f3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:17:08</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>u_tu_bg_team</name><parent/><position/><relationship/><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:17:08</sys_created_on><sys_domain>global</sys_domain><sys_id>1f0767e3e033300029a6fccbaa5d48f2</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:17:08</sys_updated_on><sys_user/><view display_value="Default view">Default view</view><view_name/></sys_ui_list></sys_ui_list>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>147a5e49945b0100e28a4e71b2faebba</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_team</table>
+<target_name>Bomgar Team</target_name>
+<type>List Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_app_module_b2d93ba7e033300029a6fccbaa5d48ef</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><name/><order>2000</order><query>User info</query><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:39:18</sys_created_on><sys_domain>global</sys_domain><sys_id>b2d93ba7e033300029a6fccbaa5d48ef</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:39:18</sys_updated_on><timeline_page/><title/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>147a5e49945b0100e28a4e71b2faebbb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>Module.b2d93ba7e033300029a6fccbaa5d48ef</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_action_c31c0c3be033300029a6fccbaa5d4838</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action"><sys_ui_action action="INSERT_OR_UPDATE"><action_name/><active>true</active><client>false</client><comments/><condition>gs.hasRole('bomgar_admin')</condition><form_action>true</form_action><form_button>true</form_button><form_context_menu>false</form_context_menu><form_link>false</form_link><hint/><list_action>false</list_action><list_banner_button>false</list_banner_button><list_button>false</list_button><list_choice>false</list_choice><list_context_menu>false</list_context_menu><list_link>false</list_link><list_save_with_form_button>false</list_save_with_form_button><name>Refresh Survey</name><onclick/><order>100</order><script>refresh_session_data();&#13;
+&#13;
+function refresh_session_data() {&#13;
+   var appliance_id = current.u_session.u_appliance.u_appliance_id.toString();&#13;
+   var lsid = current.u_session.u_lsid.toString();&#13;
+   var bg, msg = "Bomgar Survey Refresh";&#13;
+   try {&#13;
+	  bg = new BomgarAPI(appliance_id);&#13;
+   } catch(e) {&#13;
+	  return;&#13;
+   }&#13;
+	  &#13;
+   var survey = bg.retrieveExitSurvey(lsid,current.u_survey_type.toString());&#13;
+   if (survey) {&#13;
+	  bg.saveExitSurvey(survey);&#13;
+	  gs.addInfoMessage( "Survey refreshed successfully" );&#13;
+   } else {&#13;
+	  gs.addErrorMessage( bg.getErrorMessage() );&#13;
+   }&#13;
+&#13;
+   action.setRedirectURL( current );&#13;
+&#13;
+}&#13;
+</script><show_insert>true</show_insert><show_multiple_update>false</show_multiple_update><show_query>false</show_query><show_update>true</show_update><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 14:59:03</sys_created_on><sys_domain>global</sys_domain><sys_id>c31c0c3be033300029a6fccbaa5d4838</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 14:59:03</sys_updated_on><table>u_tu_bg_exit_survey</table></sys_ui_action></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>147a5e49945b0100e28a4e71b2faebbd</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>Refresh Survey</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_page_b88c0c3be033300029a6fccbaa5d48ff</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page"><sys_ui_page action="INSERT_OR_UPDATE"><category>general</category><client_script/><description>A page to used to request a new session from a Bomgar Appliance, based upon a Session Key</description><html>&lt;?xml version="1.0" encoding="utf-8" ?&gt;&#13;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;&#13;
+&#13;
+&lt;g:evaluate&gt;&#13;
+var hostname = gs.getProperty( 'tu.bomgar.hostname', 'teamultra.bomgar.com' );&#13;
+ var url = 'https://' + hostname + '/api/start_session.ns';&#13;
+&#13;
+&#13;
+&lt;/g:evaluate&gt;&#13;
+&#13;
+&lt;br/&gt;&#13;
+&lt;div class="contentBox" id="sessionKeyBox"&gt;&#13;
+&#13;
+&lt;table style="padding-left:2px" class="wide" cellspacing="0"&gt;&#13;
+&lt;tr class="header"&gt;&#13;
+  &lt;td class="column_head" align="left"&gt;Bomgar Session request - Session Key&lt;/td&gt;&#13;
+&lt;/tr&gt;&#13;
+&lt;/table&gt;&#13;
+&#13;
+&lt;p&gt;You can use this form to initiate a Bomgar session when you have been given a Session key from a Support Representative.&lt;/p&gt;&#13;
+&lt;br/&gt;&#13;
+&#13;
+&lt;div&gt;&#13;
+&lt;form action="${url}" method="post"&gt;&#13;
+&#13;
+&lt;table&gt;&#13;
+&lt;tr&gt;&#13;
+&lt;td title="Please enter the Bomgar Session Key" data-type="label" noWrap="true" class="label label_spacing"&gt;&#13;
+    &lt;span id="status.session.key" class=" label_description" title="" mandatory="false" oclass=""&gt;&lt;/span&gt;&#13;
+    &lt;label id="access_key_pretty:label" for="access_key_pretty" class="accessible"&gt;Session key:&lt;/label&gt;&#13;
+  &lt;/td&gt;&#13;
+  &lt;td class="input_controls"&gt;&#13;
+    &lt;input type="text" name="short_key" id="short_key" value="" size="12" maxlength="24" autocomplete="off" /&gt;&#13;
+  &lt;/td&gt;&#13;
+&lt;/tr&gt;&#13;
+&#13;
+&lt;tr&gt;&#13;
+  &lt;td/&gt;&#13;
+  &lt;td&gt;&#13;
+    &lt;button type="submit"&gt;Submit Session Key&lt;/button&gt;&#13;
+  &lt;/td&gt;&#13;
+&lt;/tr&gt;&#13;
+&lt;/table&gt;&#13;
+&#13;
+&#13;
+&lt;/form&gt;&#13;
+&#13;
+&lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&#13;
+&lt;/j:jelly&gt;&#13;
+</html><name>bomgar_request_session</name><processing_script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 15:01:21</sys_created_on><sys_id>b88c0c3be033300029a6fccbaa5d48ff</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 15:01:21</sys_updated_on></sys_ui_page></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>147a5e49945b0100e28a4e71b2faebbf</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>bomgar_request_session</target_name>
+<type>UI Page</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_actor_sys_class_name</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary action="INSERT" element="sys_class_name" table="u_tu_bg_session_actor"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>3</choice><choice_field/><choice_table/><comments/><create_roles/><default_value>javascript:current.getTableName();</default_value><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>sys_class_name</element><element_reference>false</element_reference><foreign_database/><internal_type>sys_class_name</internal_type><mandatory>false</mandatory><max_length>80</max_length><name>u_tu_bg_session_actor</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:00:46</sys_created_on><sys_id>22013367e033300029a6fccbaa5d48c0</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:00:46</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>147a5e49945b0100e28a4e71b2faebc3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor.sys_class_name</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_8f043367e033300029a6fccbaa5d48b8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users to read Bomgar records</description><name>u_tu_bg_session_event</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:55</sys_created_on><sys_id>8f043367e033300029a6fccbaa5d48b8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:13:55</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:22</sys_created_on>
+<sys_id>187a5e49945b0100e28a4e71b2faebb3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:22</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>u_tu_bg_session_event</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_list_u_tu_bg_appliance_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_list parent="" sys_domain="global" table="u_tu_bg_appliance" version="2" view=""><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_hostname</element><list_id display_value="u_tu_bg_appliance">1561a7e3e033300029a6fccbaa5d48c3</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:52:26</sys_created_on><sys_id>9561a7e3e033300029a6fccbaa5d48c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:52:26</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_appliance_id</element><list_id display_value="u_tu_bg_appliance">1561a7e3e033300029a6fccbaa5d48c3</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:52:26</sys_created_on><sys_id>1961a7e3e033300029a6fccbaa5d48c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:52:26</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_public_ip</element><list_id display_value="u_tu_bg_appliance">1561a7e3e033300029a6fccbaa5d48c3</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:52:26</sys_created_on><sys_id>9961a7e3e033300029a6fccbaa5d48c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:52:26</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_api_version</element><list_id display_value="u_tu_bg_appliance">1561a7e3e033300029a6fccbaa5d48c3</list_id><max_value>false</max_value><min_value>false</min_value><position>3</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:52:26</sys_created_on><sys_id>1d61a7e3e033300029a6fccbaa5d48c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:52:26</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_api_username</element><list_id display_value="u_tu_bg_appliance">1561a7e3e033300029a6fccbaa5d48c3</list_id><max_value>false</max_value><min_value>false</min_value><position>4</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:52:26</sys_created_on><sys_id>9d61a7e3e033300029a6fccbaa5d48c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:52:26</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>u_tu_bg_appliance</name><parent/><position/><relationship/><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:52:26</sys_created_on><sys_domain>global</sys_domain><sys_id>1561a7e3e033300029a6fccbaa5d48c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:52:26</sys_updated_on><sys_user/><view display_value="Default view">Default view</view><view_name/></sys_ui_list></sys_ui_list>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:22</sys_created_on>
+<sys_id>187a5e49945b0100e28a4e71b2faebb5</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:22</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>Bomgar Appliance</target_name>
+<type>List Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_f5c3bb67e033300029a6fccbaa5d48a3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users to read Bomgar records</description><name>u_tu_bg_exit_survey</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:12:44</sys_created_on><sys_id>f5c3bb67e033300029a6fccbaa5d48a3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:12:44</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>187a5e49945b0100e28a4e71b2faebbe</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>u_tu_bg_exit_survey</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_related_u_tu_bg_rep_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_related sys_domain="global" table="u_tu_bg_rep" version="2" view=""><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="u_tu_bg_rep">b2b6b3a7e033300029a6fccbaa5d48c6</list_id><order_by/><position>0</position><related_list>u_tu_bg_session_rep.u_rep</related_list><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:25:39</sys_created_on><sys_id>36b6b3a7e033300029a6fccbaa5d48c6</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:25:39</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list action="INSERT_OR_UPDATE"><filter/><name>u_tu_bg_rep</name><order_by/><position/><related_list/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:25:39</sys_created_on><sys_domain>global</sys_domain><sys_id>b2b6b3a7e033300029a6fccbaa5d48c6</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:25:39</sys_updated_on><sys_user/><view display_value="Default view">Default view</view><view_name/></sys_ui_related_list></sys_ui_related>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>187a5e49945b0100e28a4e71b2faebc1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_rep</table>
+<target_name>Bomgar Representative</target_name>
+<type>Related Lists</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_actor_u_primary_actor</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_primary_actor" table="u_tu_bg_session_actor"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_primary_actor</element><element_reference>false</element_reference><foreign_database/><internal_type>boolean</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_session_actor</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:24:15</sys_created_on><sys_id>27a8e327e033300029a6fccbaa5d48c9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:24:15</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>187a5e49945b0100e28a4e71b2faebc2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor.u_primary_actor</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_related_u_tu_bg_session_rep_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_related sys_domain="global" table="u_tu_bg_session_rep" version="2" view=""><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="u_tu_bg_session_rep">5958f7a7e033300029a6fccbaa5d484b</list_id><order_by/><position>0</position><related_list>u_tu_bg_session_event.u_performed_by</related_list><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:32:38</sys_created_on><sys_id>d958f7a7e033300029a6fccbaa5d484b</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:32:38</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="u_tu_bg_session_rep">5958f7a7e033300029a6fccbaa5d484b</list_id><order_by/><position>1</position><related_list>u_tu_bg_session_event.u_destination</related_list><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:32:38</sys_created_on><sys_id>dd58f7a7e033300029a6fccbaa5d484b</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:32:38</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="u_tu_bg_session_rep">5958f7a7e033300029a6fccbaa5d484b</list_id><order_by/><position>2</position><related_list>u_tu_bg_exit_survey.u_submitted_by</related_list><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:32:38</sys_created_on><sys_id>d158f7a7e033300029a6fccbaa5d484c</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:32:38</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list action="INSERT_OR_UPDATE"><filter/><name>u_tu_bg_session_rep</name><order_by/><position/><related_list/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:32:38</sys_created_on><sys_domain>global</sys_domain><sys_id>5958f7a7e033300029a6fccbaa5d484b</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:32:38</sys_updated_on><sys_user/><view display_value="Default view">Default view</view><view_name/></sys_ui_related_list></sys_ui_related>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:22</sys_created_on>
+<sys_id>1c7a5e49945b0100e28a4e71b2faebb2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:22</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>Bomgar Session Rep</target_name>
+<type>Related Lists</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_u_host_name</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_host_name" table="u_tu_bg_session"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_host_name</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_session</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:12:31</sys_created_on><sys_id>fbf56fe3e033300029a6fccbaa5d489f</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:12:31</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>1c7a5e49945b0100e28a4e71b2faebb7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Session.u_host_name</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_event_u_performed_by</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_performed_by" table="u_tu_bg_session_event"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_performed_by</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_session_event</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>u_tu_bg_session_actor</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:38:48</sys_created_on><sys_id>6c0ceb27e033300029a6fccbaa5d4846</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:38:48</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>1c7a5e49945b0100e28a4e71b2faebb8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>Bomgar Session Event.u_performed_by</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_appliance_u_public_ip</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_public_ip" table="u_tu_bg_appliance"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_public_ip</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_appliance</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:50:21</sys_created_on><sys_id>4fe067e3e033300029a6fccbaa5d4807</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:50:21</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>1c7a5e49945b0100e28a4e71b2faebc0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>Bomgar Appliance.u_public_ip</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>dictionary_u_tu_bg_system_actor_58efd3a3e033300029a6fccbaa5d4804</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><database><element extends="u_tu_bg_session_actor" label="Bomgar System Actor" name="u_tu_bg_system_actor" type="collection"><element label="Appliance" name="u_appliance" reference="u_tu_bg_appliance" type="reference"/></element></database>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>207a5e49945b0100e28a4e71b2faebc5</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_system_actor</table>
+<target_name>Bomgar System Actor</target_name>
+<type>Database field(s)</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_app_module_3df937a7e033300029a6fccbaa5d480a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><name/><order>3000</order><query>System info</query><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:39:47</sys_created_on><sys_domain>global</sys_domain><sys_id>3df937a7e033300029a6fccbaa5d480a</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:39:47</sys_updated_on><timeline_page/><title/><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>207a5e49945b0100e28a4e71b2faebc9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>Module.3df937a7e033300029a6fccbaa5d480a</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_section_edc6efa3e033300029a6fccbaa5d4874</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_section section_id="edc6efa3e033300029a6fccbaa5d4874" sys_domain="global" table="u_tu_bg_team" version="2"><sys_ui_element action="INSERT_OR_UPDATE"><element>u_appliance</element><position>0</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:16:37</sys_created_on><sys_id>6be62327e033300029a6fccbaa5d4801</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">edc6efa3e033300029a6fccbaa5d4874</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:16:37</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_name</element><position>1</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:16:37</sys_created_on><sys_id>b7e62327e033300029a6fccbaa5d4806</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">edc6efa3e033300029a6fccbaa5d4874</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:16:37</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_team_id</element><position>2</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:16:37</sys_created_on><sys_id>f3e62327e033300029a6fccbaa5d480b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">edc6efa3e033300029a6fccbaa5d4874</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:16:37</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>u_tu_bg_team</name><roles/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:55</sys_created_on><sys_domain>global</sys_domain><sys_id>edc6efa3e033300029a6fccbaa5d4874</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:55</sys_updated_on><sys_user/><title>true</title><view display_value="Default view">Default view</view><view_name/></sys_ui_section></sys_ui_section>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>207a5e49945b0100e28a4e71b2faebcc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_team</table>
+<target_name>Bomgar Team</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_properties_category_m2m_cd0d53a3e033300029a6fccbaa5d4808</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="BomgarAppliance">6ecc17a3e033300029a6fccbaa5d4889</category><order>200</order><property display_value="tu.bomgar.event.tasks.only">983c1723e033300029a6fccbaa5d4864</property><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:33:18</sys_created_on><sys_id>cd0d53a3e033300029a6fccbaa5d4808</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:33:18</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>207a5e49945b0100e28a4e71b2faebcd</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.event.tasks.only.BomgarAppliance</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_system_actor_u_appliance</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_appliance" table="u_tu_bg_system_actor"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_appliance</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_system_actor</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>u_tu_bg_appliance</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:50:10</sys_created_on><sys_id>c79e2727e033300029a6fccbaa5d48d7</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:50:10</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>207a5e49945b0100e28a4e71b2faebd1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_system_actor</table>
+<target_name>Bomgar System Actor.u_appliance</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_list_u_tu_bg_system_actor_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_list parent="" sys_domain="global" table="u_tu_bg_system_actor" version="2" view=""><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_display_name</element><list_id display_value="u_tu_bg_system_actor">71fee727e033300029a6fccbaa5d481d</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:51:43</sys_created_on><sys_id>f1fee727e033300029a6fccbaa5d481d</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:51:43</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_actor_type</element><list_id display_value="u_tu_bg_system_actor">71fee727e033300029a6fccbaa5d481d</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:51:43</sys_created_on><sys_id>75fee727e033300029a6fccbaa5d481d</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:51:43</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_appliance</element><list_id display_value="u_tu_bg_system_actor">71fee727e033300029a6fccbaa5d481d</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:51:43</sys_created_on><sys_id>f5fee727e033300029a6fccbaa5d481d</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:51:43</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>sys_updated_on</element><list_id display_value="u_tu_bg_system_actor">71fee727e033300029a6fccbaa5d481d</list_id><max_value>false</max_value><min_value>false</min_value><position>3</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:51:43</sys_created_on><sys_id>79fee727e033300029a6fccbaa5d481d</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:51:43</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>u_tu_bg_system_actor</name><parent/><position/><relationship/><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:51:43</sys_created_on><sys_domain>global</sys_domain><sys_id>71fee727e033300029a6fccbaa5d481d</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:51:43</sys_updated_on><sys_user/><view display_value="Default view">Default view</view><view_name/></sys_ui_list></sys_ui_list>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>247a5e49945b0100e28a4e71b2faebc4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_system_actor</table>
+<target_name>Bomgar System Actor</target_name>
+<type>List Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_related_u_tu_bg_session_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_related sys_domain="global" table="u_tu_bg_session" version="2" view=""><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="u_tu_bg_session">b1877b67e033300029a6fccbaa5d48af</list_id><order_by/><position>0</position><related_list>u_tu_bg_session_customer.u_session</related_list><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:29:08</sys_created_on><sys_id>35877b67e033300029a6fccbaa5d48af</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:29:08</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="u_tu_bg_session">b1877b67e033300029a6fccbaa5d48af</list_id><order_by/><position>1</position><related_list>u_tu_bg_session_rep.u_session</related_list><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:29:08</sys_created_on><sys_id>39877b67e033300029a6fccbaa5d48af</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:29:08</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="u_tu_bg_session">b1877b67e033300029a6fccbaa5d48af</list_id><order_by/><position>2</position><related_list>REL:a93737a7e033300029a6fccbaa5d4827</related_list><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:29:08</sys_created_on><sys_id>358737a7e033300029a6fccbaa5d48f5</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:29:08</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="u_tu_bg_session">b1877b67e033300029a6fccbaa5d48af</list_id><order_by/><position>3</position><related_list>u_tu_bg_session_event.u_session</related_list><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:29:08</sys_created_on><sys_id>398737a7e033300029a6fccbaa5d48f5</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:29:08</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="u_tu_bg_session">b1877b67e033300029a6fccbaa5d48af</list_id><order_by/><position>4</position><related_list>u_tu_bg_exit_survey.u_session</related_list><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:29:08</sys_created_on><sys_id>3d8737a7e033300029a6fccbaa5d48f5</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:29:08</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list action="INSERT_OR_UPDATE"><filter/><name>u_tu_bg_session</name><order_by/><position/><related_list/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:29:08</sys_created_on><sys_domain>global</sys_domain><sys_id>b1877b67e033300029a6fccbaa5d48af</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:29:08</sys_updated_on><sys_user/><view display_value="Default view">Default view</view><view_name/></sys_ui_related_list></sys_ui_related>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>247a5e49945b0100e28a4e71b2faebc6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Session</target_name>
+<type>Related Lists</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_macro_d9b0d47be033300029a6fccbaa5d48f3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro"><sys_ui_macro action="INSERT_OR_UPDATE"><active>true</active><category>general</category><description>show bomgar jump client popup link&#13;
+activate by:&#13;
+- set the active field in this macro to true&#13;
+- adding the attribute to a dictionary field: ref_contributions=tu_bg_jump_to_ci</description><media_type/><name>tu_bg_jump_to_ci</name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 15:20:39</sys_created_on><sys_id>d9b0d47be033300029a6fccbaa5d48f3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 15:20:39</sys_updated_on><xml>&lt;?xml version="1.0" encoding="utf-8" ?&gt;&#13;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;&#13;
+&lt;g:evaluate var="jvar_guid" expression="gs.generateGUID(this);" /&gt;&#13;
+&lt;j:set var="jvar_n" value="tu_bg_jump_${jvar_guid}:${ref}"/&gt;&#13;
+&lt;g:reference_decoration id="${jvar_n}" field="${ref}" &#13;
+  onclick="tubgJump('${ref}'); "&#13;
+  title="${gs.getMessage('Bomgar Jump')}" image="bomgar_small.pngx"/&gt;&#13;
+&#13;
+&lt;script&gt;&#13;
+// show related list &#13;
+// todo: should be part of the PopupWindow class&#13;
+// todo: needs new stack name&#13;
+function tubgJump(reference) {&#13;
+&#13;
+  var s = reference.split('.');&#13;
+  var tableName = s[0];&#13;
+  var referenceField = s[1];&#13;
+  var fieldElement = 'sys_display.' + tableName + '.' + referenceField; &#13;
+&#13;
+  var task_no = g_form.getValue('number');&#13;
+  var cmdb_ci = gel(fieldElement).value;&#13;
+&#13;
+  var amp = '&amp;amp;amp;', url;&#13;
+&#13;
+  url = 'https://teamultra.bomgar.com/api/client_script.ns?';&#13;
+  url += 'type=rep';&#13;
+  url += amp + 'operation=generate';&#13;
+  url += amp + 'action=start_pinned_client_session';&#13;
+  url += amp + 'search_string=' + cmdb_ci;&#13;
+  url += amp + 'session.custom.external_key=' + task_no;&#13;
+&#13;
+  var w = getTopWindow(); &#13;
+  w.popupOpenFocus(url, 'related_list',  950, 700, '', false, false); &#13;
+}&#13;
+&#13;
+&lt;/script&gt;&#13;
+&lt;/j:jelly&gt; &#13;
+</xml></sys_ui_macro></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>247a5e49945b0100e28a4e71b2faebc8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>tu_bg_jump_to_ci</target_name>
+<type>Macro</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_rep_u_user</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_user" table="u_tu_bg_rep"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_user</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_rep</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>sys_user</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:21</sys_created_on><sys_id>ff876327e033300029a6fccbaa5d4879</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:21</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>247a5e49945b0100e28a4e71b2faebcb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_rep</table>
+<target_name>Bomgar Representative.u_user</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_role_44047b27e033300029a6fccbaa5d4880</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:43</sys_created_on><sys_id>44047b27e033300029a6fccbaa5d4880</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">c0047b27e033300029a6fccbaa5d4880</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:13:43</sys_updated_on><sys_user_role display_value="itil">0d8984576411300029a6f0f05c94d2a4</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>247a5e49945b0100e28a4e71b2faebcd</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>c0047b27e033300029a6fccbaa5d4880</table>
+<target_name>itil.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_rep_u_appliance</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_appliance" table="u_tu_bg_rep"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_appliance</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_rep</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>u_tu_bg_appliance</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:20</sys_created_on><sys_id>6787efe3e033300029a6fccbaa5d48dd</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:20</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>247a5e49945b0100e28a4e71b2faebce</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_rep</table>
+<target_name>Bomgar Representative.u_appliance</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_c0047b27e033300029a6fccbaa5d4880</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users to read Bomgar records</description><name>u_tu_bg_session_customer</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:43</sys_created_on><sys_id>c0047b27e033300029a6fccbaa5d4880</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:13:43</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>247a5e49945b0100e28a4e71b2faebcf</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_session_customer</table>
+<target_name>u_tu_bg_session_customer</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>dictionary_u_tu_bg_session_rep_6b7f13e3e033300029a6fccbaa5d4865</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><database><element extends="u_tu_bg_session_actor" label="Bomgar Session Rep" name="u_tu_bg_session_rep" type="collection"><element label="Rep" name="u_rep" reference="u_tu_bg_rep" type="reference"/><element label="Seconds Involved" max_length="40" name="u_seconds_involved" type="integer"/></element></database>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>247a5e49945b0100e28a4e71b2faebd0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>Bomgar Session Rep</target_name>
+<type>Database field(s)</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_app_module_481e9ba3e033300029a6fccbaa5d4831</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><name>u_tu_bg_team</name><order>2300</order><query/><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:37:52</sys_created_on><sys_domain>global</sys_domain><sys_id>481e9ba3e033300029a6fccbaa5d4831</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:36:50</sys_updated_on><timeline_page/><title>Bomgar Team</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>247a5e49945b0100e28a4e71b2faebd3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_team</table>
+<target_name>Bomgar Team</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_event_u_data</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_data" table="u_tu_bg_session_event"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_data</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>1000</max_length><name>u_tu_bg_session_event</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:38:47</sys_created_on><sys_id>980c2327e033300029a6fccbaa5d481f</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:38:47</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>287a5e49945b0100e28a4e71b2faebc7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>Bomgar Session Event.u_data</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_exit_survey_u_gsnumber</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_gsnumber" table="u_tu_bg_exit_survey"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_gsnumber</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_exit_survey</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:32:14</sys_created_on><sys_id>d88a2b27e033300029a6fccbaa5d4833</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:32:14</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>287a5e49945b0100e28a4e71b2faebca</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>Bomgar Survey.u_gsnumber</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_section_7f276fe3e033300029a6fccbaa5d48d1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_section section_id="7f276fe3e033300029a6fccbaa5d48d1" sys_domain="global" table="u_tu_bg_rep" version="2"><sys_ui_element action="INSERT_OR_UPDATE"><element>.begin_split</element><position>0</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:58</sys_created_on><sys_id>fcb76327e033300029a6fccbaa5d48ef</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">7f276fe3e033300029a6fccbaa5d48d1</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:58</sys_updated_on><sys_user/><type>.begin_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_name</element><position>1</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:58</sys_created_on><sys_id>70b76327e033300029a6fccbaa5d48f0</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">7f276fe3e033300029a6fccbaa5d48d1</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:58</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_user</element><position>2</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:58</sys_created_on><sys_id>f0b76327e033300029a6fccbaa5d48f0</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">7f276fe3e033300029a6fccbaa5d48d1</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:58</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>3</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:58</sys_created_on><sys_id>74b76327e033300029a6fccbaa5d48f0</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">7f276fe3e033300029a6fccbaa5d48d1</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:58</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_appliance</element><position>4</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:58</sys_created_on><sys_id>f4b76327e033300029a6fccbaa5d48f0</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">7f276fe3e033300029a6fccbaa5d48d1</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:58</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_username</element><position>5</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:58</sys_created_on><sys_id>78b76327e033300029a6fccbaa5d48f0</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">7f276fe3e033300029a6fccbaa5d48d1</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:58</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_rep_id</element><position>6</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:58</sys_created_on><sys_id>f8b76327e033300029a6fccbaa5d48f0</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">7f276fe3e033300029a6fccbaa5d48d1</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:58</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>7</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:19:58</sys_created_on><sys_id>7cb76327e033300029a6fccbaa5d48f0</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">7f276fe3e033300029a6fccbaa5d48d1</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:19:58</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>u_tu_bg_rep</name><roles/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:17:43</sys_created_on><sys_domain>global</sys_domain><sys_id>7f276fe3e033300029a6fccbaa5d48d1</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:17:43</sys_updated_on><sys_user/><title>true</title><view display_value="Default view">Default view</view><view_name/></sys_ui_section></sys_ui_section>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>287a5e49945b0100e28a4e71b2faebcd</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_rep</table>
+<target_name>Bomgar Representative</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_list_u_tu_bg_session_actor_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_list parent="" sys_domain="global" table="u_tu_bg_session_actor" version="2" view=""><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_actor_type</element><list_id display_value="u_tu_bg_session_actor">a19927e3e033300029a6fccbaa5d4825</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_id>259927e3e033300029a6fccbaa5d4825</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_display_name</element><list_id display_value="u_tu_bg_session_actor">a19927e3e033300029a6fccbaa5d4825</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_id>a59927e3e033300029a6fccbaa5d4825</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_gsnumber</element><list_id display_value="u_tu_bg_session_actor">a19927e3e033300029a6fccbaa5d4825</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_id>299927e3e033300029a6fccbaa5d4825</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_hostname</element><list_id display_value="u_tu_bg_session_actor">a19927e3e033300029a6fccbaa5d4825</list_id><max_value>false</max_value><min_value>false</min_value><position>3</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_id>a99927e3e033300029a6fccbaa5d4825</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_os</element><list_id display_value="u_tu_bg_session_actor">a19927e3e033300029a6fccbaa5d4825</list_id><max_value>false</max_value><min_value>false</min_value><position>4</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_id>2d9927e3e033300029a6fccbaa5d4825</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_primary_actor</element><list_id display_value="u_tu_bg_session_actor">a19927e3e033300029a6fccbaa5d4825</list_id><max_value>false</max_value><min_value>false</min_value><position>5</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_id>ad9927e3e033300029a6fccbaa5d4825</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_private_ip</element><list_id display_value="u_tu_bg_session_actor">a19927e3e033300029a6fccbaa5d4825</list_id><max_value>false</max_value><min_value>false</min_value><position>6</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_id>219927e3e033300029a6fccbaa5d4826</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_public_ip</element><list_id display_value="u_tu_bg_session_actor">a19927e3e033300029a6fccbaa5d4825</list_id><max_value>false</max_value><min_value>false</min_value><position>7</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_id>a19927e3e033300029a6fccbaa5d4826</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_session</element><list_id display_value="u_tu_bg_session_actor">a19927e3e033300029a6fccbaa5d4825</list_id><max_value>false</max_value><min_value>false</min_value><position>8</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_id>259927e3e033300029a6fccbaa5d4826</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>u_tu_bg_session_actor</name><parent/><position/><relationship/><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:28:13</sys_created_on><sys_domain>global</sys_domain><sys_id>a19927e3e033300029a6fccbaa5d4825</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:28:13</sys_updated_on><sys_user/><view display_value="Default view">Default view</view><view_name/></sys_ui_list></sys_ui_list>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>287a5e49945b0100e28a4e71b2faebd2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor</target_name>
+<type>List Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>dictionary_u_tu_bg_session_event_154fdfa3e033300029a6fccbaa5d486f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><database><element label="Bomgar Session Event" name="u_tu_bg_session_event" type="collection"><element label="Data" max_length="1000" name="u_data" type="string"/><element label="Destination" name="u_destination" reference="u_tu_bg_session_actor" type="reference"/><element label="Event Time" max_length="40" name="u_event_time" type="glide_date_time"/><element label="Event Type" max_length="40" name="u_event_type" type="string"/><element label="Performed By" name="u_performed_by" reference="u_tu_bg_session_actor" type="reference"/><element label="Seq No" max_length="40" name="u_seq_no" type="integer"/><element label="Session" name="u_session" reference="u_tu_bg_session" type="reference"/><element label="Session ID" max_length="40" name="u_session_id" type="string"/></element></database>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>2c7a5e49945b0100e28a4e71b2faebd1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>Bomgar Session Event</target_name>
+<type>Database field(s)</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_properties_f9cbd323e033300029a6fccbaa5d4856</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>The socket read timeout, in seconds, for the HTTP connection to a Bomgar Appliance.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>tu.bomgar.socket.timeout</name><read_roles/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:27:53</sys_created_on><sys_id>f9cbd323e033300029a6fccbaa5d4856</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:27:53</sys_updated_on><type>integer</type><value>10</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=f9cbd323e033300029a6fccbaa5d4856"/></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:22</sys_created_on>
+<sys_id>507a5e49945b0100e28a4e71b2faebb4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:22</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.socket.timeout</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_aa247f67e033300029a6fccbaa5d4848</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users to read Bomgar records</description><name>u_tu_bg_team</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:14:26</sys_created_on><sys_id>aa247f67e033300029a6fccbaa5d4848</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:14:26</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>507a5e49945b0100e28a4e71b2faebb6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_team</table>
+<target_name>u_tu_bg_team</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_properties_90ac5323e033300029a6fccbaa5d48f1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices>error,warning,notice,info,debug</choices><description>Set logging level for Bomgar Event (default is 'notice')</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>tu.bomgar.loglevel.event</name><read_roles/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:31:36</sys_created_on><sys_id>90ac5323e033300029a6fccbaa5d48f1</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:31:36</sys_updated_on><type>choicelist</type><value>notice</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=90ac5323e033300029a6fccbaa5d48f1"/></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>507a5e49945b0100e28a4e71b2faebba</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.loglevel.event</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_app_module_101f9fa3e033300029a6fccbaa5d4850</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><name>u_tu_bg_exit_survey</name><order>1950</order><query/><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:42:16</sys_created_on><sys_domain>global</sys_domain><sys_id>101f9fa3e033300029a6fccbaa5d4850</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:36:37</sys_updated_on><timeline_page/><title>Bomgar Survey</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>507a5e49945b0100e28a4e71b2faebbb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>Bomgar Survey</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_choice_u_tu_bg_exit_survey_u_survey_type</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_choice field="u_survey_type" table="u_tu_bg_exit_survey"><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>u_survey_type</element><hint/><inactive>false</inactive><label>Customer</label><language>en</language><name>u_tu_bg_exit_survey</name><sequence>0</sequence><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:34:11</sys_created_on><sys_domain>global</sys_domain><sys_id>0dfa6b27e033300029a6fccbaa5d481e</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:34:22</sys_updated_on><value>cust</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>u_survey_type</element><hint/><inactive>false</inactive><label>Representative</label><language>en</language><name>u_tu_bg_exit_survey</name><sequence>1</sequence><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:34:11</sys_created_on><sys_domain>global</sys_domain><sys_id>c1fa6b27e033300029a6fccbaa5d481f</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:34:29</sys_updated_on><value>rep</value></sys_choice></sys_choice>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>507a5e49945b0100e28a4e71b2faebbf</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>Bomgar Survey.Survey Type</target_name>
+<type>Choice list</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_app_module_14efd3a3e033300029a6fccbaa5d4805</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><name>u_tu_bg_system_actor</name><order>200</order><query/><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:45:48</sys_created_on><sys_domain>global</sys_domain><sys_id>14efd3a3e033300029a6fccbaa5d4805</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:35:48</sys_updated_on><timeline_page/><title>Bomgar System Actor</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>507a5e49945b0100e28a4e71b2faebc3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_system_actor</table>
+<target_name>Bomgar System Actor</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_3454fb67e033300029a6fccbaa5d48b1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to write to Bomgar records</description><name>u_tu_bg_appliance</name><operation display_value="write">write</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:15:07</sys_created_on><sys_id>3454fb67e033300029a6fccbaa5d48b1</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:15:36</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:22</sys_created_on>
+<sys_id>547a5e49945b0100e28a4e71b2faebb3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:22</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>u_tu_bg_appliance</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_user_role_96ca5f63e033300029a6fccbaa5d4823</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><can_delegate>true</can_delegate><description>A role held by users that are Bomgar Administrators</description><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>bomgar_admin</name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:23:58</sys_created_on><sys_id>96ca5f63e033300029a6fccbaa5d4823</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:23:58</sys_updated_on></sys_user_role></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:22</sys_created_on>
+<sys_id>547a5e49945b0100e28a4e71b2faebb5</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:22</sys_updated_on>
+<table/>
+<target_name>bomgar_admin</target_name>
+<type>Role</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_properties_category_m2m_850d57a3e033300029a6fccbaa5d4844</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="BomgarAppliance">6ecc17a3e033300029a6fccbaa5d4889</category><order>400</order><property display_value="tu.bomgar.socket.timeout">f9cbd323e033300029a6fccbaa5d4856</property><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:33:18</sys_created_on><sys_id>850d57a3e033300029a6fccbaa5d4844</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:33:18</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>547a5e49945b0100e28a4e71b2faebb9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.socket.timeout.BomgarAppliance</target_name>
+<type>Category Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_appliance_u_api_version</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_api_version" table="u_tu_bg_appliance"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_api_version</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_appliance</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:50:20</sys_created_on><sys_id>b6e027e3e033300029a6fccbaa5d48f9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:50:20</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>547a5e49945b0100e28a4e71b2faebbe</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>Bomgar Appliance.u_api_version</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_u_task</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_task" table="u_tu_bg_session"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_task</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_session</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>task</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:12:27</sys_created_on><sys_id>2af56fe3e033300029a6fccbaa5d4860</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:12:27</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>547a5e49945b0100e28a4e71b2faebc1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Session.u_task</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_properties_640c9f63e033300029a6fccbaa5d4853</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Please enter the fully qualified hostname of the default Bomgar appliance.</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>tu.bomgar.hostname</name><read_roles/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:28:53</sys_created_on><sys_id>640c9f63e033300029a6fccbaa5d4853</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:28:53</sys_updated_on><type>string</type><value>teamultra.bomgar.com</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=640c9f63e033300029a6fccbaa5d4853"/></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>547a5e49945b0100e28a4e71b2faebc2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.hostname</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_app_module_88bf93a3e033300029a6fccbaa5d48c7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><name>u_tu_bg_session_customer</name><order>1200</order><query/><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:44:58</sys_created_on><sys_domain>global</sys_domain><sys_id>88bf93a3e033300029a6fccbaa5d48c7</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:36:13</sys_updated_on><timeline_page/><title>Bomgar Session Customer</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:22</sys_created_on>
+<sys_id>587a5e49945b0100e28a4e71b2faebb2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:22</sys_updated_on>
+<table>u_tu_bg_session_customer</table>
+<target_name>Bomgar Session Customer</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_u_public_site_name</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_public_site_name" table="u_tu_bg_session"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_public_site_name</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>100</max_length><name>u_tu_bg_session</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:12:29</sys_created_on><sys_id>1bf56fe3e033300029a6fccbaa5d4887</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:12:29</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>587a5e49945b0100e28a4e71b2faebb7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Session.u_public_site_name</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_appliance_u_api_password</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_api_password" table="u_tu_bg_appliance"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice/><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_api_password</element><element_reference>false</element_reference><foreign_database/><internal_type>password2</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_appliance</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:50:21</sys_created_on><sys_id>32e067e3e033300029a6fccbaa5d4803</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:51:01</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>587a5e49945b0100e28a4e71b2faebb8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>Bomgar Appliance.u_api_password</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_properties_886cdf63e033300029a6fccbaa5d4817</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices>error,warning,notice,info,debug</choices><description>Set logging level for Bomgar API (default is 'notice')</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>tu.bomgar.loglevel.api</name><read_roles/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:30:30</sys_created_on><sys_id>886cdf63e033300029a6fccbaa5d4817</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:30:30</sys_updated_on><type>choicelist</type><value>notice</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=886cdf63e033300029a6fccbaa5d4817"/></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>587a5e49945b0100e28a4e71b2faebc0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>tu.bomgar.loglevel.api</target_name>
+<type>System Property</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>db_image_444d007be033300029a6fccbaa5d48a6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>16</height><image/><name>bomgar_small.png</name><size_bytes>345</size_bytes><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 15:04:17</sys_created_on><sys_id>444d007be033300029a6fccbaa5d48a6</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 15:04:52</sys_updated_on><thumbnail/><width>16</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><compressed>true</compressed><content_type>image/png</content_type><file_name>image</file_name><size_bytes>345</size_bytes><size_compressed>368</size_compressed><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 15:04:52</sys_created_on><sys_id>507d083be033300029a6fccbaa5d483f</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 15:04:52</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>444d007be033300029a6fccbaa5d48a6</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAAAA==</data><length>16</length><position>0</position><sys_attachment display_value="image">507d083be033300029a6fccbaa5d483f</sys_attachment><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 15:04:52</sys_created_on><sys_id>907d083be033300029a6fccbaa5d483f</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>AVkBpv6JUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIAgAAAJCRaDYAAAAZdEVYdFNvZnR3YXJlAEFk&#13;
+b2JlIEltYWdlUmVhZHlxyWU8AAAA+0lEQVR42mL8H8JAEmABERrWxCq/cRSs4c8vEm1A1qBswqBs&#13;
+CmI8u8Fw5wzDj8/YNPz+iRBQMGAw9mF49xREfv/M0B1ISMO/vwwn1jBsncjAycfQcwGk//ZJTCch&#13;
+afj7ByoiIAZifH6LIovdBptIBgN3BlkdhptHGe6fQ3MSE9Q8OAJquHaIYXEpw5JykJ7wJhRZqA1/&#13;
+/yJM+P+P4fUDhqsHQQjISJ/FsKgEw0kM/5E0/EeIiMgxfP2AIgvV8O8fijPtYhm07Bi4BBjk9Rhm&#13;
+pKDJYthw7QDUkm8fGM5sYnj9EM3TjKDEx8RMbML49xfDBqLSEpof8AKAAAMAPcpysWHsSBoAAAAA&#13;
+SUVORK5CYII3ju4kWQEAAA==</data><length>492</length><position>1</position><sys_attachment display_value="image">507d083be033300029a6fccbaa5d483f</sys_attachment><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 15:04:52</sys_created_on><sys_id>147d083be033300029a6fccbaa5d483f</sys_id></sys_attachment_doc></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>5c7a5e49945b0100e28a4e71b2faebb6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>bomgar_small.png</target_name>
+<type>Images</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_role_0ca3b767e033300029a6fccbaa5d489d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:12:05</sys_created_on><sys_id>0ca3b767e033300029a6fccbaa5d489d</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_appliance">ae63fb67e033300029a6fccbaa5d4861</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:12:05</sys_updated_on><sys_user_role display_value="itil">0d8984576411300029a6f0f05c94d2a4</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>5c7a5e49945b0100e28a4e71b2faebba</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>itil.u_tu_bg_appliance</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_exit_survey_u_session</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_session" table="u_tu_bg_exit_survey"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_session</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_exit_survey</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>u_tu_bg_session</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:32:14</sys_created_on><sys_id>648a2b27e033300029a6fccbaa5d483d</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:32:14</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>5c7a5e49945b0100e28a4e71b2faebbb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>Bomgar Survey.u_session</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_exit_survey_u_comments</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_comments" table="u_tu_bg_exit_survey"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_comments</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>1000</max_length><name>u_tu_bg_exit_survey</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:33:26</sys_created_on><sys_id>4aca2b27e033300029a6fccbaa5d48cb</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:33:26</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>5c7a5e49945b0100e28a4e71b2faebbc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>Bomgar Survey.u_comments</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_section_c7ccafe3e033300029a6fccbaa5d482b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_section section_id="c7ccafe3e033300029a6fccbaa5d482b" sys_domain="global" table="u_tu_bg_session_rep" version="2"><sys_ui_element action="INSERT_OR_UPDATE"><element>.begin_split</element><position>0</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>aa3d2327e033300029a6fccbaa5d4845</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type>.begin_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_display_name</element><position>1</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>2e3d2327e033300029a6fccbaa5d4845</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_rep</element><position>2</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>6a3d6f27e033300029a6fccbaa5d48cc</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_session</element><position>3</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>ea3d6f27e033300029a6fccbaa5d48cc</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_gsnumber</element><position>4</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>6e3d6f27e033300029a6fccbaa5d48cc</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_primary_actor</element><position>5</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>ee3d6f27e033300029a6fccbaa5d48cc</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>6</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>623d6f27e033300029a6fccbaa5d48cd</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_username</element><position>7</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>e23d6f27e033300029a6fccbaa5d48cd</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_hostname</element><position>8</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>663d6f27e033300029a6fccbaa5d48cd</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_os</element><position>9</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>e63d6f27e033300029a6fccbaa5d48cd</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_public_ip</element><position>10</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>6a3d6f27e033300029a6fccbaa5d48cd</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_private_ip</element><position>11</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>ea3d6f27e033300029a6fccbaa5d48cd</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_seconds_involved</element><position>12</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>223d6f27e033300029a6fccbaa5d48d3</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>13</position><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:44:07</sys_created_on><sys_id>a23d6f27e033300029a6fccbaa5d48d3</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_section display_value="">c7ccafe3e033300029a6fccbaa5d482b</sys_ui_section><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:44:07</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>u_tu_bg_session_rep</name><roles/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:42:14</sys_created_on><sys_domain>global</sys_domain><sys_id>c7ccafe3e033300029a6fccbaa5d482b</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:42:14</sys_updated_on><sys_user/><title>true</title><view display_value="Default view">Default view</view><view_name/></sys_ui_section></sys_ui_section>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>5c7a5e49945b0100e28a4e71b2faebbf</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>Bomgar Session Rep</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_ui_list_u_tu_bg_session_null</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_ui_list parent="" sys_domain="global" table="u_tu_bg_session" version="2" view=""><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_display_name</element><list_id display_value="u_tu_bg_session">6da6efe3e033300029a6fccbaa5d4867</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:23</sys_created_on><sys_id>eda6efe3e033300029a6fccbaa5d4867</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_task</element><list_id display_value="u_tu_bg_session">6da6efe3e033300029a6fccbaa5d4867</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:23</sys_created_on><sys_id>61a6efe3e033300029a6fccbaa5d4868</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_duration</element><list_id display_value="u_tu_bg_session">6da6efe3e033300029a6fccbaa5d4867</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:23</sys_created_on><sys_id>e1a6efe3e033300029a6fccbaa5d4868</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_duration_band</element><list_id display_value="u_tu_bg_session">6da6efe3e033300029a6fccbaa5d4867</list_id><max_value>false</max_value><min_value>false</min_value><position>3</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:23</sys_created_on><sys_id>65a6efe3e033300029a6fccbaa5d4868</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_start_time</element><list_id display_value="u_tu_bg_session">6da6efe3e033300029a6fccbaa5d4867</list_id><max_value>false</max_value><min_value>false</min_value><position>4</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:23</sys_created_on><sys_id>e5a6efe3e033300029a6fccbaa5d4868</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_end_time</element><list_id display_value="u_tu_bg_session">6da6efe3e033300029a6fccbaa5d4867</list_id><max_value>false</max_value><min_value>false</min_value><position>5</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:23</sys_created_on><sys_id>69a6efe3e033300029a6fccbaa5d4868</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>sys_updated_on</element><list_id display_value="u_tu_bg_session">6da6efe3e033300029a6fccbaa5d4867</list_id><max_value>false</max_value><min_value>false</min_value><position>6</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:23</sys_created_on><sys_id>e9a6efe3e033300029a6fccbaa5d4868</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:23</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>sys_updated_by</element><list_id display_value="u_tu_bg_session">6da6efe3e033300029a6fccbaa5d4867</list_id><max_value>false</max_value><min_value>false</min_value><position>7</position><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:23</sys_created_on><sys_id>6da6efe3e033300029a6fccbaa5d4868</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:23</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>u_tu_bg_session</name><parent/><position/><relationship/><sum>false</sum><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:15:23</sys_created_on><sys_domain>global</sys_domain><sys_id>6da6efe3e033300029a6fccbaa5d4867</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:15:23</sys_updated_on><sys_user/><view display_value="Default view">Default view</view><view_name/></sys_ui_list></sys_ui_list>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>607a5e49945b0100e28a4e71b2faebc4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Session</target_name>
+<type>List Layout</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_actor_u_gsnumber</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_gsnumber" table="u_tu_bg_session_actor"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_gsnumber</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_session_actor</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:24:14</sys_created_on><sys_id>dfa8e327e033300029a6fccbaa5d48b2</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:24:14</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>607a5e49945b0100e28a4e71b2faebc6</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor.u_gsnumber</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_event_u_event_type</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_event_type" table="u_tu_bg_session_event"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_event_type</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_session_event</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:38:48</sys_created_on><sys_id>200ceb27e033300029a6fccbaa5d4842</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:38:48</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>607a5e49945b0100e28a4e71b2faebc8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>Bomgar Session Event.u_event_type</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_actor_u_display_name</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_display_name" table="u_tu_bg_session_actor"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_display_name</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_session_actor</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:24:14</sys_created_on><sys_id>93a86327e033300029a6fccbaa5d48a1</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:24:14</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>607a5e49945b0100e28a4e71b2faebcb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor.u_display_name</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_app_module_39ce807be033300029a6fccbaa5d48cb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="itil_self_service">08771d0cc0a8016401f604303b94b999</application><content_page/><filter/><hint/><homepage/><image>bomgar_small.pngx</image><link_type>DIRECT</link_type><map_page/><name/><order>60</order><query>/bomgar_request_session.do</query><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 15:11:17</sys_created_on><sys_domain>global</sys_domain><sys_id>39ce807be033300029a6fccbaa5d48cb</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 15:13:46</sys_updated_on><timeline_page/><title>Enter Bomgar Session Key</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>607a5e49945b0100e28a4e71b2faebce</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table/>
+<target_name>Enter Bomgar Session Key</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_u_appliance</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_appliance" table="u_tu_bg_session"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_appliance</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_session</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>u_tu_bg_appliance</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:12:28</sys_created_on><sys_id>8ff56fe3e033300029a6fccbaa5d4878</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:12:28</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>607a5e49945b0100e28a4e71b2faebcf</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Session.u_appliance</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_actor_u_username</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_username" table="u_tu_bg_session_actor"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_username</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>u_tu_bg_session_actor</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:24:17</sys_created_on><sys_id>37a8e327e033300029a6fccbaa5d48e7</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:24:17</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>607a5e49945b0100e28a4e71b2faebd0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor.u_username</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_app_module_de8e1fa3e033300029a6fccbaa5d48b1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="bomgar">b5bdd7a3e033300029a6fccbaa5d4857</application><content_page/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><name>u_tu_bg_session_actor</name><order>250</order><query/><report/><roles/><survey/><survey_overwrite>true</survey_overwrite><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:39:56</sys_created_on><sys_domain>global</sys_domain><sys_id>de8e1fa3e033300029a6fccbaa5d48b1</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:35:56</sys_updated_on><timeline_page/><title>Bomgar Session Actor</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>607a5e49945b0100e28a4e71b2faebd3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor</target_name>
+<type>Module</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_18f3fb67e033300029a6fccbaa5d48d4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users to read Bomgar records</description><name>u_tu_bg_session_actor</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:28</sys_created_on><sys_id>18f3fb67e033300029a6fccbaa5d48d4</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:13:28</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>647a5e49945b0100e28a4e71b2faebc7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>u_tu_bg_session_actor</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>dictionary_u_tu_bg_session_41ed1ba3e033300029a6fccbaa5d48f8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><database><element label="Bomgar Session" name="u_tu_bg_session" type="collection"><element label="Display Name" max_length="40" name="u_display_name" type="string"/><element label="Task" name="u_task" reference="task" type="reference"/><element label="Start Time" max_length="40" name="u_start_time" type="glide_date_time"/><element label="End Time" max_length="40" name="u_end_time" type="glide_date_time"/><element label="Duration" max_length="40" name="u_duration" type="string"/><element choice="1" label="Duration Band" max_length="40" name="u_duration_band" type="string"/><element label="Appliance" name="u_appliance" reference="u_tu_bg_appliance" type="reference"/><element label="LSID" max_length="40" name="u_lsid" type="string"/><element label="Public Site ID" max_length="100" name="u_public_site_id" type="string"/><element label="Public Site Name" max_length="100" name="u_public_site_name" type="string"/><element label="File Transfers" max_length="40" name="u_file_transfers" type="string"/><element label="LSeq" max_length="40" name="u_lseq" type="string"/><element label="External Key" max_length="40" name="u_external_key" type="string"/><element label="Session Type" max_length="40" name="u_session_type" type="string"/><element label="Host Name" max_length="40" name="u_host_name" type="string"/></element></database>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>647a5e49945b0100e28a4e71b2faebca</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Session</target_name>
+<type>Database field(s)</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_actor_u_session</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_session" table="u_tu_bg_session_actor"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_session</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_session_actor</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>u_tu_bg_session</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12:24:16</sys_created_on><sys_id>bba8e327e033300029a6fccbaa5d48df</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 12:24:16</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>647a5e49945b0100e28a4e71b2faebd2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>Bomgar Session Actor.u_session</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_user_role_contains_ea3b1b63e033300029a6fccbaa5d4875</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</contains><role display_value="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</role><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:25:29</sys_created_on><sys_id>ea3b1b63e033300029a6fccbaa5d4875</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:25:29</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>687a5e49945b0100e28a4e71b2faebc9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table/>
+<target_name>bomgar_admin.bomgar_rep</target_name>
+<type>Contained Role</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_role_5614b367e033300029a6fccbaa5d48da</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:14:09</sys_created_on><sys_id>5614b367e033300029a6fccbaa5d48da</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">d214b367e033300029a6fccbaa5d48da</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:14:09</sys_updated_on><sys_user_role display_value="itil">0d8984576411300029a6f0f05c94d2a4</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>687a5e49945b0100e28a4e71b2faebcc</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>d214b367e033300029a6fccbaa5d48da</table>
+<target_name>itil.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_script_430ac83be033300029a6fccbaa5d482e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script"><sys_script action="INSERT_OR_UPDATE"><action_delete>false</action_delete><action_insert>true</action_insert><action_label/><action_name/><action_query>false</action_query><action_run_at>server</action_run_at><action_update>true</action_update><active>true</active><application/><client_callable>false</client_callable><collection>u_tu_bg_session</collection><condition>current.u_duration.changes()</condition><description/><name>Update Duration Band</name><onclick/><order>100</order><priority>100</priority><read_access_action>false</read_access_action><script>update_duration_band();&#13;
+&#13;
+function update_duration_band() {&#13;
+&#13;
+   var dura, durs = 0, dur_band = '00';&#13;
+   dura = current.u_duration.split(':');&#13;
+   durs = parseInt(dura[0], 10) * 3600;&#13;
+   durs += parseInt(dura[1], 10) * 60;&#13;
+   durs += parseInt(dura[2], 10);&#13;
+&#13;
+   if ( durs &lt; 60 ) {&#13;
+	  dur_band = '00';&#13;
+   } else if ( durs &lt; 300 ) {&#13;
+	  dur_band = '10';&#13;
+   } else if ( durs &lt; 600 ) {&#13;
+	  dur_band = '20';&#13;
+   } else if ( durs &lt; 1800 ) {&#13;
+	  dur_band = '30';&#13;
+   } else if ( durs &lt; 3600 ) {&#13;
+	  dur_band = '40';&#13;
+   } else {&#13;
+	  dur_band = '50';&#13;
+   }&#13;
+&#13;
+   current.u_duration_band = dur_band;&#13;
+   &#13;
+}&#13;
+</script><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 14:50:56</sys_created_on><sys_domain>global</sys_domain><sys_id>430ac83be033300029a6fccbaa5d482e</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 14:50:56</sys_updated_on><when>before</when></sys_script></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>687a5e49945b0100e28a4e71b2faebd1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Update Duration Band</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_db_object_22bed7a3e033300029a6fccbaa5d4863</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object"><sys_db_object action="INSERT_OR_UPDATE"><name>u_tu_bg_session_actor</name><provider_class/><super_class/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:40:51</sys_created_on><sys_id>22bed7a3e033300029a6fccbaa5d4863</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:40:51</sys_updated_on></sys_db_object></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>6c7a5e49945b0100e28a4e71b2faebc4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name/>
+<type>Table</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_security_acl_d214b367e033300029a6fccbaa5d48da</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users to read Bomgar records</description><name>u_tu_bg_session_rep</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:14:09</sys_created_on><sys_id>d214b367e033300029a6fccbaa5d48da</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 13:14:09</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:23</sys_created_on>
+<sys_id>6c7a5e49945b0100e28a4e71b2faebc8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:23</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>u_tu_bg_session_rep</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_appliance_u_hostname</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_hostname" table="u_tu_bg_appliance"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_hostname</element><element_reference>false</element_reference><foreign_database/><internal_type>string</internal_type><mandatory>false</mandatory><max_length>100</max_length><name>u_tu_bg_appliance</name><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 11:50:19</sys_created_on><sys_id>e2e063a3e033300029a6fccbaa5d48b2</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-03-05 11:50:19</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5">907a5e49945b0100e28a4e71b2faebb1</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:57:24</sys_created_on>
+<sys_id>6c7a5e49945b0100e28a4e71b2faebcb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:57:24</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>Bomgar Appliance.u_hostname</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_dictionary_u_tu_bg_session_event_u_session</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><sys_dictionary element="u_session" table="u_tu_bg_session_event"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><element>u_session</element><element_reference>false</element_reference><foreign_database/><internal_type>reference</internal_type><mandatory>false</mandatory><max_length>32</max_length><name>u_tu_bg_session_event</name><primary>false</primary><read_only>false</read_only><read_roles/><reference>u_tu_bg_session</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_qual/><reference_type/><sizeclass/><spell_check>false</spell_check><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 12

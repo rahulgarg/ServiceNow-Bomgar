@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2013-08-18 11:58:56">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Security enhancements to Bomgar Integration.
+Aug 2013. v0.5 p2</description>
+<inserted/>
+<name>TeamUltra Bomgar Integration - v0.5 p2</name>
+<origin_sys_id/>
+<release_date/>
+<remote_sys_id>f6ba69b894d70100e28a4e71b2faebb3</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>7ecade49945b0100e28a4e71b2faeb56</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_e79d65f894d70100e28a4e71b2faeb12</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:03:04</sys_created_on><sys_id>e79d65f894d70100e28a4e71b2faeb12</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_appliance">ae63fb67e033300029a6fccbaa5d4861</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:03:04</sys_updated_on><sys_user_role display_value="bomgar_rep" name="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OTX/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:03:04</sys_created_on><sys_id>ab9d65f894d70100e28a4e71b2faeb13</sys_id><sys_mod_count>0</sys_mod_count><sys_name>e79d65f894d70100e28a4e71b2faeb12</sys_name><sys_parent/><sys_path>!!OTX/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>e79d65f894d70100e28a4e71b2faeb12</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_e79d65f894d70100e28a4e71b2faeb12</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:03:04</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>03cade49945b0100e28a4e71b2faeb8d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>bomgar_rep.u_tu_bg_appliance</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_18f3fb67e033300029a6fccbaa5d48d4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users or Bomgar reps to read Bomgar records</description><name>u_tu_bg_session_actor</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:28</sys_created_on><sys_id>18f3fb67e033300029a6fccbaa5d48d4</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:34</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!*IF/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:28</sys_created_on><sys_id>ae46b443ac500100e28ae871c68832f7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_actor</sys_name><sys_parent/><sys_path>!!*IF/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>18f3fb67e033300029a6fccbaa5d48d4</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_18f3fb67e033300029a6fccbaa5d48d4</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:34</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>03cade49945b0100e28a4e71b2faeb8f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>u_tu_bg_session_actor</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_c0047b27e033300029a6fccbaa5d4880</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users or Bomgar reps to read Bomgar records</description><name>u_tu_bg_session_customer</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:43</sys_created_on><sys_id>c0047b27e033300029a6fccbaa5d4880</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:32</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!*T@/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:43</sys_created_on><sys_id>fa46f443ac500100e28ae871c68832b0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_customer</sys_name><sys_parent/><sys_path>!!*T@/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>c0047b27e033300029a6fccbaa5d4880</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_c0047b27e033300029a6fccbaa5d4880</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:32</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>07cade49945b0100e28a4e71b2faeb59</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_session_customer</table>
+<target_name>u_tu_bg_session_customer</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_65909afc94d70100e28a4e71b2faeb63</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:51</sys_created_on><sys_id>65909afc94d70100e28a4e71b2faeb63</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">a1909afc94d70100e28a4e71b2faeb63</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:35:51</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU7/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:51</sys_created_on><sys_id>b5909afc94d70100e28a4e71b2faeb64</sys_id><sys_mod_count>0</sys_mod_count><sys_name>65909afc94d70100e28a4e71b2faeb63</sys_name><sys_parent/><sys_path>!!OU7/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>65909afc94d70100e28a4e71b2faeb63</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_65909afc94d70100e28a4e71b2faeb63</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:35:51</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>07cade49945b0100e28a4e71b2faeb8d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>a1909afc94d70100e28a4e71b2faeb63</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_d2809efc94d70100e28a4e71b2faeb2a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:37</sys_created_on><sys_id>d2809efc94d70100e28a4e71b2faeb2a</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">12809efc94d70100e28a4e71b2faeb2a</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:35:37</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU5/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:37</sys_created_on><sys_id>16809efc94d70100e28a4e71b2faeb2b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>d2809efc94d70100e28a4e71b2faeb2a</sys_name><sys_parent/><sys_path>!!OU5/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>d2809efc94d70100e28a4e71b2faeb2a</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_d2809efc94d70100e28a4e71b2faeb2a</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:35:37</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>07cade49945b0100e28a4e71b2faeb92</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>12809efc94d70100e28a4e71b2faeb2a</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_b782b1f894d70100e28a4e71b2faebff</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:38</sys_created_on><sys_id>b782b1f894d70100e28a4e71b2faebff</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">f382b1f894d70100e28a4e71b2faebff</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:38</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU,/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:38</sys_created_on><sys_id>f782f1f894d70100e28a4e71b2faeb00</sys_id><sys_mod_count>0</sys_mod_count><sys_name>b782b1f894d70100e28a4e71b2faebff</sys_name><sys_parent/><sys_path>!!OU,/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>b782b1f894d70100e28a4e71b2faebff</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_b782b1f894d70100e28a4e71b2faebff</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:38</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>0bcade49945b0100e28a4e71b2faeb8d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>f382b1f894d70100e28a4e71b2faebff</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_88c0defc94d70100e28a4e71b2faeb71</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:33</sys_created_on><sys_id>88c0defc94d70100e28a4e71b2faeb71</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">c4c0defc94d70100e28a4e71b2faeb71</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:36:33</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU?/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:33</sys_created_on><sys_id>c8c0defc94d70100e28a4e71b2faeb72</sys_id><sys_mod_count>0</sys_mod_count><sys_name>88c0defc94d70100e28a4e71b2faeb71</sys_name><sys_parent/><sys_path>!!OU?/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>88c0defc94d70100e28a4e71b2faeb71</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_88c0defc94d70100e28a4e71b2faeb71</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:36:33</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>0bcade49945b0100e28a4e71b2faeb8e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>c4c0defc94d70100e28a4e71b2faeb71</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_8f043367e033300029a6fccbaa5d48b8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users or Bomgar reps to read Bomgar records</description><name>u_tu_bg_session_event</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:55</sys_created_on><sys_id>8f043367e033300029a6fccbaa5d48b8</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:30</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!*P[/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:55</sys_created_on><sys_id>6646f443ac500100e28ae871c688327c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_event</sys_name><sys_parent/><sys_path>!!*P[/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>8f043367e033300029a6fccbaa5d48b8</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_8f043367e033300029a6fccbaa5d48b8</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:30</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>0bcade49945b0100e28a4e71b2faeb92</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>u_tu_bg_session_event</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_f8cf06fc94d70100e28a4e71b2faebd8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:32:14</sys_created_on><sys_id>f8cf06fc94d70100e28a4e71b2faebd8</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">38cf06fc94d70100e28a4e71b2faebd8</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:32:14</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU1/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:32:14</sys_created_on><sys_id>3ccf06fc94d70100e28a4e71b2faebd9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>f8cf06fc94d70100e28a4e71b2faebd8</sys_name><sys_parent/><sys_path>!!OU1/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>f8cf06fc94d70100e28a4e71b2faebd8</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_f8cf06fc94d70100e28a4e71b2faebd8</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:32:14</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>0bcade49945b0100e28a4e71b2faeb93</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>38cf06fc94d70100e28a4e71b2faebd8</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_cdd3b767e033300029a6fccbaa5d487f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users or Bomgar reps to read Bomgar records</description><name>u_tu_bg_rep</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:12:58</sys_created_on><sys_id>cdd3b767e033300029a6fccbaa5d487f</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:18:01</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!*U(/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:12:58</sys_created_on><sys_id>3246f443ac500100e28ae871c68832b8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_rep</sys_name><sys_parent/><sys_path>!!*U(/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>cdd3b767e033300029a6fccbaa5d487f</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_cdd3b767e033300029a6fccbaa5d487f</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:18:01</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>0fcade49945b0100e28a4e71b2faeb8d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_rep</table>
+<target_name>u_tu_bg_rep</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_da91bdf894d70100e28a4e71b2faeb21</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:20:26</sys_created_on><sys_id>da91bdf894d70100e28a4e71b2faeb21</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_session_actor">18f3fb67e033300029a6fccbaa5d48d4</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:20:26</sys_updated_on><sys_user_role display_value="bomgar_rep" name="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OT`/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:20:26</sys_created_on><sys_id>1e91bdf894d70100e28a4e71b2faeb22</sys_id><sys_mod_count>0</sys_mod_count><sys_name>da91bdf894d70100e28a4e71b2faeb21</sys_name><sys_parent/><sys_path>!!OT`/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>da91bdf894d70100e28a4e71b2faeb21</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_da91bdf894d70100e28a4e71b2faeb21</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:20:26</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>0fcade49945b0100e28a4e71b2faeb8e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>bomgar_rep.u_tu_bg_session_actor</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_c4c0defc94d70100e28a4e71b2faeb71</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to delete Bomgar records</description><name>u_tu_bg_session_event</name><operation display_value="delete">delete</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:33</sys_created_on><sys_id>c4c0defc94d70100e28a4e71b2faeb71</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:38</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU@/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:33</sys_created_on><sys_id>8cc0defc94d70100e28a4e71b2faeb74</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_event</sys_name><sys_parent/><sys_path>!!OU@/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>c4c0defc94d70100e28a4e71b2faeb71</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_c4c0defc94d70100e28a4e71b2faeb71</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:38</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>0fcade49945b0100e28a4e71b2faeb90</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>u_tu_bg_session_event</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_18f01230941b0100e28a4e71b2faeb4e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to delete Bomgar records</description><name>u_tu_bg_team</name><operation display_value="delete">delete</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:37:23</sys_created_on><sys_id>18f01230941b0100e28a4e71b2faeb4e</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:45</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OUD/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:37:23</sys_created_on><sys_id>dcf01230941b0100e28a4e71b2faeb51</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_team</sys_name><sys_parent/><sys_path>!!OUD/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>18f01230941b0100e28a4e71b2faeb4e</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_18f01230941b0100e28a4e71b2faeb4e</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:45</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>3ecade49945b0100e28a4e71b2faeb57</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_team</table>
+<target_name>u_tu_bg_team</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_23705efc94d70100e28a4e71b2faebe0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to delete Bomgar records</description><name>u_tu_bg_exit_survey</name><operation display_value="delete">delete</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:26</sys_created_on><sys_id>23705efc94d70100e28a4e71b2faebe0</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:43</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU4/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:26</sys_created_on><sys_id>e7705efc94d70100e28a4e71b2faebe3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_exit_survey</sys_name><sys_parent/><sys_path>!!OU4/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>23705efc94d70100e28a4e71b2faebe0</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_23705efc94d70100e28a4e71b2faebe0</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:43</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>43cade49945b0100e28a4e71b2faeb59</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>u_tu_bg_exit_survey</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_3b52f9b894d70100e28a4e71b2faeb78</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:23:50</sys_created_on><sys_id>3b52f9b894d70100e28a4e71b2faeb78</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">7752f9b894d70100e28a4e71b2faeb78</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:23:50</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU$/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:23:50</sys_created_on><sys_id>fb52713c94d70100e28a4e71b2faeb24</sys_id><sys_mod_count>0</sys_mod_count><sys_name>3b52f9b894d70100e28a4e71b2faeb78</sys_name><sys_parent/><sys_path>!!OU$/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>3b52f9b894d70100e28a4e71b2faeb78</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_3b52f9b894d70100e28a4e71b2faeb78</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:23:50</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>43cade49945b0100e28a4e71b2faeb90</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>7752f9b894d70100e28a4e71b2faeb78</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_aa247f67e033300029a6fccbaa5d4848</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users or Bomgar reps to read Bomgar records</description><name>u_tu_bg_team</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:14:26</sys_created_on><sys_id>aa247f67e033300029a6fccbaa5d4848</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:37</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!*RO/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:14:26</sys_created_on><sys_id>7a46f443ac500100e28ae871c6883290</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_team</sys_name><sys_parent/><sys_path>!!*RO/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>aa247f67e033300029a6fccbaa5d4848</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_aa247f67e033300029a6fccbaa5d4848</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:37</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>43cade49945b0100e28a4e71b2faeb92</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_team</table>
+<target_name>u_tu_bg_team</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_64817df894d70100e28a4e71b2faebc8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:20:03</sys_created_on><sys_id>64817df894d70100e28a4e71b2faebc8</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_session">15e3fb67e033300029a6fccbaa5d48d1</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:20:03</sys_updated_on><sys_user_role display_value="bomgar_rep" name="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OT^/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:20:03</sys_created_on><sys_id>a4817df894d70100e28a4e71b2faebc9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>64817df894d70100e28a4e71b2faebc8</sys_name><sys_parent/><sys_path>!!OT^/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>64817df894d70100e28a4e71b2faebc8</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_64817df894d70100e28a4e71b2faebc8</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:20:03</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>47cade49945b0100e28a4e71b2faeb58</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>bomgar_rep.u_tu_bg_session</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_4c82713c94d70100e28a4e71b2faebc7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:24</sys_created_on><sys_id>4c82713c94d70100e28a4e71b2faebc7</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">8882713c94d70100e28a4e71b2faebc7</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:24</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU*/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:24</sys_created_on><sys_id>8c82713c94d70100e28a4e71b2faebc8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>4c82713c94d70100e28a4e71b2faebc7</sys_name><sys_parent/><sys_path>!!OU*/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>4c82713c94d70100e28a4e71b2faebc7</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_4c82713c94d70100e28a4e71b2faebc7</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:24</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>47cade49945b0100e28a4e71b2faeb5a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>8882713c94d70100e28a4e71b2faebc7</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_4cb09efc94d70100e28a4e71b2faebf6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:17</sys_created_on><sys_id>4cb09efc94d70100e28a4e71b2faebf6</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">88b09efc94d70100e28a4e71b2faebf6</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:36:17</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU;/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:17</sys_created_on><sys_id>8cb09efc94d70100e28a4e71b2faebf7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>4cb09efc94d70100e28a4e71b2faebf6</sys_name><sys_parent/><sys_path>!!OU;/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>4cb09efc94d70100e28a4e71b2faebf6</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_4cb09efc94d70100e28a4e71b2faebf6</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:36:17</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>47cade49945b0100e28a4e71b2faeb8c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>88b09efc94d70100e28a4e71b2faebf6</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_88b09efc94d70100e28a4e71b2faebf6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to delete Bomgar records</description><name>u_tu_bg_session_customer</name><operation display_value="delete">delete</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:17</sys_created_on><sys_id>88b09efc94d70100e28a4e71b2faebf6</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:49</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU&lt;/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:17</sys_created_on><sys_id>40b09efc94d70100e28a4e71b2faebfa</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_customer</sys_name><sys_parent/><sys_path>!!OU&lt;/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>88b09efc94d70100e28a4e71b2faebf6</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_88b09efc94d70100e28a4e71b2faebf6</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:49</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>47cade49945b0100e28a4e71b2faeb8e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_session_customer</table>
+<target_name>u_tu_bg_session_customer</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_fdc1bdf894d70100e28a4e71b2faebea</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:21:14</sys_created_on><sys_id>fdc1bdf894d70100e28a4e71b2faebea</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_session_event">8f043367e033300029a6fccbaa5d48b8</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:21:14</sys_updated_on><sys_user_role display_value="bomgar_rep" name="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OT|/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:21:14</sys_created_on><sys_id>31c1bdf894d70100e28a4e71b2faebec</sys_id><sys_mod_count>0</sys_mod_count><sys_name>fdc1bdf894d70100e28a4e71b2faebea</sys_name><sys_parent/><sys_path>!!OT|/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>fdc1bdf894d70100e28a4e71b2faebea</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_fdc1bdf894d70100e28a4e71b2faebea</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:21:14</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>47cade49945b0100e28a4e71b2faeb90</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>bomgar_rep.u_tu_bg_session_event</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_6bb2b13c94d70100e28a4e71b2faeb63</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to write to Bomgar records</description><name>u_tu_bg_team</name><operation display_value="write">write</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:25:27</sys_created_on><sys_id>6bb2b13c94d70100e28a4e71b2faeb63</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:25:27</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU0/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:25:27</sys_created_on><sys_id>23b2b13c94d70100e28a4e71b2faeb67</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_team</sys_name><sys_parent/><sys_path>!!OU0/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>6bb2b13c94d70100e28a4e71b2faeb63</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_6bb2b13c94d70100e28a4e71b2faeb63</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:25:27</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>47cade49945b0100e28a4e71b2faeb93</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_team</table>
+<target_name>u_tu_bg_team</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_64f1fdf894d70100e28a4e71b2faebf3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:21:58</sys_created_on><sys_id>64f1fdf894d70100e28a4e71b2faebf3</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_team">aa247f67e033300029a6fccbaa5d4848</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:21:58</sys_updated_on><sys_user_role display_value="bomgar_rep" name="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OT~/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:21:58</sys_created_on><sys_id>a4f1fdf894d70100e28a4e71b2faebf4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>64f1fdf894d70100e28a4e71b2faebf3</sys_name><sys_parent/><sys_path>!!OT~/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>64f1fdf894d70100e28a4e71b2faebf3</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_64f1fdf894d70100e28a4e71b2faebf3</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:21:58</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>4bcade49945b0100e28a4e71b2faeb58</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_team</table>
+<target_name>bomgar_rep.u_tu_bg_team</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_585275f894d70100e28a4e71b2faeb91</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:23:35</sys_created_on><sys_id>585275f894d70100e28a4e71b2faeb91</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">945275f894d70100e28a4e71b2faeb91</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:23:35</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU!/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:23:35</sys_created_on><sys_id>985275f894d70100e28a4e71b2faeb92</sys_id><sys_mod_count>0</sys_mod_count><sys_name>585275f894d70100e28a4e71b2faeb91</sys_name><sys_parent/><sys_path>!!OU!/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>585275f894d70100e28a4e71b2faeb91</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_585275f894d70100e28a4e71b2faeb91</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:23:35</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>4bcade49945b0100e28a4e71b2faeb8c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>945275f894d70100e28a4e71b2faeb91</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_a1909afc94d70100e28a4e71b2faeb63</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to delete Bomgar records</description><name>u_tu_bg_session</name><operation display_value="delete">delete</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:51</sys_created_on><sys_id>a1909afc94d70100e28a4e71b2faeb63</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:40</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU8/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:51</sys_created_on><sys_id>79909afc94d70100e28a4e71b2faeb66</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session</sys_name><sys_parent/><sys_path>!!OU8/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>a1909afc94d70100e28a4e71b2faeb63</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_a1909afc94d70100e28a4e71b2faeb63</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:40</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>4bcade49945b0100e28a4e71b2faeb90</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>u_tu_bg_session</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_2fb2b13c94d70100e28a4e71b2faeb63</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:25:27</sys_created_on><sys_id>2fb2b13c94d70100e28a4e71b2faeb63</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">6bb2b13c94d70100e28a4e71b2faeb63</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:25:27</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU./</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:25:27</sys_created_on><sys_id>6fb2b13c94d70100e28a4e71b2faeb64</sys_id><sys_mod_count>0</sys_mod_count><sys_name>2fb2b13c94d70100e28a4e71b2faeb63</sys_name><sys_parent/><sys_path>!!OU./</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>2fb2b13c94d70100e28a4e71b2faeb63</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_2fb2b13c94d70100e28a4e71b2faeb63</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:25:27</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>4fcade49945b0100e28a4e71b2faeb58</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>6bb2b13c94d70100e28a4e71b2faeb63</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_f5c3bb67e033300029a6fccbaa5d48a3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users or Bomgar reps to read Bomgar records</description><name>u_tu_bg_exit_survey</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:12:44</sys_created_on><sys_id>f5c3bb67e033300029a6fccbaa5d48a3</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:16:01</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!*W0/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:12:44</sys_created_on><sys_id>fa46f443ac500100e28ae871c68832e8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_exit_survey</sys_name><sys_parent/><sys_path>!!*W0/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>f5c3bb67e033300029a6fccbaa5d48a3</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_f5c3bb67e033300029a6fccbaa5d48a3</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:16:01</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>4fcade49945b0100e28a4e71b2faeb8c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>u_tu_bg_exit_survey</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_08d0defc94d70100e28a4e71b2faebcc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:50</sys_created_on><sys_id>08d0defc94d70100e28a4e71b2faebcc</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">44d0defc94d70100e28a4e71b2faebcc</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:36:50</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OUA/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:50</sys_created_on><sys_id>48d0defc94d70100e28a4e71b2faebcd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>08d0defc94d70100e28a4e71b2faebcc</sys_name><sys_parent/><sys_path>!!OUA/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>08d0defc94d70100e28a4e71b2faebcc</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_08d0defc94d70100e28a4e71b2faebcc</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:36:50</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>72cade49945b0100e28a4e71b2faeb57</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>44d0defc94d70100e28a4e71b2faebcc</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_4a113df894d70100e28a4e71b2faeb41</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:18:14</sys_created_on><sys_id>4a113df894d70100e28a4e71b2faeb41</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_rep">cdd3b767e033300029a6fccbaa5d487f</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:18:14</sys_updated_on><sys_user_role display_value="bomgar_rep" name="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OT]/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:18:14</sys_created_on><sys_id>8a113df894d70100e28a4e71b2faeb42</sys_id><sys_mod_count>0</sys_mod_count><sys_name>4a113df894d70100e28a4e71b2faeb41</sys_name><sys_parent/><sys_path>!!OT]/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>4a113df894d70100e28a4e71b2faeb41</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_4a113df894d70100e28a4e71b2faeb41</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:18:14</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>76cade49945b0100e28a4e71b2faeb57</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_rep</table>
+<target_name>bomgar_rep.u_tu_bg_rep</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_44d0defc94d70100e28a4e71b2faebcc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to delete Bomgar records</description><name>u_tu_bg_session_rep</name><operation display_value="delete">delete</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:50</sys_created_on><sys_id>44d0defc94d70100e28a4e71b2faebcc</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:44</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OUB/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:50</sys_created_on><sys_id>0cd0defc94d70100e28a4e71b2faebcf</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_rep</sys_name><sys_parent/><sys_path>!!OUB/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>44d0defc94d70100e28a4e71b2faebcc</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_44d0defc94d70100e28a4e71b2faebcc</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:44</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>7acade49945b0100e28a4e71b2faeb57</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>u_tu_bg_session_rep</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_12809efc94d70100e28a4e71b2faeb2a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to delete Bomgar records</description><name>u_tu_bg_rep</name><operation display_value="delete">delete</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:37</sys_created_on><sys_id>12809efc94d70100e28a4e71b2faeb2a</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:41</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU6/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:37</sys_created_on><sys_id>d6809efc94d70100e28a4e71b2faeb2d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_rep</sys_name><sys_parent/><sys_path>!!OU6/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>12809efc94d70100e28a4e71b2faeb2a</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_12809efc94d70100e28a4e71b2faeb2a</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:41</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>83cade49945b0100e28a4e71b2faeb58</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_rep</table>
+<target_name>u_tu_bg_rep</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_15e3fb67e033300029a6fccbaa5d48d1</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users or Bomgar reps to read Bomgar records</description><name>u_tu_bg_session</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:15</sys_created_on><sys_id>15e3fb67e033300029a6fccbaa5d48d1</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:33</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!*I6/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:13:15</sys_created_on><sys_id>2646b443ac500100e28ae871c68832f5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session</sys_name><sys_parent/><sys_path>!!*I6/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>15e3fb67e033300029a6fccbaa5d48d1</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_15e3fb67e033300029a6fccbaa5d48d1</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:33</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>83cade49945b0100e28a4e71b2faeb5a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>u_tu_bg_session</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_8882713c94d70100e28a4e71b2faebc7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to write to Bomgar records</description><name>u_tu_bg_session_event</name><operation display_value="write">write</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:24</sys_created_on><sys_id>8882713c94d70100e28a4e71b2faebc7</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:24</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU+/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:24</sys_created_on><sys_id>4082713c94d70100e28a4e71b2faebcb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_event</sys_name><sys_parent/><sys_path>!!OU+/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>8882713c94d70100e28a4e71b2faebc7</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_8882713c94d70100e28a4e71b2faebc7</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:24</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>83cade49945b0100e28a4e71b2faeb8e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_session_event</table>
+<target_name>u_tu_bg_session_event</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_d8f01230941b0100e28a4e71b2faeb4e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:37:23</sys_created_on><sys_id>d8f01230941b0100e28a4e71b2faeb4e</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">18f01230941b0100e28a4e71b2faeb4e</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:37:23</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OUC/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:37:23</sys_created_on><sys_id>1cf01230941b0100e28a4e71b2faeb4f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>d8f01230941b0100e28a4e71b2faeb4e</sys_name><sys_parent/><sys_path>!!OUC/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>d8f01230941b0100e28a4e71b2faeb4e</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_d8f01230941b0100e28a4e71b2faeb4e</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:37:23</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>83cade49945b0100e28a4e71b2faeb91</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>18f01230941b0100e28a4e71b2faeb4e</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_7752f9b894d70100e28a4e71b2faeb78</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to write to Bomgar records</description><name>u_tu_bg_session_actor</name><operation display_value="write">write</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:23:50</sys_created_on><sys_id>7752f9b894d70100e28a4e71b2faeb78</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:23:50</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU&amp;/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:23:50</sys_created_on><sys_id>bf52713c94d70100e28a4e71b2faeb26</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_actor</sys_name><sys_parent/><sys_path>!!OU&amp;/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>7752f9b894d70100e28a4e71b2faeb78</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_7752f9b894d70100e28a4e71b2faeb78</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:23:50</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>83cade49945b0100e28a4e71b2faeb93</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>u_tu_bg_session_actor</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_eba1bdf894d70100e28a4e71b2faebab</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:20:49</sys_created_on><sys_id>eba1bdf894d70100e28a4e71b2faebab</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_session_customer">c0047b27e033300029a6fccbaa5d4880</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:20:49</sys_updated_on><sys_user_role display_value="bomgar_rep" name="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OT{/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:20:49</sys_created_on><sys_id>2fa1bdf894d70100e28a4e71b2faebac</sys_id><sys_mod_count>0</sys_mod_count><sys_name>eba1bdf894d70100e28a4e71b2faebab</sys_name><sys_parent/><sys_path>!!OT{/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>eba1bdf894d70100e28a4e71b2faebab</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_eba1bdf894d70100e28a4e71b2faebab</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:20:49</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>87cade49945b0100e28a4e71b2faeb8f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_customer</table>
+<target_name>bomgar_rep.u_tu_bg_session_customer</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_d9a09efc94d70100e28a4e71b2faeba8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:06</sys_created_on><sys_id>d9a09efc94d70100e28a4e71b2faeba8</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">19a09efc94d70100e28a4e71b2faeba8</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:36:06</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU9/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:06</sys_created_on><sys_id>1da09efc94d70100e28a4e71b2faeba9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>d9a09efc94d70100e28a4e71b2faeba8</sys_name><sys_parent/><sys_path>!!OU9/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>d9a09efc94d70100e28a4e71b2faeba8</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_d9a09efc94d70100e28a4e71b2faeba8</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:36:06</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>87cade49945b0100e28a4e71b2faeb91</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>19a09efc94d70100e28a4e71b2faeba8</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_efd1fdf894d70100e28a4e71b2faeb75</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:21:38</sys_created_on><sys_id>efd1fdf894d70100e28a4e71b2faeb75</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_session_rep">d214b367e033300029a6fccbaa5d48da</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:21:38</sys_updated_on><sys_user_role display_value="bomgar_rep" name="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OT}/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:21:38</sys_created_on><sys_id>23d1fdf894d70100e28a4e71b2faeb77</sys_id><sys_mod_count>0</sys_mod_count><sys_name>efd1fdf894d70100e28a4e71b2faeb75</sys_name><sys_parent/><sys_path>!!OT}/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>efd1fdf894d70100e28a4e71b2faeb75</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_efd1fdf894d70100e28a4e71b2faeb75</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:21:38</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>8bcade49945b0100e28a4e71b2faeb8f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>bomgar_rep.u_tu_bg_session_rep</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_cad0b9f894d70100e28a4e71b2faebe4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:17:09</sys_created_on><sys_id>cad0b9f894d70100e28a4e71b2faebe4</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">0ad0b9f894d70100e28a4e71b2faebe4</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:17:09</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OTZ/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:17:09</sys_created_on><sys_id>1ed0b9f894d70100e28a4e71b2faebe5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>cad0b9f894d70100e28a4e71b2faebe4</sys_name><sys_parent/><sys_path>!!OTZ/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>cad0b9f894d70100e28a4e71b2faebe4</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_cad0b9f894d70100e28a4e71b2faebe4</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:17:09</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>8bcade49945b0100e28a4e71b2faeb91</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>0ad0b9f894d70100e28a4e71b2faebe4</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_7370bdb894d70100e28a4e71b2faebe6</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:15:38</sys_created_on><sys_id>7370bdb894d70100e28a4e71b2faebe6</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="u_tu_bg_exit_survey">f5c3bb67e033300029a6fccbaa5d48a3</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:15:38</sys_updated_on><sys_user_role display_value="bomgar_rep" name="bomgar_rep">a20b9323e033300029a6fccbaa5d4832</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OTY/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:15:38</sys_created_on><sys_id>b370bdb894d70100e28a4e71b2faebe7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>7370bdb894d70100e28a4e71b2faebe6</sys_name><sys_parent/><sys_path>!!OTY/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>7370bdb894d70100e28a4e71b2faebe6</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_7370bdb894d70100e28a4e71b2faebe6</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:15:38</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>8fcade49945b0100e28a4e71b2faeb59</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>bomgar_rep.u_tu_bg_exit_survey</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_f382b1f894d70100e28a4e71b2faebff</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to write to Bomgar records</description><name>u_tu_bg_session_rep</name><operation display_value="write">write</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:38</sys_created_on><sys_id>f382b1f894d70100e28a4e71b2faebff</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:38</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU-/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:38</sys_created_on><sys_id>7f82b13c94d70100e28a4e71b2faeb05</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_rep</sys_name><sys_parent/><sys_path>!!OU-/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>f382b1f894d70100e28a4e71b2faebff</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_f382b1f894d70100e28a4e71b2faebff</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:38</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>8fcade49945b0100e28a4e71b2faeb8f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>u_tu_bg_session_rep</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_0ad0b9f894d70100e28a4e71b2faebe4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to write to Bomgar records</description><name>u_tu_bg_exit_survey</name><operation display_value="write">write</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:17:10</sys_created_on><sys_id>0ad0b9f894d70100e28a4e71b2faebe4</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:17:10</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OT[/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:17:10</sys_created_on><sys_id>52d0b9f894d70100e28a4e71b2faebe8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_exit_survey</sys_name><sys_parent/><sys_path>!!OT[/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>0ad0b9f894d70100e28a4e71b2faebe4</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_0ad0b9f894d70100e28a4e71b2faebe4</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:17:10</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>8fcade49945b0100e28a4e71b2faeb91</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>u_tu_bg_exit_survey</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_ae63fb67e033300029a6fccbaa5d4861</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users or Bomgar reps to read Bomgar records</description><name>u_tu_bg_appliance</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:11:42</sys_created_on><sys_id>ae63fb67e033300029a6fccbaa5d4861</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:02:47</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!*RX/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:11:42</sys_created_on><sys_id>3646f443ac500100e28ae871c6883292</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_appliance</sys_name><sys_parent/><sys_path>!!*RX/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>ae63fb67e033300029a6fccbaa5d4861</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_ae63fb67e033300029a6fccbaa5d4861</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:02:47</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>c3cade49945b0100e28a4e71b2faeb8f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>u_tu_bg_appliance</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_7762713c94d70100e28a4e71b2faeb0a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:06</sys_created_on><sys_id>7762713c94d70100e28a4e71b2faeb0a</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">b362713c94d70100e28a4e71b2faeb0a</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:06</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU(/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:06</sys_created_on><sys_id>7762713c94d70100e28a4e71b2faeb7b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>7762713c94d70100e28a4e71b2faeb0a</sys_name><sys_parent/><sys_path>!!OU(/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>7762713c94d70100e28a4e71b2faeb0a</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_7762713c94d70100e28a4e71b2faeb0a</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:06</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>c7cade49945b0100e28a4e71b2faeb59</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>b362713c94d70100e28a4e71b2faeb0a</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_38cf06fc94d70100e28a4e71b2faebd8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to delete Bomgar records</description><name>u_tu_bg_appliance</name><operation display_value="delete">delete</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:32:14</sys_created_on><sys_id>38cf06fc94d70100e28a4e71b2faebd8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:32:14</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU2/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:32:14</sys_created_on><sys_id>fccf06fc94d70100e28a4e71b2faebdb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_appliance</sys_name><sys_parent/><sys_path>!!OU2/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>38cf06fc94d70100e28a4e71b2faebd8</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_38cf06fc94d70100e28a4e71b2faebd8</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:32:14</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>cbcade49945b0100e28a4e71b2faeb59</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_appliance</table>
+<target_name>u_tu_bg_appliance</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_role_e3705efc94d70100e28a4e71b2faebe0</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:26</sys_created_on><sys_id>e3705efc94d70100e28a4e71b2faebe0</sys_id><sys_mod_count>0</sys_mod_count><sys_security_acl display_value="">23705efc94d70100e28a4e71b2faebe0</sys_security_acl><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:35:26</sys_updated_on><sys_user_role display_value="bomgar_admin" name="bomgar_admin">96ca5f63e033300029a6fccbaa5d4823</sys_user_role></sys_security_acl_role><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU3/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:35:26</sys_created_on><sys_id>27705efc94d70100e28a4e71b2faebe1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>e3705efc94d70100e28a4e71b2faebe0</sys_name><sys_parent/><sys_path>!!OU3/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>e3705efc94d70100e28a4e71b2faebe0</sys_source_id><sys_source_table>sys_security_acl_role</sys_source_table><sys_type/><sys_update_name>sys_security_acl_role_e3705efc94d70100e28a4e71b2faebe0</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:35:26</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>cbcade49945b0100e28a4e71b2faeb92</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>23705efc94d70100e28a4e71b2faebe0</table>
+<target_name>bomgar_admin.</target_name>
+<type>Access Roles</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_19a09efc94d70100e28a4e71b2faeba8</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to delete Bomgar records</description><name>u_tu_bg_session_actor</name><operation display_value="delete">delete</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:06</sys_created_on><sys_id>19a09efc94d70100e28a4e71b2faeba8</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:47</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU:/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 16:36:06</sys_created_on><sys_id>dda09efc94d70100e28a4e71b2faebab</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_actor</sys_name><sys_parent/><sys_path>!!OU:/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>19a09efc94d70100e28a4e71b2faeba8</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_19a09efc94d70100e28a4e71b2faeba8</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 16:38:47</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>cfcade49945b0100e28a4e71b2faeb57</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_session_actor</table>
+<target_name>u_tu_bg_session_actor</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_b362713c94d70100e28a4e71b2faeb0a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to write to Bomgar records</description><name>u_tu_bg_session_customer</name><operation display_value="write">write</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:06</sys_created_on><sys_id>b362713c94d70100e28a4e71b2faeb0a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:06</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU)/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:24:06</sys_created_on><sys_id>3b62713c94d70100e28a4e71b2faeb7d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_customer</sys_name><sys_parent/><sys_path>!!OU)/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>b362713c94d70100e28a4e71b2faeb0a</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_b362713c94d70100e28a4e71b2faeb0a</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:24:06</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:55</sys_created_on>
+<sys_id>cfcade49945b0100e28a4e71b2faeb8d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:55</sys_updated_on>
+<table>u_tu_bg_session_customer</table>
+<target_name>u_tu_bg_session_customer</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_945275f894d70100e28a4e71b2faeb91</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Bomgar Admins to write to Bomgar records</description><name>u_tu_bg_session</name><operation display_value="write">write</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:23:35</sys_created_on><sys_id>945275f894d70100e28a4e71b2faeb91</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:23:35</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OU#/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-08-17 14:23:35</sys_created_on><sys_id>9c52313c94d70100e28a4e71b2faebcd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session</sys_name><sys_parent/><sys_path>!!OU#/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>945275f894d70100e28a4e71b2faeb91</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_945275f894d70100e28a4e71b2faeb91</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:23:35</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>cfcade49945b0100e28a4e71b2faeb90</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>u_tu_bg_session</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category>customer</category>
+<comments/>
+<name>sys_security_acl_d214b367e033300029a6fccbaa5d48da</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><condition/><description>Allow Itil users or Bomgar reps to read Bomgar records</description><name>u_tu_bg_session_rep</name><operation display_value="read">read</operation><script/><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:14:09</sys_created_on><sys_id>d214b367e033300029a6fccbaa5d48da</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:36</sys_updated_on><type display_value="record">record</type></sys_security_acl><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!*U8/</sys_code><sys_created_by>team.ultra</sys_created_by><sys_created_on>2013-03-05 13:14:09</sys_created_on><sys_id>7e46f443ac500100e28ae871c68832ba</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_tu_bg_session_rep</sys_name><sys_parent/><sys_path>!!*U8/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>d214b367e033300029a6fccbaa5d48da</sys_source_id><sys_source_table>sys_security_acl</sys_source_table><sys_type>code</sys_type><sys_update_name>sys_security_acl_d214b367e033300029a6fccbaa5d48da</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-08-17 14:19:36</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p2">7ecade49945b0100e28a4e71b2faeb56</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-08-18 11:58:56</sys_created_on>
+<sys_id>cfcade49945b0100e28a4e71b2faeb92</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-08-18 11:58:56</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>u_tu_bg_session_rep</target_name>
+<type>Access Control</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
