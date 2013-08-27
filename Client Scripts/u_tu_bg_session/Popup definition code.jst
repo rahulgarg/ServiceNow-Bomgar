@@ -1,0 +1,49 @@
+function onLoad() {
+  // No code
+}
+
+// tu_bg_popup( url, colf, title, width, height, features )
+// Parameters title, width, height and features are optional
+//
+function tu_bg_popup( url, closeOnLoseFocus, pTitle, pWidth, pHeight, pFeatures ) {
+
+  // Use parameters, or set defaults
+  var title  = pTitle  || "Bomgar_Popup";
+  var width  = pWidth  || 800;
+  var height = pHeight || 480;
+  var features = pFeatures || "toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollbars=1";
+
+  // Credit for this positioning code to:
+  //   http://www.xtf.dk/2011/08/center-new-popup-window-even-on.html
+  //
+  // Fixes dual-screen position                          Most browsers      Firefox
+  var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+  var dualScreenTop  = window.screenTop  != undefined ? window.screenTop  : screen.top;
+  //
+  var left = ((screen.width / 2) - (width / 2)) + dualScreenLeft;
+  var top = ((screen.height / 2) - (height / 2)) + dualScreenTop;
+  //
+  features += ', width=' + width + ', height=' + height;
+  features += ', top=' + top + ', left=' + left;
+  
+  return popupOpenFocus( url, title, width, height, features, false, closeOnLoseFocus );
+  
+}
+
+// tu_bg_popup_action
+// Called from UI Action onClick actions
+//
+function tu_bg_popup_action( field_name, action_type ) {
+
+  // Close the popup when it loses focus
+  var closeOnLoseFocus = true;
+  
+  var url = g_form.getValue(field_name);
+  if ( action_type.toLowerCase() == "view" ) {
+    url += "&view=1";
+    closeOnLoseFocus = false;  // Don't close 'view' windows
+  }
+  
+  tu_bg_popup( url, closeOnLoseFocus );
+  
+}
