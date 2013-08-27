@@ -655,10 +655,42 @@ BomgarAPI.prototype = {
       // Extract the system info and convert to HTML
       event_data += '<div class="bg_sysinfo">\n';
 
-      var cats = this.ensureArray( sys_info.category );
+      // Check that we have some categories
+      var cats = [];
+      if ( sys_info === null || typeof sys_info != "object" || !( "category" in sys_info ) ) {
+         event_data += "No System Information found\n";
+      } else {
+         cats = this.ensureArray( sys_info.category );
+      }
+
       for ( i=0; i<cats.length; i++ ) {
 
+         // Validate the structure of the category (should be a non-null object)
+         if ( cats[i] === null || typeof cats[i] != "object" ) {
+            event_data += "No System Information found\n";
+            continue;
+         } 
+        
          event_data += '<h2>' + cats[i]["@name"] + '</h2>\n';
+
+         if ( !( "description" in cats[i] ) ) {
+            event_data += "<p>No Description found for Category</p>\n";
+            continue;
+         } else if ( !( "data" in cats[i] ) ) {
+            event_data += "<p>No Data found for Category</p>\n";
+            continue;
+         }
+         
+         var catdata = cats[i].data;
+         if ( catdata === null || typeof catdata != "object" ) {
+            event_data += "<p>No Data object found for Category</p>\n";
+            continue;
+         }
+         if ( !( "row" in catdata ) ) {
+            event_data += "<p>No Data rows found for Category</p>\n";
+             continue;
+         }
+
          event_data += '<table class="grid">\n';
 
          // For data with only one row, build the table headers vertically
