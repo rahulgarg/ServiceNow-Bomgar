@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2013-10-22 10:52:02">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Further enhancements to Bomgar Integration.
+Aug 2013. v0.5 p5
+
+Sample reports of Bomgar information</description>
+<inserted/>
+<name>TeamUltra Bomgar Integration - v0.5 p5</name>
+<origin_sys_id/>
+<release_date/>
+<remote_sys_id>cb7a9ffee5801100e28a2102393058ef</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-10-22 10:52:02</sys_created_on>
+<sys_id>7cdaf042e52cd100e28a21023930587a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-10-22 10:52:02</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_report_02a4229a6c2970008a30bda468436a67</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report"><sys_report action="INSERT_OR_UPDATE"><aggregate>COUNT</aggregate><chart_size>small</chart_size><column/><content/><display_grid>false</display_grid><exp_report_attrs>true</exp_report_attrs><field>u_display_name</field><field_list/><filter table="u_tu_bg_session_rep">^GROUPBYu_display_name<item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="u_display_name"/></filter><group display_value="Service Desk" name="Service Desk">d625dccec0a8016700a222a0f7900d06</group><groups name="Service Desk">d625dccec0a8016700a222a0f7900d06</groups><interval>year</interval><orderby_list/><other_threshold>-2</other_threshold><others/><page_hdrftr/><roles/><row/><show_empty>false</show_empty><sumfield>u_seconds_involved</sumfield><sys_created_by>tuadmin_hn</sys_created_by><sys_created_on>2012-11-09 13:53:23</sys_created_on><sys_id>02a4229a6c2970008a30bda468436a67</sys_id><sys_mod_count>4</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:26:42</sys_updated_on><table>u_tu_bg_session_rep</table><title>Bomgar Sessions by Rep</title><trend_field/><type>pie</type><user>group</user><users/></sys_report><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OW(/</sys_code><sys_created_by>tuadmin_hn</sys_created_by><sys_created_on>2012-11-09 13:53:23</sys_created_on><sys_id>620dc1cc946f4100e28a4e71b2faeb32</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bomgar Sessions by Rep</sys_name><sys_parent display_value="Bomgar Session Rep">a626b803ac500100e28ae871c6883272</sys_parent><sys_path>!!)O~/!!OW(/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>02a4229a6c2970008a30bda468436a67</sys_source_id><sys_source_table>sys_report</sys_source_table><sys_type/><sys_update_name>sys_report_02a4229a6c2970008a30bda468436a67</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:26:42</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p5">7cdaf042e52cd100e28a21023930587a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-10-22 10:52:02</sys_created_on>
+<sys_id>30daf042e52cd100e28a21023930587b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-10-22 10:52:02</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>Bomgar Sessions by Rep</target_name>
+<type>Report</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_report_6a74229a6c2970008a30bda468436a4f</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report"><sys_report action="INSERT_OR_UPDATE"><aggregate>COUNT</aggregate><chart_size>small</chart_size><column/><content/><display_grid>false</display_grid><exp_report_attrs>true</exp_report_attrs><field>u_task</field><field_list/><filter table="u_tu_bg_session">^GROUPBYu_task<item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="u_task"/></filter><group display_value="Service Desk" name="Service Desk">d625dccec0a8016700a222a0f7900d06</group><groups name="Service Desk">d625dccec0a8016700a222a0f7900d06</groups><interval>year</interval><orderby_list/><other_threshold>-2</other_threshold><others/><page_hdrftr/><roles/><row/><show_empty>false</show_empty><sumfield>sys_mod_count</sumfield><sys_created_by>tuadmin_hn</sys_created_by><sys_created_on>2012-11-09 13:52:36</sys_created_on><sys_id>6a74229a6c2970008a30bda468436a4f</sys_id><sys_mod_count>4</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:26:29</sys_updated_on><table>u_tu_bg_session</table><title>Bomgar Sessions by Task</title><trend_field/><type>bar</type><user>group</user><users/></sys_report><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OW*/</sys_code><sys_created_by>tuadmin_hn</sys_created_by><sys_created_on>2012-11-09 13:52:36</sys_created_on><sys_id>620dc1cc946f4100e28a4e71b2faeb36</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bomgar Sessions by Task</sys_name><sys_parent display_value="Bomgar Session">be26b803ac500100e28ae871c68832ed</sys_parent><sys_path>!!)R{/!!OW*/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>6a74229a6c2970008a30bda468436a4f</sys_source_id><sys_source_table>sys_report</sys_source_table><sys_type/><sys_update_name>sys_report_6a74229a6c2970008a30bda468436a4f</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:26:29</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p5">7cdaf042e52cd100e28a21023930587a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-10-22 10:52:02</sys_created_on>
+<sys_id>38daf042e52cd100e28a21023930587b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-10-22 10:52:02</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Sessions by Task</target_name>
+<type>Report</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_report_659e2fef909ff000d3cadb1911185c09</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report"><sys_report action="INSERT_OR_UPDATE"><aggregate>COUNT</aggregate><chart_size>small</chart_size><column/><content/><display_grid>false</display_grid><exp_report_attrs>true</exp_report_attrs><field>u_duration_band</field><field_list/><filter/><group display_value="Service Desk" name="Service Desk">d625dccec0a8016700a222a0f7900d06</group><groups name="Service Desk">d625dccec0a8016700a222a0f7900d06</groups><interval>year</interval><orderby_list/><other_threshold>-2</other_threshold><others/><page_hdrftr/><roles/><row/><show_empty>false</show_empty><sumfield>sys_mod_count</sumfield><sys_created_by>tuadmin_hn</sys_created_by><sys_created_on>2013-02-08 16:18:40</sys_created_on><sys_id>659e2fef909ff000d3cadb1911185c09</sys_id><sys_mod_count>7</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:26:36</sys_updated_on><table>u_tu_bg_session</table><title>Bomgar Session Durations</title><trend_field/><type>pie</type><user>group</user><users/></sys_report><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OW)/</sys_code><sys_created_by>tuadmin_hn</sys_created_by><sys_created_on>2013-02-08 16:18:40</sys_created_on><sys_id>620dc1cc946f4100e28a4e71b2faeb34</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bomgar Session Durations</sys_name><sys_parent display_value="Bomgar Session">be26b803ac500100e28ae871c68832ed</sys_parent><sys_path>!!)R{/!!OW)/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>659e2fef909ff000d3cadb1911185c09</sys_source_id><sys_source_table>sys_report</sys_source_table><sys_type/><sys_update_name>sys_report_659e2fef909ff000d3cadb1911185c09</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:26:36</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p5">7cdaf042e52cd100e28a21023930587a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-10-22 10:52:02</sys_created_on>
+<sys_id>74daf042e52cd100e28a21023930587b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-10-22 10:52:02</sys_updated_on>
+<table>u_tu_bg_session</table>
+<target_name>Bomgar Session Durations</target_name>
+<type>Report</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_report_830e3be390f3b400d3cadb1911185c6c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report"><sys_report action="INSERT_OR_UPDATE"><aggregate>COUNT</aggregate><chart_size>small</chart_size><column/><content/><display_grid>false</display_grid><exp_report_attrs>true</exp_report_attrs><field>u_username</field><field_list/><filter table="u_tu_bg_session_rep">sys_created_onONLast month@javascript:gs.beginningOfLastMonth()@javascript:gs.endOfLastMonth()^EQ^GROUPBYu_username<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last month@javascript:gs.beginningOfLastMonth()@javascript:gs.endOfLastMonth()"/><item endquery="true" field="" goto="false" newquery="false" operator="" or="false" value=""/><item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="u_username"/></filter><group display_value="Service Desk" name="Service Desk">d625dccec0a8016700a222a0f7900d06</group><groups name="Service Desk">d625dccec0a8016700a222a0f7900d06</groups><interval>year</interval><orderby_list/><other_threshold>-2</other_threshold><others/><page_hdrftr/><roles/><row/><show_empty>false</show_empty><sumfield>sys_mod_count</sumfield><sys_created_by>tuadmin_ja</sys_created_by><sys_created_on>2013-03-05 13:57:37</sys_created_on><sys_id>830e3be390f3b400d3cadb1911185c6c</sys_id><sys_mod_count>4</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:27:01</sys_updated_on><table>u_tu_bg_session_rep</table><title>Bomgar Sessions by Rep (last month)</title><trend_field/><type>bar</type><user>group</user><users/></sys_report><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OW,/</sys_code><sys_created_by>tuadmin_ja</sys_created_by><sys_created_on>2013-03-05 13:57:37</sys_created_on><sys_id>220dc1cc946f4100e28a4e71b2faeb3a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bomgar Sessions by Rep (last month)</sys_name><sys_parent display_value="Bomgar Session Rep">a626b803ac500100e28ae871c6883272</sys_parent><sys_path>!!)O~/!!OW,/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>830e3be390f3b400d3cadb1911185c6c</sys_source_id><sys_source_table>sys_report</sys_source_table><sys_type/><sys_update_name>sys_report_830e3be390f3b400d3cadb1911185c6c</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:27:01</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p5">7cdaf042e52cd100e28a21023930587a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-10-22 10:52:02</sys_created_on>
+<sys_id>bcdaf042e52cd100e28a21023930587b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-10-22 10:52:02</sys_updated_on>
+<table>u_tu_bg_session_rep</table>
+<target_name>Bomgar Sessions by Rep (last month)</target_name>
+<type>Report</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value=""/>
+<category/>
+<comments/>
+<name>sys_report_7ce3ee5a6c2970008a30bda468436a08</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report"><sys_report action="INSERT_OR_UPDATE"><aggregate>COUNT</aggregate><chart_size>small</chart_size><column/><content/><display_grid>false</display_grid><exp_report_attrs>true</exp_report_attrs><field>u_rating</field><field_list/><filter table="u_tu_bg_exit_survey">u_survey_type=cust^EQ^GROUPBYu_rating^TRENDBYu_rating,year<item endquery="false" field="u_survey_type" goto="false" newquery="false" operator="=" or="false" value="cust"/><item endquery="true" field="" goto="false" newquery="false" operator="" or="false" value=""/><item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="u_rating"/><item endquery="false" field="" goto="false" newquery="false" operator="TRENDBY" or="false" value="u_rating,year"/></filter><group display_value="Service Desk" name="Service Desk">d625dccec0a8016700a222a0f7900d06</group><groups name="Service Desk">d625dccec0a8016700a222a0f7900d06</groups><interval>year</interval><orderby_list/><other_threshold>-2</other_threshold><others/><page_hdrftr/><roles/><row/><show_empty>false</show_empty><sumfield>u_rating</sumfield><sys_created_by>tuadmin_hn</sys_created_by><sys_created_on>2012-11-09 13:50:01</sys_created_on><sys_id>7ce3ee5a6c2970008a30bda468436a08</sys_id><sys_mod_count>6</sys_mod_count><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:26:21</sys_updated_on><table>u_tu_bg_exit_survey</table><title>Bomgar Customer Ratings</title><trend_field>u_submitted_by</trend_field><type>hist</type><user>group</user><users/></sys_report><sys_app_file action="INSERT_OR_UPDATE"><sys_app/><sys_code>!!OW+/</sys_code><sys_created_by>tuadmin_hn</sys_created_by><sys_created_on>2012-11-09 13:50:01</sys_created_on><sys_id>220dc1cc946f4100e28a4e71b2faeb38</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bomgar Customer Ratings</sys_name><sys_parent display_value="Bomgar Survey">ae26b803ac500100e28ae871c688328b</sys_parent><sys_path>!!)P?/!!OW+/</sys_path><sys_policy/><sys_source_deleted>false</sys_source_deleted><sys_source_id>7ce3ee5a6c2970008a30bda468436a08</sys_source_id><sys_source_table>sys_report</sys_source_table><sys_type/><sys_update_name>sys_report_7ce3ee5a6c2970008a30bda468436a08</sys_update_name><sys_updated_by>team.ultra</sys_updated_by><sys_updated_on>2013-09-26 14:26:21</sys_updated_on></sys_app_file></record_update>]]></payload>
+<remote_update_set display_value="TeamUltra Bomgar Integration - v0.5 p5">7cdaf042e52cd100e28a21023930587a</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>team.ultra</sys_created_by>
+<sys_created_on>2013-10-22 10:52:02</sys_created_on>
+<sys_id>f8daf042e52cd100e28a21023930587b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>team.ultra</sys_updated_by>
+<sys_updated_on>2013-10-22 10:52:02</sys_updated_on>
+<table>u_tu_bg_exit_survey</table>
+<target_name>Bomgar Customer Ratings</target_name>
+<type>Report</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
