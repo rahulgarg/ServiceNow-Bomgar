@@ -5,6 +5,7 @@ BomgarEvent.prototype = {
    initialize: function() {
       this.log = new GSLog('tu.bomgar.loglevel.event', 'Bomgar Event');
       this.tasks_only = gs.getProperty( 'tu.bomgar.event.tasks.only', 'false' );
+      this.close_can_create = gs.getProperty( 'tu.bomgar.event.close.create', 'false' );
       this.errorMessage = '';
       this.warningMessage = '';
    },
@@ -51,10 +52,18 @@ BomgarEvent.prototype = {
       
       // Validate presence of essential params
       var ev_err = false, ev_warn = false;
-      if (!this.event)        { msg += "\nParam missing: event"; ev_err = true; }
+      if (!this.event) {
+         msg += "\nParam missing: event"; ev_err = true; 
+      } else {
+         msg += "\nEvent type: [" + this.event + "]";
+      }
+      if (!this.lsid) { 
+         msg += "\nParam missing: lsid"; ev_err = true; 
+      } else {
+         msg += "\nLSID: [" + this.lsid + "]";
+      }
       if (!this.version)      { msg += "\nParam missing: version"; ev_err = true; }
       if (!this.timestamp)    { msg += "\nParam missing: timestamp"; ev_err = true; }
-      if (!this.lsid)         { msg += "\nParam missing: lsid"; ev_err = true; }
          
       if ( this.tasks_only ) {
          // Check that external_key is a valid task
@@ -125,10 +134,10 @@ BomgarEvent.prototype = {
          run_at.addSeconds(30);
          
          // Create the Session record
-         session = bg.createSession( this.lsid, this.ext_key );
-         if ( session ) {
+         var grSession = bg.createSessionRecord( this.lsid, this.ext_key );
+         if ( grSession ) {
             msg += "\nBomgar Session found and update event scheduled.";
-            gs.eventQueueScheduled('bomgar.session.start', session, 
+            gs.eventQueueScheduled('bomgar.session.start', grSession, 
                               this.appliance_id, this.lsid, run_at);
             this.log.logNotice(msg);
          } else {
@@ -144,6 +153,7 @@ BomgarEvent.prototype = {
          
          // Collect Session and Event data from Bomgar
          session = bg.retrieveSession(this.lsid);
+
          if (!session) {
             msg += "\nFailed to obtain details of session";
             msg += "\n" + bg.getErrorMessage();
@@ -151,6 +161,14 @@ BomgarEvent.prototype = {
             this.log.logError(msg);
             return null;
          }
+
+         // If close events are allowed to create sessions,
+         // then ensure we have a Bomgar Session Record.
+         // ( create will just retrive, if record exists )
+         if ( this.close_can_create ) {
+            bg.createSessionRecord( this.lsid, this.ext_key );  
+         }
+
          if ( bg.saveSession(session) ) {
             msg += "\nSaved Completed Session : [" + bg.getSessionName() + "]";
             this.log.logNotice(msg);

@@ -183,8 +183,14 @@ BomgarAPI.prototype = {
    retrieveExitSurvey: function( lsid, survey_type ) {
    //-------------------------------------------------------
       
+      // Get the session record
+      this.findSessionRecord(lsid);
+      if (!this.grSession) {
+         this.errorMessage = "Failed to find Bomgar Session record with lsid [" + lsid + "]";
+         return null; 
+      }
+      
       // Get session end_time
-      this.findSession(lsid);
       var ms = this.grSession.u_start_time.getGlideObject().getNumericValue(); // milli-seconds
       var et = Math.round( ms / 1000 ) - 5; // Convert to seconds and adjust down by 5 secs
       
@@ -285,10 +291,18 @@ BomgarAPI.prototype = {
       // session:  /session_list/session
       
       var i, msg = "saveSession";
+
       var lsid = session["@lsid"];
-      if (!lsid) { return null; }
-      var gr = this.findSession(lsid);
-      if (!gr) { return null; }
+      if (!lsid) {
+         this.errorMessage = "Failed to find LSID in retrieved session data.";
+         return null; 
+      }
+
+      var gr = this.findSessionRecord(lsid);
+      if (!gr) {
+         this.errorMessage = "Failed to find Bomgar Session record with lsid [" + lsid + "]";
+         return null; 
+      }
       
       gr.u_lseq = session.lseq;
       gr.u_session_type = session.session_type;
@@ -500,8 +514,13 @@ BomgarAPI.prototype = {
       }
       if ( !lsid || !gsno ) { return null; }
          
-      var session_id = this.findSession(lsid).sys_id.toString();
-      if (!session_id) { return null; }
+      this.findSessionRecord(lsid);
+      if (!this.grSession) {
+         this.errorMessage = "Failed to find Bomgar Session record with lsid [" + lsid + "]";
+         return null; 
+      }
+
+      var session_id = this.grSession.sys_id.toString();
          
       var gr = new GlideRecord('u_tu_bg_exit_survey');
       gr.addQuery('u_session',session_id);
@@ -539,7 +558,13 @@ BomgarAPI.prototype = {
       for ( i=0; i<questions.length; i++ ) {
          q = questions[i]; q_no = q['@id'];
          qna += "Q" + q_no + ".\t(" + q.type + ")\t" + q.label +"\n";
-         ans = q.answer_list.answer;
+
+         // Protect ourselves from missing answers
+         if ( q.answer_list && q.answer_list.answer ) {
+            ans = q.answer_list.answer;
+         } else {
+            ans = '(no answer)';
+         }
 
          // Ensure we have a valid string
          if (ans) {
@@ -814,14 +839,14 @@ BomgarAPI.prototype = {
    //----------------------------------------------------------------------------
    //
    //-------------------------------------------------------
-   createSession: function( lsid, task_no ) {
+   createSessionRecord: function( lsid, task_no ) {
    //-------------------------------------------------------
       // Returns a GlideRecord object for the created Bomgar Session
 
       var msg = "createSession";
 
       // Return existing session, if it exists
-      var gr = this.findSession(lsid);
+      var gr = this.findSessionRecord(lsid);
       if ( gr ) { 
          msg += "\nFound existing session: " + gr.getDisplayValue();
          this.log.logInfo(msg);
@@ -851,9 +876,10 @@ BomgarAPI.prototype = {
    },
    
    //-------------------------------------------------------
-   findSession: function( lsid ) {
+   findSessionRecord: function( lsid ) {
    //-------------------------------------------------------
-      // Returns a GlideRecord object for the Session
+      // Returns a GlideRecord object for the Session, if found
+      // It also implicitly sets the grSession attribute
       
       var gr = new GlideRecord('u_tu_bg_session');
       gr.addQuery('u_appliance',this.appliance_id);
@@ -865,7 +891,7 @@ BomgarAPI.prototype = {
          this.grSession = gr;
          return gr;
       } else {
-         this.log.logWarning( "Session not found, lsid: [" + lsid + "]" );
+         this.log.logWarning( "Bomgar Session not found, lsid: [" + lsid + "]" );
          this.grSession = null;
          return null;
       }
@@ -1080,9 +1106,15 @@ BomgarAPI.prototype = {
       var msg = "addEventWorkNote";
       msg += "\nSession name: [" + this.grSession.u_display_name + "]";
 
+      // Return silently if the current session is not associated with a task
+      var task_id = this.grSession.u_task.toString();
+      if ( !task_id ) {
+         return null;
+      }
+
       // Find the task related to this session
       var grTask = new GlideRecord('task');
-      if ( !grTask.get( this.grSession.u_task.toString() ) ) {
+      if ( !grTask.get( task_id ) ) {
          this.log.logError( msg + "\nTask not found." );
          return null;
       }
